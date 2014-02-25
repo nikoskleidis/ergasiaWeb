@@ -1,0 +1,200 @@
+var langChosen = '';
+var feelings = null;
+var headerHtml = '';
+var footerHtml = '';
+var ajax_url = 'http://ergasiaweb.gr.185-4-133-73.linuxzone33.grserver.gr/services/';
+var profileDataObj = {type: 'load_profile', user: null, fullname: null, rating: 0, avatar: 'images/no-image-available.jpg'};
+var srv_categories = {
+    "categories": [
+        {parent: 'public_services', title: 'public_wifi'},
+        {parent: 'public_services', title: 'public_buildings'},
+        {parent: 'public_services', title: 'monuments'},
+        {parent: 'public_services', title: 'beaches'},
+        {parent: 'google_places', title: 'restaurants'},
+        {parent: 'google_places', title: 'coffee_places'},
+        {parent: 'google_places', title: 'clothes_shop'},
+        {parent: 'google_places', title: 'public_parks'},
+        {parent: 'foursquare', title: 'painting_events'},
+        {parent: 'foursquare', title: 'book_events'}
+    ]
+};
+var app = {
+    // Application Constructor
+    initialize: function() {
+        setChosenLang();
+        appendLangScript();
+        headerHtml = render('header', {data: false});
+        footerHtml = render('footer', {data: false});
+        $("#left-panel").html(render('left_panel', {data: false})).panel({
+            create: function() {
+                localizeElementTexts($(this));
+            }
+        });
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicity call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        navigator.splashscreen.hide();
+        if (navigator.network.connection.type == Connection.NONE) {
+            console.log("No internet");
+//            $("#home_network_button").text('No Internet Access')
+//                    .attr("data-icon", "delete")
+//                    .button('refresh');
+        }
+        app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+//        console.log('Received Event: ' + id);
+    }
+};
+app.initialize();
+Handlebars.registerHelper('datetime', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd HH:mm:ss'), 'dd MMM, HH:mmtt');
+});
+Handlebars.registerHelper('translate', function(text, prefix) {
+    return localizeText(prefix + text);
+});
+Handlebars.registerHelper('month_name', function(month) {
+    return Globalize.culture().calendars.standard.months.names[month - 1];
+});
+Handlebars.registerHelper('rate_icons', function(rating) {
+    return new Handlebars.SafeString(renderRatingIcons(rating));
+});
+Handlebars.registerHelper('each_category', function(items) {
+    var out = "";
+
+    for (var i = 0, l = items.length; i < l; i++) {
+        var prof_cat = items[i];
+        out += '<div class="prof_cat_outer"><div class="round_img prof_category ' + prof_cat.title + '"></div><div class="cat_title">' + localizeText(prof_cat.title) + '</div></div>';
+    }
+
+    return out;
+});
+
+$("div[data-role=page]").on('pageinit', function() {
+    var header = $(this).find(".header");
+    var footer = $(this).find(".footer");
+    header.html(headerHtml);
+    footer.html(footerHtml);
+    header.find(".bars_link").on("tap", function(event) {
+        slideTopMenu();
+    });
+    localizeElementTexts($(this));
+});
+$("div[data-role=page]").on('pageshow', function() {
+    if ($(this).find('.ajax_content').is(':empty')) {
+        $.mobile.loading("show");
+    }
+});
+$("div[data-role=page]").on('pagebeforeshow', function() {
+    $(this).find(".ui-focus").removeClass("ui-focus");
+});
+$("#login").on('pagebeforecreate', function() {
+    $("#loginDiv").html(render('login', {data: false}))
+            .on("tap", "#submitLoginButton", function() {
+                submitLoginForm();
+            })
+            .on('keypress', '#login_mail, #login_pass', function(event) {
+                var keyPressed = event.which || event.keyCode;
+                if (keyPressed === 13) {
+                    submitLoginForm();
+                }
+            });
+});
+$("#home").on('pagebeforecreate', function() {
+    $("#srv_categories_wrap").html(render('srv_categories', srv_categories))
+            .trigger('create')
+            .on("tap", ".prof_cat_outer", function() {
+                $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
+                        .addClass("ui-focus");
+                $.mobile.changePage('#places');
+            })
+            .on("tabsbeforeactivate", "#categories_tabs", function(event, ui) {
+                $("#home").removeClass("google_places public_services").addClass(ui.newPanel.attr("id"));
+            });
+});
+$("#home").on('pagebeforeshow', function() {
+    $("#srv_categories").find(".prof_cat_outer.ui-focus").each(function() {
+        $(this).css({"width": (6 + $(this).width()) + "px", "height": (6 + $(this).height()) + "px"});
+    });
+});
+$("#places").on('pageinit', function() {
+    var container = $("#places_list");
+    $.post(ajax_url, {
+        action: 'load_places'
+    },
+    function(data) {
+        $.mobile.loading("hide");
+        container.html(render('places', data)).trigger('create');
+        localizeElementTexts(container);
+    }, "json");
+    container.on("tap", ".prof_selection", function(event) {
+        var target = $(event.target);
+        if (target.is(".pickButton")) {
+            target.closest(".prof_selection").addClass("ui-focus");
+            viewProfile(target.attr("data-id"), target.attr("data-name"), target.attr("data-rating"), target.attr("data-img"));
+        } else {
+            var isOpened = $(this).hasClass("tapped");
+            var currentSelection = $("#places_list").find(".prof_selection.tapped");
+            currentSelection.removeClass("tapped")
+                    .find(".prof_details").slideUp("fast");
+            if (!isOpened) {
+                $(this).addClass("tapped").find(".prof_details").slideDown("normal", function() {
+                    $('html, body').scrollTop($(this).parent().offset().top - $(".header:visible").height());
+                });
+            }
+        }
+    });
+});
+$("#rate_place").on('pagebeforecreate', function() {
+    $("#rating_wrap").html(render('rate_place', {data: false}));
+});
+$("#rate_place").on('pagebeforeshow', function() {
+    addProfileInfo("#rating_prof_name", "#rating_img", "#current_rating");
+});
+$("#settings").on('pagebeforecreate', function() {
+    $("#settings_wrap").html(render('settings', {data: false}));
+    $("#ranking_select").on("tap", ".ranking_selection", function() {
+        $(this).addClass("ui-focus");
+    });
+});
+$("#rate_place").on('pageshow', function() {
+    var container = $("#rating_bars");
+    container.find(".price_bar").animate({width: "80%"}, 1500).next(".rating_score").html("80%");
+    container.find(".quality_bar").animate({width: "60%"}, 1500).next(".rating_score").html("60%");
+    container.find(".availability_bar").animate({width: "30%"}, 1500).next(".rating_score").html("30%");
+});
+$("#search_location").on('pagebeforecreate', function() {
+    $("#search_location_wrap").html(render('search_location', {data: false}));
+});
+$("#search_location").on('pageshow', function() {
+    $("#search_location_loader").fadeOut(2000, 'linear', function() {
+//        $("#search_location_loader").fadeIn(2000, 'linear');
+    });
+    if (navigator.geolocation) {
+        var options = {timeout: 31000, enableHighAccuracy: true, maximumAge: 90000};
+        navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+                    reverseGeocode(lat, lng, "GR");
+                    initializeMap(14, true, lat, lng, 'images/map_icon.png');
+                },
+                function() {
+                    showAlert('Error getting location');
+                }, options);
+    } else {
+        showAlert("no geolocation!!!", "no");
+    }
+});
