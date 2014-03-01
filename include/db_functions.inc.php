@@ -1,5 +1,5 @@
 <?php
-
+ //uyguyyuuy
 function checkExistingUserField($column, $value_to_check) {
     global $con;
     $query = "SELECT 1 " .

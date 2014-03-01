@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header('Content-type: text/html; charset=utf-8');
-define("SITE_NAME", "HandPick");
+define("SITE_NAME", "Εργασία Web");
 define("DOCUMENT_PATH", $_SERVER['DOCUMENT_ROOT'] . "/");
 define("SERVER_PATH", "http://" . $_SERVER['SERVER_NAME'] . "/");
 define("SEND_MAILS", true);

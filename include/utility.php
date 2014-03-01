@@ -59,7 +59,29 @@ function isMobileBrowser() {
 }
 
 function formatDistance($distance) {
-    return (($distance < 1000) ? ceil($distance/100)*100 . 'm' : floatval(number_format($distance / 1000, 1)) . 'km');
+    return (($distance < 1000) ? ceil($distance / 100) * 100 . 'm' : floatval(number_format($distance / 1000, 1)) . 'km');
+}
+
+function successJSON($content, $die = true) {
+    wrapJSON('SUCCESS', $content, $die);
+}
+
+function errorJSON($content, $die = true) {
+    wrapJSON('ERROR', $content, $die);
+}
+
+function wrapJSON($code, $content, $die = true) {
+    // encode content as {foo:bar,foobar:baz}
+    $content = json_encode((object) $content);
+    // strip the first character '{' from the json encoded string
+    $content = substr($content, 1, strlen($content) - 1);
+    // add the "code" part to the string
+    $buffer = '{"code":"' . $code . '",' . $content;
+
+    echo $buffer;
+    if ($die) {
+        die;
+    }
 }
 
 ?>
