@@ -31,6 +31,7 @@ var app = {
             }
         });
         this.bindEvents();
+        testGooglePlaces();
     },
     // Bind Event Listeners
     //

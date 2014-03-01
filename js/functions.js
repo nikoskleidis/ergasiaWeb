@@ -240,6 +240,18 @@ function showAlert(message, title) {
     }
 }
 
+function testGooglePlaces(){
+    console.log("testing google places");
+    $.ajax({
+            url: 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY',
+            method: 'GET',
+            async: true,
+            success: function(data) {
+                console.log(data);
+            }
+        });
+}
+
 (function($)
 {
     $.fn.autogrow = function(options)
