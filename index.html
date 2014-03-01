@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Εργασία ΟΠΑ - Εφαρμογές στον Παγκόσμιο Ιστό</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="apple-touch-icon-precomposed" href="images/touch-icon-iphone-retina-120x120.png" />
+        <link rel="shortcut icon" href="images/touch-icon-iphone-60x60.png" type="image/png" />
+        <link rel="apple-touch-startup-image" href="images/startup.png"/>
+
+        <script type="text/javascript">
+            if (window.location.hash != '') {
+                location.href = "/";
+            }
+        </script>
+        <script type="text/javascript" src="js/libs/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function()
+            {
+                //                if (navigator.userAgent.indexOf("Android") != -1)
+                //                {
+                //                    $.mobile.defaultPageTransition = 'none';
+                //                    $.mobile.defaultDialogTransition = 'none';
+                //                } else {
+                $.mobile.defaultPageTransition = 'slide';
+                $.mobile.defaultDialogTransition = 'pop';
+                //                }
+            });
+        </script>
+        <script type="text/javascript" src="js/libs/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/libs/handlebars-v1.3.0.js"></script>
+        <script type="text/javascript" src="js/libs/globalize.js"></script>
+    </head>
+    <body>
+        <div id="statusbar"></div>
+        <!--        <div data-role="page" id="login">
+                    <div data-role="header">
+                        <h1>Σύνδεση Χρήστη</h1>
+                    </div>
+                    <div data-role="content">
+                        <div id="loginDiv"></div>
+                    </div>
+                </div>-->
+        <div data-role="page" id="home">
+            <div class="header" data-role="header" data-position="fixed"></div>
+            <div data-role="content" class="clear">
+                <div id="srv_categories_wrap" class="ajax_content"></div>
+            </div>
+        </div>
+        <div data-role="page" id="places">
+            <div class="header" data-role="header" data-position="fixed"></div>
+            <div data-role="content" class="clear">
+                <div id="places_list" class="ajax_content"></div>
+            </div>
+        </div>
+        <div data-role="page" id="rate_place">
+            <div class="header" data-role="header" data-position="fixed"></div>
+            <div data-role="content" class="clear">
+                <div id="rating_wrap" class="ajax_content"></div>
+            </div>
+        </div>
+        <div data-role="page" id="search_location">
+            <div class="header" data-role="header" data-position="fixed"></div>
+            <div data-role="content" class="clear">
+                <div id="search_location_wrap"></div>
+            </div>
+        </div>
+        <div data-role="panel" id="left-panel" data-position="left" data-display="overlay">
+        </div>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="js/mapFunctions.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
