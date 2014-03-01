@@ -1,31 +1,10 @@
 <?php
 
-// reject incomplete requests
-//if (empty($_REQUEST['token_public']) || empty($_REQUEST['hash']) || empty($_REQUEST['timestamp'])) {
-//    errorJSON(array('message' => "empty_tokens"));
-//}
-//
-//// try to find a user from the public token we've been sent (die if not found)
-//try {
-//    $User = User::find('first', array('conditions' => array('token_public = ?', $_REQUEST['token_public'])));
-//} catch (Exception $e) {
-//    errorJSON(array('message' => "invalid_tokens", "e" => $e->getMessage()));
-//}
-//// make sure the hash hasn't been tampered
-//if ($_REQUEST['hash'] !== sha1($_REQUEST['timestamp'] . $User->token_private)) {
-//    errorJSON(array('message' => "invalid_tokens"));
-//}
-
-// try and parse any additional data we've been sent
-//if (!empty($_REQUEST['data'])) {
-//    parse_str($_REQUEST['data'], $_REQUEST['data']);
-//}
 if (!isset($_POST['action'])) {
     exit();
 }
 require_once '../include/basicVars.inc.php';
-require_once '../include/utility.php';
-require_once '../include/db_functions.inc.php';
+require_once '../include/functions.inc.php';
 require '../include/DBconnection.inc.php';
 switch ($_POST['action']) {
     case 'login':
