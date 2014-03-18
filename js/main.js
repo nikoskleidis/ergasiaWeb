@@ -31,7 +31,9 @@ var app = {
             }
         });
         this.bindEvents();
-        testGooglePlaces();
+        getFsqCategoryList();
+        //testGooglePlaces();
+        testFoursquareApi();
     },
     // Bind Event Listeners
     //

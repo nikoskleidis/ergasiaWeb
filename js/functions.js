@@ -240,16 +240,59 @@ function showAlert(message, title) {
     }
 }
 
+function myjsonpfunction(data){
+    console.log("callback");
+    console.log(data.responseData.results); //showing results data
+    $.each(data.responseData.results,function(i,rows){
+       console.log(rows.url); //showing  results url
+    });
+}
+      
 function testGooglePlaces(){
     console.log("testing google places");
+    var googleMapsKey = 'AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY';
+    var url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?&callback=?';
+    //var url = 'https://maps.googleapis.com/maps/api/place/radarsearch/json?location=51.503186,-0.126446&radius=5000&types=museum&sensor=false&key=AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY';
+
     $.ajax({
-            url: 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY',
-            method: 'GET',
-            async: true,
-            success: function(data) {
-                console.log(data);
-            }
-        });
+        url: url,
+        method: 'GET',
+        async: false,
+        dataType: 'jsonp',
+        jsonpCallback: 'myjsonpfunction',
+        contentType: "application/json",
+        data : {
+            key : googleMapsKey,
+            query: 'restaurants in Sydney',
+            sensor: true
+        },
+        success: function(data){
+            console.log(data);
+        },
+        error: function(data){
+            console.log("failed");
+        }
+    });
+}
+
+/**
+ * Returns the given date in the specified date format
+ * 
+ * @param {type} date
+ * @param {type} format
+ * @returns {String}
+ */
+function getDateInFormat(date, format){
+    var dd = date.getDate();
+    var mm = date.getMonth()+1; //January is 0!
+
+    var yyyy = date.getFullYear();
+    if(dd<10){dd='0'+dd;} 
+    if(mm<10){mm='0'+mm;}
+    
+    if (format === "YYYYMMDD"){
+        return yyyy+''+mm+''+dd;
+    }
 }
 
 (function($)
