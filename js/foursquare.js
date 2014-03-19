@@ -56,18 +56,16 @@ function getPointsFor(logLat, categoryList){
             categoryId: categoryList
         },
         success: function(data){
-            console.log("Places found:");
-            console.log(data);
+            console.log("Places loaded");
+            //console.log(data);
             resultList = data;
         },
         error: function(){
             console.log("failed");
         }
     });
-    
-    transformToDisplayObject(resultList);
-    
-    return resultList;
+       
+    return {places : transformToDisplayObject(resultList)};
 }
 
 function transformToDisplayObject(foursquareData){
@@ -76,7 +74,7 @@ function transformToDisplayObject(foursquareData){
         var array = foursquareData.response.venues;
         len = array.length;
         for (var i = 0; i < len; i++){
-            var newPlace = [];
+            var newPlace = new Object();
             var fsq_obj = array[i];
             
             newPlace.id = fsq_obj.id;
@@ -88,11 +86,15 @@ function transformToDisplayObject(foursquareData){
             newPlace.avatar = placeInfo.avatar;
             newPlace.rating = placeInfo.rating; 
             
+            newPlace.lat = fsq_obj.location.lat;
+            newPlace.lng = fsq_obj.location.lng;
+            
             places.push(newPlace);
         }
-        console.log("For display purposes");
-        console.log(places);
+        console.log("Results transformed");
+        //console.log(places);
     }
+    return places;
 }
 
 /**

@@ -31,9 +31,6 @@ var app = {
             }
         });
         this.bindEvents();
-        getFsqCategoryList();
-        //testGooglePlaces();
-        testFoursquareApi();
     },
     // Bind Event Listeners
     //
@@ -134,14 +131,21 @@ $("#home").on('pagebeforeshow', function() {
 });
 $("#places").on('pageinit', function() {
     var container = $("#places_list");
-    $.post(ajax_url, {
-        action: 'load_places'
-    },
-    function(data) {
-        $.mobile.loading("hide");
-        container.html(render('places', data)).trigger('create');
-        localizeElementTexts(container);
-    }, "json");
+    
+    var coordinates = '37.976648,23.725871';
+    var data = getCoffeeShops(coordinates);
+    $.mobile.loading("hide");
+    container.html(render('places', data)).trigger('create');
+    localizeElementTexts(container);
+//    $.post(ajax_url, {
+//        action: 'load_places'
+//    },
+//    function(data) {
+//        console.log(data);
+//        $.mobile.loading("hide");
+//        container.html(render('places', data)).trigger('create');
+//        localizeElementTexts(container);
+//    }, "json");
     container.on("tap", ".prof_selection", function(event) {
         var target = $(event.target);
         if (target.is(".pickButton")) {
