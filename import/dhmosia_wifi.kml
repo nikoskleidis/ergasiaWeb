@@ -1,0 +1,2972 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>dhmosia_wifi</name>
+<Schema name="dhmosia_wifi" id="dhmosia_wifi">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="gid" type="int"></SimpleField>
+	<SimpleField name="peripherei" type="string"></SimpleField>
+	<SimpleField name="nomarchia" type="string"></SimpleField>
+	<SimpleField name="id" type="float"></SimpleField>
+	<SimpleField name="ip" type="string"></SimpleField>
+	<SimpleField name="lat" type="float"></SimpleField>
+	<SimpleField name="lon" type="float"></SimpleField>
+	<SimpleField name="perigrafh" type="string"></SimpleField>
+	<SimpleField name="dhmos" type="string"></SimpleField>
+</Schema>
+  <Placemark>
+	<name>Δ.Μεταμορφώσεως</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">1</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">170.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.84.1</SimpleData>
+		<SimpleData name="lat">38.063581229999997</SimpleData>
+		<SimpleData name="lon">23.760707320000002</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική πλατεία δήμου - Λύκειο δήμου</SimpleData>
+		<SimpleData name="dhmos">Δ.Μεταμορφώσεως</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.759009701815575,38.060983190811051</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νέου Ψυχικού</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">2</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">147.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.28.1</SimpleData>
+		<SimpleData name="lat">38.017888999999997</SimpleData>
+		<SimpleData name="lon">23.769950999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Ελευθερίας</SimpleData>
+		<SimpleData name="dhmos">Δ.Νέου Ψυχικού</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.768254155613189,38.015290846752222</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Παπάγου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">3</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">15.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.4.1</SimpleData>
+		<SimpleData name="lat">38.009837370000000</SimpleData>
+		<SimpleData name="lon">23.783834250000002</SimpleData>
+		<SimpleData name="perigrafh">Μεγάλο Πάρκο Παπάγου</SimpleData>
+		<SimpleData name="dhmos">Δ.Παπάγου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.782137169752694,38.007239373616855</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Χαροκόπειο</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">4</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">1012.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.36.1</SimpleData>
+		<SimpleData name="lat">37.972214999999998</SimpleData>
+		<SimpleData name="lon">23.717251000000001</SimpleData>
+		<SimpleData name="perigrafh">ΧΑΡΟΚΟΠΕΙΟ ΠΑΝΕΠΙΣΤΗΜΙΟ</SimpleData>
+		<SimpleData name="dhmos">Χαροκόπειο</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.715556807407378,37.969615841636312</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλυβιών Αττικής</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">5</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">1143.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.188.1</SimpleData>
+		<SimpleData name="lat">37.838123000000003</SimpleData>
+		<SimpleData name="lon">23.929466999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία ΕυαγγελιστρίαςΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλυβιών Αττικής</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.927769456570843,37.835526184672801</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγίου Στεφάνου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">6</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">50.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.132.1</SimpleData>
+		<SimpleData name="lat">38.142029590000000</SimpleData>
+		<SimpleData name="lon">23.858617559999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΔΗΜΟΚΡΑΤΙΑΣ-ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΑΓΙΟΥ ΣΤΕΦΑΝΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγίου Στεφάνου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.856915149762632,38.139433397166655</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Βούλας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">7</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">67.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.12.1</SimpleData>
+		<SimpleData name="lat">37.840405930000003</SimpleData>
+		<SimpleData name="lon">23.766562449999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΙΜΙΩΝ-ΘΕΣΗ: ΕΠΙ ΤΗΣ Οδ. ΒΑΣΙΛΕΩΣ ΠΑΥΛΟΥ 72-84</SimpleData>
+		<SimpleData name="dhmos">Δ.Βούλας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.764869782317682,37.837806782151439</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ελευσίνος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">8</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">325.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.236.1</SimpleData>
+		<SimpleData name="lat">38.036536529999999</SimpleData>
+		<SimpleData name="lon">23.543078110000000</SimpleData>
+		<SimpleData name="perigrafh">Κτίριο του Ο.Λ. Ελευσίνας. Παραλιακή ζώνη-πάρκο</SimpleData>
+		<SimpleData name="dhmos">Δ.Ελευσίνος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.541387739379317,38.033935209230002</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κρωπίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">9</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">264.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.100.1</SimpleData>
+		<SimpleData name="lat">37.901228390000000</SimpleData>
+		<SimpleData name="lon">23.873472799999998</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΟΛΗΣ-ΠΝΕΥΜΑΤΙΚΟ ΚΕΝΤΡΟ- ΔΗΜΟΤΙΚΗ ΒΙΒΛΙΟΘΗΚΗ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κρωπίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.871775501908974,37.89863110347261</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Λαυρεωτικής</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">10</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">263.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.92.1</SimpleData>
+		<SimpleData name="lat">37.712292230000003</SimpleData>
+		<SimpleData name="lon">24.055093599999999</SimpleData>
+		<SimpleData name="perigrafh">ΛΙΜΕΝΙΚΗ ΖΩΝΗ ΛΑΥΡΙΟΥ - ΔΗΜΑΡΧΕΙΟ ΛΑΥΡΕΩΤΙΚΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Λαυρεωτικής</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.053395146690736,37.709696560562669</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Παιανίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">11</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">301.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.188.1</SimpleData>
+		<SimpleData name="lat">37.953750190000001</SimpleData>
+		<SimpleData name="lon">23.853082409999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΖΩΟΔΟΧΟΥ ΠΗΓΗΣ-ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΑΙΑΝΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Παιανίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.851384521783142,37.951152890766885</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ραφήνας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">12</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">268.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.28.1</SimpleData>
+		<SimpleData name="lat">38.025630470000003</SimpleData>
+		<SimpleData name="lon">24.011706499999999</SimpleData>
+		<SimpleData name="perigrafh">ΕΠΙΒΑΤΙΚΟΣ ΛΙΜΕΝΑΣ, ΛΙΜΑΝΙ ΡΑΦΗΝΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ραφήνας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.010002150675962,38.023035855123624</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Δ.Θρακομακεδόνων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">13</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">320.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.220.1</SimpleData>
+		<SimpleData name="lat">38.129513070000002</SimpleData>
+		<SimpleData name="lon">23.760582270000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΟ ΝΕΟΤΗΤΟΣ ΔΗΜΟΥ ΘΡΑΚΟΜΑΚΕΔΟΝΩΝ-(ΜΕΓΑΛΟΥ ΑΛΕΞΑΝΔΡΟΥ και ΑΡΙΣΤΟΤΕΛΟΥΣ Ο.Τ. 84)</SimpleData>
+		<SimpleData name="dhmos">Κ.Δ.Θρακομακεδόνων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.758883129799205,38.1269153889519</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Παλαιάς Φωκαίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">14</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Ανατολικής Αττικής</SimpleData>
+		<SimpleData name="id">1024.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.228.1</SimpleData>
+		<SimpleData name="lat">37.718190999999997</SimpleData>
+		<SimpleData name="lon">23.945924999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Κ.Παλαιάς Φωκαίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.944229700496418,37.715593790331695</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μεγαρέων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">15</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Δυτικής Αττικής</SimpleData>
+		<SimpleData name="id">1112.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.116.1</SimpleData>
+		<SimpleData name="lat">37.973747000000003</SimpleData>
+		<SimpleData name="lon">23.363140000000001</SimpleData>
+		<SimpleData name="perigrafh">Λιμάνι-Παραλία</SimpleData>
+		<SimpleData name="dhmos">Δ.Μεγαρέων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.361456560058915,37.971142766223153</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αίγινας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">16</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Πειραιώς</SimpleData>
+		<SimpleData name="id">1062.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.108.1</SimpleData>
+		<SimpleData name="lat">37.693354999999997</SimpleData>
+		<SimpleData name="lon">23.449341000000000</SimpleData>
+		<SimpleData name="perigrafh">Παραλιακή Ζώνη - Παραλία Πέρδικα</SimpleData>
+		<SimpleData name="dhmos">Δ.Αίγινας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.44766129703925,37.69075055638951</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ύδρας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">17</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Πειραιώς</SimpleData>
+		<SimpleData name="id">303.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.196.1</SimpleData>
+		<SimpleData name="lat">37.353644009999996</SimpleData>
+		<SimpleData name="lon">23.471106769999999</SimpleData>
+		<SimpleData name="perigrafh">ΛΙΜΕΝΑΣ ΥΔΡΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ύδρας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.469434007203677,37.35103820801811</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πόρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">18</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Πειραιώς</SimpleData>
+		<SimpleData name="id">1010.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.48.1</SimpleData>
+		<SimpleData name="lat">37.503188999999999</SimpleData>
+		<SimpleData name="lon">23.460101999999999</SimpleData>
+		<SimpleData name="perigrafh">Λιμάνι-Παραλία</SimpleData>
+		<SimpleData name="dhmos">Δ.Πόρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.458426240201746,37.500583765049186</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νικηφόρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">19</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Δράμας</SimpleData>
+		<SimpleData name="id">1019.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.44.1</SimpleData>
+		<SimpleData name="lat">41.165866000000001</SimpleData>
+		<SimpleData name="lon">24.308246000000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΛΑΤΑΝΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Νικηφόρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.306453539796603,41.163297100446556</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Δράμας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">20</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Δράμας</SimpleData>
+		<SimpleData name="id">129.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.12.1</SimpleData>
+		<SimpleData name="lat">41.147602399999997</SimpleData>
+		<SimpleData name="lon">24.148736180000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ-ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΔΡΑΜΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Δράμας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.146949243894205,41.145030875836042</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κάτω Νευροκοπίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">21</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Δράμας</SimpleData>
+		<SimpleData name="id">127.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.4.1</SimpleData>
+		<SimpleData name="lat">41.343971000000003</SimpleData>
+		<SimpleData name="lon">23.866589999999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κάτω Νευροκοπίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.864806658281815,41.341396676604042</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φωτολίβους</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">22</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Δράμας</SimpleData>
+		<SimpleData name="id">235.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.252.1</SimpleData>
+		<SimpleData name="lat">41.059635810000003</SimpleData>
+		<SimpleData name="lon">24.049461500000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ και ΣΙΔΗΡΟΔΡΟΜΙΚΟΣ ΣΤΑΘΜΟΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φωτολίβους</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.04768007798161,41.057062050475849</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φιλίππων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">23</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Καβάλας</SimpleData>
+		<SimpleData name="id">1120.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.156.1</SimpleData>
+		<SimpleData name="lat">41.011896000000000</SimpleData>
+		<SimpleData name="lon">24.284758000000000</SimpleData>
+		<SimpleData name="perigrafh">ΑΡΧΑΙΟΛΟΓΙΚΟΣ ΧΩΡΟΣ ΦΙΛΙΠΠΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φιλίππων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.282970456919671,41.009325506030144</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καβάλας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">24</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Καβάλας</SimpleData>
+		<SimpleData name="id">155.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.52.1</SimpleData>
+		<SimpleData name="lat">40.934695200000000</SimpleData>
+		<SimpleData name="lon">24.407481590000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ ΧΕΡΣΟΝΗΣΟΣ ΠΑΝΑΓΙΑΣ - ΛΙΜΑΝΙ ΚΑΒΑΛΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καβάλας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.405692282275538,40.932125998981626</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Χρυσούπολης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">25</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Καβάλας</SimpleData>
+		<SimpleData name="id">300.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.180.1</SimpleData>
+		<SimpleData name="lat">40.915647630000002</SimpleData>
+		<SimpleData name="lon">24.627763470000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΚΑΒΑΛΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Χρυσούπολης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.625967793168243,40.913081701937003</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κυπρίνος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">26</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Έβρου</SimpleData>
+		<SimpleData name="id">330.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.252.1</SimpleData>
+		<SimpleData name="lat">41.575701780000003</SimpleData>
+		<SimpleData name="lon">26.226657899999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΔΗΜΟΥ ΚΥΠΡΙΝΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κυπρίνος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.224794408965824,41.573166839708733</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αλεξανδρούπολης (Επιβατικό Λιμάνι)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">27</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Έβρου</SimpleData>
+		<SimpleData name="id">186.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.172.1</SimpleData>
+		<SimpleData name="lat">40.843808950000003</SimpleData>
+		<SimpleData name="lon">25.879306719999999</SimpleData>
+		<SimpleData name="perigrafh">ΕΠΙΒΑΤΙΚΟΣ ΛΙΜΕΝΑΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ-ΧΕΡΣΑΙΑ ΖΩΝΗ ΛΙΜΕΝΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αλεξανδρούπολης (Επιβατικό Λιμάνι)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.877474427102083,40.841262121443748</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αλεξανδρούπολης (Πλατεία Φάρου)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">28</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Έβρου</SimpleData>
+		<SimpleData name="id">104.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.236.1</SimpleData>
+		<SimpleData name="lat">40.843133530000003</SimpleData>
+		<SimpleData name="lon">25.876981350000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΦΑΡΟΥ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ , ΤΜΗΜΑ ΛΙΜΕΝΑ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ , ΤΜΗΜΑ ΧΩΡΟΥ ΣΤΑΘΜΕΥΣΗΣ ΑΥΤΟΚΙΝΗΤΩΝ , ΝΑΥΤΙΚΟΣ ΟΜΙΛΟΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αλεξανδρούπολης (Πλατεία Φάρου)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.875149146534703,40.840586658913828</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ξάνθης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">29</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Ξάνθης</SimpleData>
+		<SimpleData name="id">282.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.156.1</SimpleData>
+		<SimpleData name="lat">41.137032140000002</SimpleData>
+		<SimpleData name="lon">24.886893590000000</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική Πλατεία Ξάνθης</SimpleData>
+		<SimpleData name="dhmos">Δ.Ξάνθης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.885083799700841,41.134472053336708</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σταυρουπόλεως Ξάνθης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">30</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Ξάνθης</SimpleData>
+		<SimpleData name="id">177.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.132.1</SimpleData>
+		<SimpleData name="lat">41.198391160000000</SimpleData>
+		<SimpleData name="lon">24.705164409999998</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ-ΣΤΑΣΗ ΚΤΕΛ-ΣΤΑΘΜΟΣ ΟΣΕ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σταυρουπόλεως Ξάνθης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.703358605372497,41.19582872451322</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σαπών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">31</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Ροδόπης</SimpleData>
+		<SimpleData name="id">222.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.228.1</SimpleData>
+		<SimpleData name="lat">41.025839259999998</SimpleData>
+		<SimpleData name="lon">25.698642690000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΟΛΥΔΥΝΑΜΟΣ ΣΤΑΘΜΟΣ ΝΕΟΛΑΙΑΣ - ΠΕΖΟΡΔΟΜΟΣ ΜΠΑΚΟΓΙΑΝΝΗ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σαπών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.696810888286009,41.023291077948976</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ιάσμου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">32</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Ροδόπης</SimpleData>
+		<SimpleData name="id">12.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.60.1</SimpleData>
+		<SimpleData name="lat">41.125943620000001</SimpleData>
+		<SimpleData name="lon">25.187203279999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΙΑΣΜΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ιάσμου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.185384467047619,41.123388171142459</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αρριανά</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">33</SimpleData>
+		<SimpleData name="peripherei">Ανατ. Μακεδονίας και Θράκης</SimpleData>
+		<SimpleData name="nomarchia">Ροδόπης</SimpleData>
+		<SimpleData name="id">238.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.12.1</SimpleData>
+		<SimpleData name="lat">41.081470000000003</SimpleData>
+		<SimpleData name="lon">25.695164999999999</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Αρριανά</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.693331761250853,41.07892222968966</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μυτιλήνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">34</SimpleData>
+		<SimpleData name="peripherei">Βορείου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Λέσβου</SimpleData>
+		<SimpleData name="id">283.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.164.1</SimpleData>
+		<SimpleData name="lat">39.104655000000001</SimpleData>
+		<SimpleData name="lon">26.560231000000002</SimpleData>
+		<SimpleData name="perigrafh">ΕΠΙΒΑΤΙΚΟΣ ΛΙΜΕΝΑΣ ΜΥΤΙΛΗΝΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μυτιλήνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.55842447484817,39.1021054203338</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σαμίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">35</SimpleData>
+		<SimpleData name="peripherei">Βορείου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Σάμου</SimpleData>
+		<SimpleData name="id">293.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.252.1</SimpleData>
+		<SimpleData name="lat">37.757463999999999</SimpleData>
+		<SimpleData name="lon">26.971302000000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΠΥΘΑΓΟΡΑ ΣΑΜΟΥ-ΠΑΡΑΛΙΑΚΗ ΛΕΩΦΟΡΟ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σαμίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.969516944733858,37.754911685496282</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πυθαγορείου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">36</SimpleData>
+		<SimpleData name="peripherei">Βορείου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Σάμου</SimpleData>
+		<SimpleData name="id">314.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.4.1</SimpleData>
+		<SimpleData name="lat">37.697098269999998</SimpleData>
+		<SimpleData name="lon">26.915773990000002</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΣΑΜΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Πυθαγορείου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.913991968564996,37.694544740203035</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ιωνίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">37</SimpleData>
+		<SimpleData name="peripherei">Βορείου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Χίου</SimpleData>
+		<SimpleData name="id">1044.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.84.1</SimpleData>
+		<SimpleData name="lat">38.265225000000001</SimpleData>
+		<SimpleData name="lon">26.103359999999999</SimpleData>
+		<SimpleData name="perigrafh">ΧΕΡΣΑΙΑ ΖΩΝΗ ΛΙΜΕΝΑ Δ. ΚΑΤΑΡΡΑΚΤΗ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ιωνίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.101587756885248,38.262662758086563</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Θυμιανών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">38</SimpleData>
+		<SimpleData name="peripherei">Βορείου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Χίου</SimpleData>
+		<SimpleData name="id">3.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.36.1</SimpleData>
+		<SimpleData name="lat">38.313447629999999</SimpleData>
+		<SimpleData name="lon">26.133458860000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΦΑΤΟΥΡΟΥ ΠΑΛΑΙΟ ΔΗΜΑΡΧΕΙΟ</SimpleData>
+		<SimpleData name="dhmos">Δ.Θυμιανών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.131684563668067,38.310886150593078</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κάτω Καστριτσίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">39</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αχαϊας</SimpleData>
+		<SimpleData name="id">152.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.260.1</SimpleData>
+		<SimpleData name="lat">38.274827999999999</SimpleData>
+		<SimpleData name="lon">21.761769999999999</SimpleData>
+		<SimpleData name="perigrafh">ΧΩΡΟΙ ΕΝΤΟΣ ΤΗΣ ΠΑΝΕΠΙΣΤΗΜΙΟΥΠΟΛΗΣ -ΠΕΡΙΜΕΤΡΙΚΑ ΚΤΙΡΙΟΥ ΔΙΟΙΚΗΣΗΣ ΚΑΙ ΠΡΥΤΑΝΕΙΑΣ - ΧΩΡΟΣ ΣΥΝΑΘΡΟΙΣΗΣ-ΣΥΝΕΔΡΙΑΚΟ ΚΑΙ ΠΟΛΙΤΙΣΤΙΚΟ ΚΕΝΤΡΟ -</SimpleData>
+		<SimpleData name="dhmos">Δ.Κάτω Καστριτσίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.760129418390417,38.272202648240409</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πατρέων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">40</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αχαϊας</SimpleData>
+		<SimpleData name="id">143.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.20.1</SimpleData>
+		<SimpleData name="lat">38.249710530000002</SimpleData>
+		<SimpleData name="lon">21.736583069999998</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ (ΟΛΓΑΣ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Πατρέων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.734943846267431,38.247084701652078</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αιγίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">41</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αχαϊας</SimpleData>
+		<SimpleData name="id">176.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.124.1</SimpleData>
+		<SimpleData name="lat">38.253973530000003</SimpleData>
+		<SimpleData name="lon">22.082501680000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΗΠΟΣ ΠΡΩΗΝ ΕΡΓΟΣΤΑΣΙΟΥ ΧΑΡΤΟΠΟΙΙΑΣ ΑΙΓΙΟΥ-ΛΙΜΕΝΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αιγίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.080851494941793,38.251352570585155</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Λαμπείας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">42</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Ηλείας</SimpleData>
+		<SimpleData name="id">1110.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.140.1</SimpleData>
+		<SimpleData name="lat">37.858862000000002</SimpleData>
+		<SimpleData name="lon">21.803334000000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ (ΑΓΟΡΑ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Λαμπείας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.801701379893981,37.856235223945347</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ΤΕΙ Πατρών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">43</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Ηλείας</SimpleData>
+		<SimpleData name="id">1040.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.76.1</SimpleData>
+		<SimpleData name="lat">37.794966000000002</SimpleData>
+		<SimpleData name="lon">21.346242000000000</SimpleData>
+		<SimpleData name="perigrafh">ΕΚΠΑΙΔΕΥΤΙΚΟ ΙΔΡΥΜΑ, ΤΕΙ ΠΑΤΡΩΝ - ΠΑΡΑΡΤΗΜΑ ΑΜΑΛΙΑΔΑΣ</SimpleData>
+		<SimpleData name="dhmos">ΤΕΙ Πατρών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.344625131198175,37.792332627755314</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κατακόλου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">44</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Ηλείας</SimpleData>
+		<SimpleData name="id">290.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.52.1</SimpleData>
+		<SimpleData name="lat">37.647229390000000</SimpleData>
+		<SimpleData name="lon">21.321737469999999</SimpleData>
+		<SimpleData name="perigrafh">ΛΙΜΑΝΙ ΚΑΤΑΚΟΛΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κατακόλου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.320124579428317,37.644595032149866</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αμαλιάδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">45</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Ηλείας</SimpleData>
+		<SimpleData name="id">219.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.44.1</SimpleData>
+		<SimpleData name="lat">37.796436079999999</SimpleData>
+		<SimpleData name="lon">21.352055839999998</SimpleData>
+		<SimpleData name="perigrafh">ΔΗΜΟΤΙΚΗ ΒΙΒΛΙΟΘΗΚΗ, ΠΛΑΤΕΙΑ ΜΠΕΛΟΓΙΑΝΝΗ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αμαλιάδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.350438756060942,37.793802794105751</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κυλλήνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">46</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Ηλείας</SimpleData>
+		<SimpleData name="id">55.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.36.1</SimpleData>
+		<SimpleData name="lat">37.931965980000001</SimpleData>
+		<SimpleData name="lon">21.149973930000002</SimpleData>
+		<SimpleData name="perigrafh">ΛΙΜΑΝΙ ΚΥΛΛΗΝΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κυλλήνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.148360267656173,37.929330530299708</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγρινίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">47</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αιτωλίας και Ακαρνανίας</SimpleData>
+		<SimpleData name="id">1076.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.124.1</SimpleData>
+		<SimpleData name="lat">38.621488999999997</SimpleData>
+		<SimpleData name="lon">21.407622000000000</SimpleData>
+		<SimpleData name="perigrafh">ΔΗΜΟΤΙΚΟ ΠΑΡΚΟ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγρινίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.405984789630587,38.618860449273555</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Παραβόλας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">48</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αιτωλίας και Ακαρνανίας</SimpleData>
+		<SimpleData name="id">272.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.116.1</SimpleData>
+		<SimpleData name="lat">38.614067679999998</SimpleData>
+		<SimpleData name="lon">21.522993280000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Παραβόλας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.521352570676211,38.611440706851411</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νεοχωρίου Μεσολογγίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">49</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αιτωλίας και Ακαρνανίας</SimpleData>
+		<SimpleData name="id">249.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.44.1</SimpleData>
+		<SimpleData name="lat">38.409335169999999</SimpleData>
+		<SimpleData name="lon">21.276655770000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Νεοχωρίου Μεσολογγίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.275027517047938,38.40670372402068</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μύτικα</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">50</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αιτωλίας και Ακαρνανίας</SimpleData>
+		<SimpleData name="id">317.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.212.1</SimpleData>
+		<SimpleData name="lat">38.669242509999997</SimpleData>
+		<SimpleData name="lon">20.946048579999999</SimpleData>
+		<SimpleData name="perigrafh">Final: Κτίριο Πνευματικού Κέντρου Μύτικα-εφαπτόμενη πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Μύτικα</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.944425033609541,38.666607770273025</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μεσολογγίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">51</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Ελλάδος</SimpleData>
+		<SimpleData name="nomarchia">Αιτωλίας και Ακαρνανίας</SimpleData>
+		<SimpleData name="id">179.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.140.1</SimpleData>
+		<SimpleData name="lat">38.368377729999999</SimpleData>
+		<SimpleData name="lon">21.432993300000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μεσολογγίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.431361003432329,38.365748255654388</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μανιάκων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">52</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">195.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.204.1</SimpleData>
+		<SimpleData name="lat">40.501414859999997</SimpleData>
+		<SimpleData name="lon">21.247271229999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΟ ΠΑΡΚΟ - ΠΛΑΤΕΙΑ ΤΩΝ ΜΑΝΙΑΚΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μανιάκων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.245594459228176,40.498795068355896</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καστοριάς</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">53</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">173.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.100.1</SimpleData>
+		<SimpleData name="lat">40.521224490000002</SimpleData>
+		<SimpleData name="lon">21.261886329999999</SimpleData>
+		<SimpleData name="perigrafh">Πάρκο Ολυμπιακής Φλόγας.</SimpleData>
+		<SimpleData name="dhmos">Δ.Καστοριάς</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.260208586662277,40.518605041468227</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Βογατσικού</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">54</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">254.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.68.1</SimpleData>
+		<SimpleData name="lat">40.414848700000000</SimpleData>
+		<SimpleData name="lon">21.380538520000002</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Βογατσικού</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.378859542194323,40.412230272353689</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γάβρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">55</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">77.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.188.1</SimpleData>
+		<SimpleData name="lat">40.623385790000000</SimpleData>
+		<SimpleData name="lon">21.203987059999999</SimpleData>
+		<SimpleData name="perigrafh">ΣΧΟΛΙΚΟ ΣΥΓΚΡΟΤΗΜΑ Ν. ΟΙΚΙΣΜΟΥ ΚΟΡΕΣΤΕΙΩΝ-Ν. ΟΙΚΙΣΜΟΣ ΚΟΡΕΣΤΕΙΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Γάβρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.202308664722654,40.620766180392124</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγίων Αναργύρων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">56</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">1020.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.52.1</SimpleData>
+		<SimpleData name="lat">40.504956999999997</SimpleData>
+		<SimpleData name="lon">21.376132999999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ Δ. ΚΟΡΗΣΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγίων Αναργύρων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.374451921611957,40.502339103794462</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Αρρένων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">57</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">1111.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.204.1</SimpleData>
+		<SimpleData name="lat">40.222413000000003</SimpleData>
+		<SimpleData name="lon">21.022418999999999</SimpleData>
+		<SimpleData name="perigrafh">Πνευματικό Κέντρο</SimpleData>
+		<SimpleData name="dhmos">Κ.Αρρένων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.020756479422126,40.219788160625825</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νεστορίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">58</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Καστοριάς</SimpleData>
+		<SimpleData name="id">1105.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.124.1</SimpleData>
+		<SimpleData name="lat">40.417158000000001</SimpleData>
+		<SimpleData name="lon">21.057545999999999</SimpleData>
+		<SimpleData name="perigrafh">Βιβλιοθήκη</SimpleData>
+		<SimpleData name="dhmos">Δ.Νεστορίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.055877542272437,40.414534912071083</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σερβίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">59</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κοζάνης</SimpleData>
+		<SimpleData name="id">73.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.172.1</SimpleData>
+		<SimpleData name="lat">40.185058390000002</SimpleData>
+		<SimpleData name="lon">21.999074310000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ-ΔΗΜΑΡΧΕΙΟ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σερβίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.997380972520382,40.182447466007439</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πτολεμαΐδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">60</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κοζάνης</SimpleData>
+		<SimpleData name="id">248.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.36.1</SimpleData>
+		<SimpleData name="lat">40.513024000000001</SimpleData>
+		<SimpleData name="lon">21.679856000000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΟΛΗΣ.</SimpleData>
+		<SimpleData name="dhmos">Δ.Πτολεμαΐδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.67816480763442,40.510410589059376</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νεάπολης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">61</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κοζάνης</SimpleData>
+		<SimpleData name="id">158.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.68.1</SimpleData>
+		<SimpleData name="lat">40.313057800000003</SimpleData>
+		<SimpleData name="lon">21.386904290000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΤΙΡΙΟ ΠΑΛΙΟΥ ΔΗΜΑΡΧΕΙΟΥ ΝΕΑΠΟΛΗΣ- ΠΛΑΤΕΙΑ ΤΡΙΓΩΝΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Νεάπολης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.385227628088508,40.310438799660645</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Βελβεντού</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">62</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κοζάνης</SimpleData>
+		<SimpleData name="id">11.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.52.1</SimpleData>
+		<SimpleData name="lat">40.254922069999999</SimpleData>
+		<SimpleData name="lon">22.074160729999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ-ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΒΕΛΒΕΝΤΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Βελβεντού</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.072463230801361,40.252312707763316</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αναρράχης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">63</SimpleData>
+		<SimpleData name="peripherei">Δυτικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κοζάνης</SimpleData>
+		<SimpleData name="id">156.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.60.1</SimpleData>
+		<SimpleData name="lat">40.492789230000000</SimpleData>
+		<SimpleData name="lon">21.569968700000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΗΡΩΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αναρράχης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.568281595549298,40.490174077121843</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Περάμα</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">64</SimpleData>
+		<SimpleData name="peripherei">Ηπείρου</SimpleData>
+		<SimpleData name="nomarchia">Ιωαννίνων</SimpleData>
+		<SimpleData name="id">299.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.92.1</SimpleData>
+		<SimpleData name="lat">39.693507930000003</SimpleData>
+		<SimpleData name="lon">20.824022589999998</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΙΩΑΝΝΙΝΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Περάμα</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.82237928600054,39.690877050220607</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ιωαννιτών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">65</SimpleData>
+		<SimpleData name="peripherei">Ηπείρου</SimpleData>
+		<SimpleData name="nomarchia">Ιωαννίνων</SimpleData>
+		<SimpleData name="id">206.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.84.1</SimpleData>
+		<SimpleData name="lat">39.664290039999997</SimpleData>
+		<SimpleData name="lon">20.853355310000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΠΥΡΡΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ιωαννιτών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.851711742571688,39.661659405130521</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κομποτίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">66</SimpleData>
+		<SimpleData name="peripherei">Ηπείρου</SimpleData>
+		<SimpleData name="nomarchia">Άρτης</SimpleData>
+		<SimpleData name="id">1008.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.28.1</SimpleData>
+		<SimpleData name="lat">39.133921999999998</SimpleData>
+		<SimpleData name="lon">21.062850999999998</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ, ΠΛΑΤΕΙΑ ΚΑΠΕΤΑΝΙΟΥ, ΠΛΑΤΕΙΑ ΛΕΥΚΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κομποτίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.061213070018461,39.131291330634895</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καρδίτσης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">67</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Καρδίτσης</SimpleData>
+		<SimpleData name="id">70.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.60.1</SimpleData>
+		<SimpleData name="lat">39.362248670000000</SimpleData>
+		<SimpleData name="lon">21.921757320000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΚΑΙ ΑΙΘΡΙΟΣ ΧΩΡΟΣ ΔΗΜΟΤΙΚΗΣ ΑΓΟΡΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καρδίτσης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.920086488865785,39.359631495816778</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ρεντίνας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">68</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Καρδίτσης</SimpleData>
+		<SimpleData name="id">89.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.68.1</SimpleData>
+		<SimpleData name="lat">39.064122619999999</SimpleData>
+		<SimpleData name="lon">21.978871280000000</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Ρεντίνας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.977205685852439,39.06150453917585</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σοφάδων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">69</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Καρδίτσης</SimpleData>
+		<SimpleData name="id">224.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.76.1</SimpleData>
+		<SimpleData name="lat">39.336250360000001</SimpleData>
+		<SimpleData name="lon">22.092961480000000</SimpleData>
+		<SimpleData name="perigrafh">ΤΡΙΓΩΝΗ Πλατεία, ΑΓ. ΠΑΡΑΣΚΕΥΗΣ ΚΑΙ ΠΕΖΟΔΡΟΜΟΣ 28ΗΣ ΟΚΤΩΒΡΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σοφάδων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.091285816781106,39.333635493342427</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Τυρνάβου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">70</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Λαρίσης</SimpleData>
+		<SimpleData name="id">26.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.12.1</SimpleData>
+		<SimpleData name="lat">39.742735830000001</SimpleData>
+		<SimpleData name="lon">22.292552250000000</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική Πλατεία Νικ. Εμμανουήλ-ΔΗΜΑΡΧΕΙΟ</SimpleData>
+		<SimpleData name="dhmos">Δ.Τυρνάβου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.290860411069552,39.740126341226947</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σηπιάδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">71</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">1142.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.180.1</SimpleData>
+		<SimpleData name="lat">39.177582000000001</SimpleData>
+		<SimpleData name="lon">23.246813000000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΛΑΥΚΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σηπιάδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.245104845603613,39.174982937380697</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πτελέου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">72</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">1070.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.116.1</SimpleData>
+		<SimpleData name="lat">39.052585000000001</SimpleData>
+		<SimpleData name="lon">22.953099999999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΤΕΛΕΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Πτελέου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.951404010342785,39.049980891937871</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Τσαγκαράδας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">73</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">111.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.20.1</SimpleData>
+		<SimpleData name="lat">39.379898249999997</SimpleData>
+		<SimpleData name="lon">23.181251280000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΑΓΙΑΣ ΠΑΡΑΣΚΕΥΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Τσαγκαράδας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.179540253381351,39.377299484270594</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σκιάθου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">74</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">324.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.228.1</SimpleData>
+		<SimpleData name="lat">39.176554660000001</SimpleData>
+		<SimpleData name="lon">23.504900769999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΣΚΙΑΘΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σκιάθου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.503184623540616,39.173959382923108</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νέας Αγχιάλου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">75</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">274.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.36.1</SimpleData>
+		<SimpleData name="lat">39.279282500000001</SimpleData>
+		<SimpleData name="lon">22.817034780000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΝΕΑΣ ΑΓΧΙΑΛΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Νέας Αγχιάλου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.815337605047279,39.276677778900485</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κροκίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">76</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">315.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.44.1</SimpleData>
+		<SimpleData name="lat">39.218999040000000</SimpleData>
+		<SimpleData name="lon">22.796256870000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ Ν.ΑΓΧΙΑΛΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κροκίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.794561799367433,39.216393650098077</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Βόλου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">77</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">262.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.28.1</SimpleData>
+		<SimpleData name="lat">39.358913190000003</SimpleData>
+		<SimpleData name="lon">22.944514600000002</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΞ ΠΡΟΒΛΗΤΑ-ΚΕΝΤΡΙΚΗ ΠΑΡΑΛΙΑ ΟΔΟΥ ΑΡΓΟΝΑΥΤΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Βόλου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.942811496833979,39.35631082059507</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Κεραμιδίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">78</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">1100.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.212.1</SimpleData>
+		<SimpleData name="lat">39.571598999999999</SimpleData>
+		<SimpleData name="lon">22.910291999999998</SimpleData>
+		<SimpleData name="perigrafh">Πάρκο</SimpleData>
+		<SimpleData name="dhmos">Κ.Κεραμιδίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.90858478193859,39.56899746537318</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Μακρινίτσας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">79</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Μαγνησίας</SimpleData>
+		<SimpleData name="id">1017.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.220.1</SimpleData>
+		<SimpleData name="lat">39.402033000000003</SimpleData>
+		<SimpleData name="lon">22.986950000000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Κ.Μακρινίτσας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.985244517206194,39.399431520660748</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πύλης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">80</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Τρικάλων</SimpleData>
+		<SimpleData name="id">193.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.188.1</SimpleData>
+		<SimpleData name="lat">39.459060000000001</SimpleData>
+		<SimpleData name="lon">21.623588569999999</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική πλατεία κτιρίου Δημαρχείου</SimpleData>
+		<SimpleData name="dhmos">Δ.Πύλης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.62192497266631,39.456439123133713</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φαρκαδόνος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">81</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Τρικάλων</SimpleData>
+		<SimpleData name="id">74.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.180.1</SimpleData>
+		<SimpleData name="lat">39.591825419999999</SimpleData>
+		<SimpleData name="lon">22.069608660000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φαρκαδόνος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.067927602110935,39.589211755991442</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Οιχαλίας (Νεοχωρίου)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">82</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Τρικάλων</SimpleData>
+		<SimpleData name="id">180.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.148.1</SimpleData>
+		<SimpleData name="lat">39.606410550000000</SimpleData>
+		<SimpleData name="lon">21.981475700000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Οιχαλίας (Νεοχωρίου)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.979797105672603,39.603795701092729</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γομφών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">83</SimpleData>
+		<SimpleData name="peripherei">Θεσσαλίας</SimpleData>
+		<SimpleData name="nomarchia">Τρικάλων</SimpleData>
+		<SimpleData name="id">1072.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.28.1</SimpleData>
+		<SimpleData name="lat">39.463912999999998</SimpleData>
+		<SimpleData name="lon">21.693363000000002</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Γομφών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.691697049100561,39.461293150478618</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Λαγανά</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">84</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Ζακύνθου</SimpleData>
+		<SimpleData name="id">1127.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.172.1</SimpleData>
+		<SimpleData name="lat">37.715161999999999</SimpleData>
+		<SimpleData name="lon">20.863788000000000</SimpleData>
+		<SimpleData name="perigrafh">ΜΑΡΙΝΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Λαγανά</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.862188102265939,37.712521696507707</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αρκαδίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">85</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Ζακύνθου</SimpleData>
+		<SimpleData name="id">1006.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.20.1</SimpleData>
+		<SimpleData name="lat">37.810665000000000</SimpleData>
+		<SimpleData name="lon">20.843896999999998</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ Δ. ΣΑΡΑΚΙΝΑΔΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αρκαδίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.842295675259194,37.808024835759021</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κατασταρίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">86</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Ζακύνθου</SimpleData>
+		<SimpleData name="id">40.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.108.1</SimpleData>
+		<SimpleData name="lat">37.840917800000000</SimpleData>
+		<SimpleData name="lon">20.770251479999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΜΠΟΡΙΑ ΠΕΡΙΟΧΗΣ ΑΛΥΚΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κατασταρίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.768651841752064,37.838276765895131</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ζακυνθίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">87</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Ζακύνθου</SimpleData>
+		<SimpleData name="id">296.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.172.1</SimpleData>
+		<SimpleData name="lat">37.750561060000003</SimpleData>
+		<SimpleData name="lon">20.885583960000002</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΖΑΚΥΝΘΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ζακυνθίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.883982609367141,37.747921203550455</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κερκυραίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">88</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Κέρκυρας</SimpleData>
+		<SimpleData name="id">234.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.244.1</SimpleData>
+		<SimpleData name="lat">39.626887429999996</SimpleData>
+		<SimpleData name="lon">19.913188770000001</SimpleData>
+		<SimpleData name="perigrafh">ΕΠΙΒΑΤΙΚΟ ΛΙΜΑΝΙ ΚΕΡΚΥΡΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κερκυραίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>19.911576915871283,39.624243409023549</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Παλαιοκαστριτών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">89</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Κέρκυρας</SimpleData>
+		<SimpleData name="id">1113.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.132.1</SimpleData>
+		<SimpleData name="lat">39.672004000000001</SimpleData>
+		<SimpleData name="lon">19.703375999999999</SimpleData>
+		<SimpleData name="perigrafh">Λιμάνι</SimpleData>
+		<SimpleData name="dhmos">Δ.Παλαιοκαστριτών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>19.701770041687897,39.669357320981952</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγίας Ευφημίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">90</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Κεφαλληνίας</SimpleData>
+		<SimpleData name="id">90.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.220.1</SimpleData>
+		<SimpleData name="lat">38.302621080000002</SimpleData>
+		<SimpleData name="lon">20.599872720000000</SimpleData>
+		<SimpleData name="perigrafh">ΛΙΜΑΝΙ/ΜΑΡΙΝΑ ΑΓΙΑΣ ΕΥΦΗΜΙΑΣ - ΠΥΛΑΡΟΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγίας Ευφημίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.598268453945906,38.299979794532383</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αργοστολίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">91</SimpleData>
+		<SimpleData name="peripherei">Ιονίων Νήσων</SimpleData>
+		<SimpleData name="nomarchia">Κεφαλληνίας</SimpleData>
+		<SimpleData name="id">258.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.76.1</SimpleData>
+		<SimpleData name="lat">38.179319700000001</SimpleData>
+		<SimpleData name="lon">20.488033349999998</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Βαλλιάνου</SimpleData>
+		<SimpleData name="dhmos">Δ.Αργοστολίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.486435375876091,38.176676324309568</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πλατέος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">92</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Ημαθίας</SimpleData>
+		<SimpleData name="id">24.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.76.1</SimpleData>
+		<SimpleData name="lat">40.643935239999998</SimpleData>
+		<SimpleData name="lon">22.533591009999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΜΑΚΕΔΟΝΙΑΣ - ΣΙΔΗΡΟΔΡΟΜΙΚΟΣ ΣΤΑΘΜΟΣ ΠΛΑΤΕΟΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Πλατέος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.531868856286273,40.641335347251072</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αλεξανδρείας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">93</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Ημαθίας</SimpleData>
+		<SimpleData name="id">78.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.196.1</SimpleData>
+		<SimpleData name="lat">40.627755639999997</SimpleData>
+		<SimpleData name="lon">22.433669370000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΟΣΕ - ΠΛΑΤΕΙΑ  ΕΛΕΥΘΕΡΙΑΣ -ΠΛΑΤΕΙΑ ΠΝΕΥΜΑΤΙΚΟΥ ΠΟΛΙΤΙΣΤΙΚΟΥ ΚΕΝΤΡΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αλεξανδρείας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.431950849080767,40.625154144328441</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μακεδονίδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">94</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Ημαθίας</SimpleData>
+		<SimpleData name="id">1027.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.108.1</SimpleData>
+		<SimpleData name="lat">40.350064000000003</SimpleData>
+		<SimpleData name="lon">22.209506000000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Μακεδονίδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.207801754071337,40.347457265820928</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ωραιοκάστρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">95</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">46.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.124.1</SimpleData>
+		<SimpleData name="lat">40.731125280000001</SimpleData>
+		<SimpleData name="lon">22.918239910000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΑΓΟΡΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ωραιοκάστρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.916503155995009,40.728531775831634</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Χαλάστρας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">96</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">154.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.44.1</SimpleData>
+		<SimpleData name="lat">40.627579009999998</SimpleData>
+		<SimpleData name="lon">22.733471860000002</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Χαλάστρας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.731743706781248,40.624981986484777</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Συκεών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">97</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">23.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.148.1</SimpleData>
+		<SimpleData name="lat">40.643653639999997</SimpleData>
+		<SimpleData name="lon">22.948713059999999</SimpleData>
+		<SimpleData name="perigrafh">Πολιτιστική Γειτονία Δήμου-Πάρκο Ελπίδος</SimpleData>
+		<SimpleData name="dhmos">Δ.Συκεών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.946977601082789,40.641059959547185</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σταυρουπόλεως Θεσσαλονίκης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">98</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">44.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.156.1</SimpleData>
+		<SimpleData name="lat">40.673578890000002</SimpleData>
+		<SimpleData name="lon">22.929697860000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ ΑΝΩ ΗΛΙΟΥΠΟΛΗ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σταυρουπόλεως Θεσσαλονίκης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.927962233515906,40.670985140202163</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σοχού</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">99</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">251.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.60.1</SimpleData>
+		<SimpleData name="lat">40.666564930000000</SimpleData>
+		<SimpleData name="lon">22.951264729999998</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΔΑΒΑΚΗ (ΑΓΙΟΥ ΓΕΩΡΓΙΟΥ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Σοχού</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.949528595763383,40.663971453623112</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Όσσης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">100</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">194.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.196.1</SimpleData>
+		<SimpleData name="lat">40.883852449999999</SimpleData>
+		<SimpleData name="lon">23.228429030000001</SimpleData>
+		<SimpleData name="perigrafh">ΑΥΛΕΙΟΣ ΧΩΡΟΣ - ΔΗΜΑΡΧΕΙΟΥ ΤΟΥ ΔΗΜΟΥ ΒΕΡΤΙΣΚΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Όσσης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.226678361171807,40.881264762040487</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νέας Μηχανιώνας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">101</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">242.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.20.1</SimpleData>
+		<SimpleData name="lat">40.463819290000004</SimpleData>
+		<SimpleData name="lon">22.858631010000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Νέας Μηχανιώνας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.856903061171835,40.461222975588363</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νεαπόλεως Θεσσαλονίκης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">102</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">255.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.172.1</SimpleData>
+		<SimpleData name="lat">40.655080499999997</SimpleData>
+		<SimpleData name="lon">22.946909999999999</SimpleData>
+		<SimpleData name="perigrafh">Δημοτική Βιβλιοθήκη-πάρκο Στρεμπενιώτη-Δημοτική πισίνα</SimpleData>
+		<SimpleData name="dhmos">Δ.Νεαπόλεως Θεσσαλονίκης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.945174302677799,40.6524868750423</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μενεμένης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">103</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">22.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.140.1</SimpleData>
+		<SimpleData name="lat">40.657245160000002</SimpleData>
+		<SimpleData name="lon">22.910083700000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΤΣΟΜΠΑΝΟΓΛΟΥ - ΚΕΠ - ΚΤΕΛ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μενεμένης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.90834912415502,40.654650997351375</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλαμαριάς</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">104</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">2.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.28.1</SimpleData>
+		<SimpleData name="lat">40.582782610000002</SimpleData>
+		<SimpleData name="lon">22.951479650000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ- ΠΕΖΟΔΡΟΜΟ ΤΗΣ ΟΔΟΥ ΚΟΜΝΗΝΩΝ-ΠΑΡΑΔΟΣΙΑΚΟ ΕΜΠΡΟΡΙΚΟ ΚΕΝΤΡΟ ΚΑΛΑΜΑΡΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλαμαριάς</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.949745676889826,40.580188532819605</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αμπελοκήπων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">105</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">225.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.164.1</SimpleData>
+		<SimpleData name="lat">40.653851750000001</SimpleData>
+		<SimpleData name="lon">22.923234740000002</SimpleData>
+		<SimpleData name="perigrafh">ΠΑΡΚΟ ΦΙΛΙΠΠΟΥ- ΠΑΡΚΟ ΑΝΑΨΥΧΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αμπελοκήπων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.921499831449367,40.65125776039558</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Εχέδωρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">106</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">1136.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.44.1</SimpleData>
+		<SimpleData name="lat">40.668658000000001</SimpleData>
+		<SimpleData name="lon">22.809307000000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Εχέδωρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.807575355181555,40.666062407148665</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Επανομής</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">107</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">1129.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.52.1</SimpleData>
+		<SimpleData name="lat">40.428230999999997</SimpleData>
+		<SimpleData name="lon">22.929054000000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Επανομής</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.927324716763032,40.425635487644229</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγίου Παύλου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">108</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Θεσσαλόνίκης</SimpleData>
+		<SimpleData name="id">1131.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.4.1</SimpleData>
+		<SimpleData name="lat">40.637709000000001</SimpleData>
+		<SimpleData name="lon">22.964590999999999</SimpleData>
+		<SimpleData name="perigrafh">Αρχαιολογικός χώρος</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγίου Παύλου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.962855187689339,40.635115515228684</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλλικράτειας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">109</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Χαλκιδικής</SimpleData>
+		<SimpleData name="id">1144.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.196.1</SimpleData>
+		<SimpleData name="lat">40.313885999999997</SimpleData>
+		<SimpleData name="lon">23.063564000000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΟΣ ΔΡΟΜΟΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλλικράτειας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.061833362409686,40.311291696589215</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ακάνθου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">110</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Χαλκιδικής</SimpleData>
+		<SimpleData name="id">1124.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.164.1</SimpleData>
+		<SimpleData name="lat">40.400457000000003</SimpleData>
+		<SimpleData name="lon">23.881295000000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΑΡΑΛΙΑ ΙΕΡΙΣΣΟΥ</SimpleData>
+		<SimpleData name="dhmos">Ακάνθου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.879536334663186,40.397875650683972</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ζερβοχωρίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">111</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Χαλκιδικής</SimpleData>
+		<SimpleData name="id">1137.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.60.1</SimpleData>
+		<SimpleData name="lat">40.500934999999998</SimpleData>
+		<SimpleData name="lon">23.451283000000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Ζερβοχωρίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.449535263364538,40.498347861938718</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πολυκάστρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">112</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κιλκίς</SimpleData>
+		<SimpleData name="id">328.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.84.1</SimpleData>
+		<SimpleData name="lat">41.009510470000002</SimpleData>
+		<SimpleData name="lon">22.661780329999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΤΙΡΙΟ ΔΗΜΟΥ ΠΟΛΥΚΑΣΤΡΟΥ-ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ-ΚΕΝΤΡΟ ΠΟΛΙΤΙΣΜΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Πολυκάστρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.660044550063546,41.006915153188565</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κιλκίς</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">113</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κιλκίς</SimpleData>
+		<SimpleData name="id">220.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.76.1</SimpleData>
+		<SimpleData name="lat">40.994487520000000</SimpleData>
+		<SimpleData name="lon">22.878047380000002</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΔΗΜΑΡΧΕΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κιλκίς</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.876305025386081,40.991895353766715</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αξιουπόλεως</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">114</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κιλκίς</SimpleData>
+		<SimpleData name="id">209.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.68.1</SimpleData>
+		<SimpleData name="lat">40.986154259999999</SimpleData>
+		<SimpleData name="lon">22.538562949999999</SimpleData>
+		<SimpleData name="perigrafh">ΜΟΥΣΕΙΟ ΦΥΣΙΚΗΣ ΙΣΤΟΡΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αξιουπόλεως</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.536831763614661,40.983556917568364</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ευρωπού</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">115</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Κιλκίς</SimpleData>
+		<SimpleData name="id">96.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.60.1</SimpleData>
+		<SimpleData name="lat">40.897102080000003</SimpleData>
+		<SimpleData name="lon">22.553408330000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ (ΠΑΡΚΟ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Ευρωπού</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.551678987807062,40.894504306854309</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γιαννιτσών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">116</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πέλλης</SimpleData>
+		<SimpleData name="id">1035.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.68.1</SimpleData>
+		<SimpleData name="lat">40.793019000000001</SimpleData>
+		<SimpleData name="lon">22.411745000000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΑΝΔΡΕΑ ΠΑΠΑΝΔΡΕΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Γιαννιτσών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.410022933588078,40.79041835397944</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αριδαίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">117</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πέλλης</SimpleData>
+		<SimpleData name="id">137.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.124.1</SimpleData>
+		<SimpleData name="lat">40.975480560000001</SimpleData>
+		<SimpleData name="lon">22.061751300000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΣΕΤΣΚΟΥ(ΠΡΩΗΝ ΕΛΕΥΘΕΡΙΑΣ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Αριδαίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.060035870588095,40.972876012529518</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλής</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">118</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πέλλης</SimpleData>
+		<SimpleData name="id">237.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.132.1</SimpleData>
+		<SimpleData name="lat">40.819046000000000</SimpleData>
+		<SimpleData name="lon">22.176653999999999</SimpleData>
+		<SimpleData name="perigrafh">Πεζόδρομος και κεντρική πλατεία οικισμού</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλής</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.174938874852057,40.816442038816668</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κρύας Βρύσης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">119</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πέλλης</SimpleData>
+		<SimpleData name="id">27.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.116.1</SimpleData>
+		<SimpleData name="lat">40.686433440000002</SimpleData>
+		<SimpleData name="lon">22.302492560000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ-ΔΗΜΑΡΧΕΙΟ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Κρύας Βρύσης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.300776767853502,40.683830407968749</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πέλλας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">120</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πέλλης</SimpleData>
+		<SimpleData name="id">1097.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.140.1</SimpleData>
+		<SimpleData name="lat">40.759359000000003</SimpleData>
+		<SimpleData name="lon">22.527144000000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Πέλλας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.525419078888952,40.756759835525365</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Λόφου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">121</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πιερίας</SimpleData>
+		<SimpleData name="id">35.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.180.1</SimpleData>
+		<SimpleData name="lat">40.180910779999998</SimpleData>
+		<SimpleData name="lon">22.330533930000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Λόφου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.328830039324302,40.178304691383993</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κατερίνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">122</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πιερίας</SimpleData>
+		<SimpleData name="id">213.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.188.1</SimpleData>
+		<SimpleData name="lat">40.272434050000001</SimpleData>
+		<SimpleData name="lon">22.508183530000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κατερίνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.506471649033617,40.269831198821556</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Παραλίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">123</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πιερίας</SimpleData>
+		<SimpleData name="id">29.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.196.1</SimpleData>
+		<SimpleData name="lat">40.267636650000000</SimpleData>
+		<SimpleData name="lon">22.599724840000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Παραλίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.598010151721361,40.265035121435155</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κορίνου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">124</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Πιερίας</SimpleData>
+		<SimpleData name="id">1037.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.76.1</SimpleData>
+		<SimpleData name="lat">40.316516000000000</SimpleData>
+		<SimpleData name="lon">22.577204999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Κορίνου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.575489796440721,40.313914471820596</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σιδηροκάστρου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">125</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Σερρών</SimpleData>
+		<SimpleData name="id">269.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.100.1</SimpleData>
+		<SimpleData name="lat">41.235437390000001</SimpleData>
+		<SimpleData name="lon">23.390346670000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σιδηροκάστρου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.388581464260817,41.232854865329365</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σερρών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">126</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Σερρών</SimpleData>
+		<SimpleData name="id">228.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.92.1</SimpleData>
+		<SimpleData name="lat">41.091192139999997</SimpleData>
+		<SimpleData name="lon">23.549769520000002</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Ελευθερίας</SimpleData>
+		<SimpleData name="dhmos">Δ.Σερρών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.548003095505109,41.088610935308246</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νιγρίτης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">127</SimpleData>
+		<SimpleData name="peripherei">Κεντρικής Μακεδονίας</SimpleData>
+		<SimpleData name="nomarchia">Σερρών</SimpleData>
+		<SimpleData name="id">270.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.108.1</SimpleData>
+		<SimpleData name="lat">40.908065399999998</SimpleData>
+		<SimpleData name="lon">23.500393689999999</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική πλατεία-Μπουγατσοπούλου</SimpleData>
+		<SimpleData name="dhmos">Δ.Νιγρίτης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.498633716673755,40.905482033819261</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Τυλίσου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">128</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ηρακλείου</SimpleData>
+		<SimpleData name="id">57.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.164.1</SimpleData>
+		<SimpleData name="lat">35.296044799999997</SimpleData>
+		<SimpleData name="lon">25.016559260000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ (ΠΕΡΔΙΚΑΡΗ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Τυλίσου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.014884970283148,35.293451965804024</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ηρακλείου (Σοφ. Βενιζέλου)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">129</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ηρακλείου</SimpleData>
+		<SimpleData name="id">171.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.92.1</SimpleData>
+		<SimpleData name="lat">35.343423020000003</SimpleData>
+		<SimpleData name="lon">25.130290680000002</SimpleData>
+		<SimpleData name="perigrafh">Νέο Κτιριακό Συγκρότημα Δήμου-Δημοτική καφετέρια</SimpleData>
+		<SimpleData name="dhmos">Δ.Ηρακλείου (Σοφ. Βενιζέλου)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.128612152441772,35.340831937211455</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ηρακλείου (Λιμάνι)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">130</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ηρακλείου</SimpleData>
+		<SimpleData name="id">207.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.212.1</SimpleData>
+		<SimpleData name="lat">35.341981570000002</SimpleData>
+		<SimpleData name="lon">25.147867869999999</SimpleData>
+		<SimpleData name="perigrafh">ΕΠΙΒΑΤΙΚΟ ΛΙΜΑΝΙ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ηρακλείου (Λιμάνι)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.146188868867291,35.339390725924638</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αμιρά</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">131</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ηρακλείου</SimpleData>
+		<SimpleData name="id">316.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.204.1</SimpleData>
+		<SimpleData name="lat">35.041573950000000</SimpleData>
+		<SimpleData name="lon">25.445530349999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Οικισμού - Λιμάνι</SimpleData>
+		<SimpleData name="dhmos">Δ.Αμιρά</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.443849048223186,35.038986135038456</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ανωπόλεως</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">132</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ηρακλείου</SimpleData>
+		<SimpleData name="id">276.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.124.1</SimpleData>
+		<SimpleData name="lat">35.328910389999997</SimpleData>
+		<SimpleData name="lon">25.288186560000000</SimpleData>
+		<SimpleData name="perigrafh">ΠΡΩΗΝ ΑΜΕΡΙΚΑΝΙΚΗ ΒΑΣΗ ΓΟΥΡΝΩΝ-ΛΙΜΕΝΑΣ (ΜΑΡΙΝΑ)-ΠΑΡΚΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ανωπόλεως</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.286503816970527,35.326321447740803</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ιτάνου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">133</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Λασιθίου</SimpleData>
+		<SimpleData name="id">1146.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.204.1</SimpleData>
+		<SimpleData name="lat">35.173808000000001</SimpleData>
+		<SimpleData name="lon">26.241703000000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΟΙΚΙΣΜΟΥ ΠΑΛΑΙΚΑΣΤΡΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ιτάνου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.239996514351656,35.171231809054959</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αθηναίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">134</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">178.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.4.1</SimpleData>
+		<SimpleData name="lat">37.979051769999998</SimpleData>
+		<SimpleData name="lon">23.715676590000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία-πάρκο Γκάζι, Πλατεία Σταθμού Μετρό Κεραμεικός, Πάρκο Τεχνόπολις</SimpleData>
+		<SimpleData name="dhmos">Δ.Αθηναίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.713982288082509,37.976452625533469</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγίας Βαρβάρας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">135</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">183.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.156.1</SimpleData>
+		<SimpleData name="lat">37.989666890000002</SimpleData>
+		<SimpleData name="lon">23.658678070000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Παναγίας Ελεούσας</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγίας Βαρβάρας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.656985256486305,37.987066981661151</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγίας Παρασκευής</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">136</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">49.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.12.1</SimpleData>
+		<SimpleData name="lat">38.012375159999998</SimpleData>
+		<SimpleData name="lon">23.822179819999999</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική πλατεία Αγίας Παρασκευής</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγίας Παρασκευής</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.820481517647458,38.009777730885034</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αλίμου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">137</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">148.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.36.1</SimpleData>
+		<SimpleData name="lat">37.911026999999997</SimpleData>
+		<SimpleData name="lon">23.713047000000000</SimpleData>
+		<SimpleData name="perigrafh">Παραλιακή ζώνη μήκους 1700m πού  εκτείνεται από την Μαρίνα Αλίμου έως την πλαζ «Ακτή του Ήλιου»</SimpleData>
+		<SimpleData name="dhmos">Δ.Αλίμου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.711354339080934,37.9084274555007</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αμαρουσίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">138</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">58.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.20.1</SimpleData>
+		<SimpleData name="lat">38.056131350000001</SimpleData>
+		<SimpleData name="lon">23.805803789999999</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική Πλατεία Αμαρουσίου (Περιοχή Σταθμού ΗΣΑΠ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Αμαρουσίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.804104974178454,38.053533921781323</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Βριλησσίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">139</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">54.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.156.1</SimpleData>
+		<SimpleData name="lat">38.046514360000003</SimpleData>
+		<SimpleData name="lon">23.839024290000001</SimpleData>
+		<SimpleData name="perigrafh">Πάρκο Μαρία Κάλλας</SimpleData>
+		<SimpleData name="dhmos">Δ.Βριλησσίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.837324688205129,38.043917359593635</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γαλατσίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">140</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">243.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.28.1</SimpleData>
+		<SimpleData name="lat">38.011789039999996</SimpleData>
+		<SimpleData name="lon">23.755827050000001</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική πλατεία Γαλατσίου</SimpleData>
+		<SimpleData name="dhmos">Δ.Γαλατσίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.754130775114,38.009190650079347</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ζωγράφου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">141</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">192.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.180.1</SimpleData>
+		<SimpleData name="lat">37.978119589999999</SimpleData>
+		<SimpleData name="lon">23.772083720000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Γαρδένια</SimpleData>
+		<SimpleData name="dhmos">Δ.Ζωγράφου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.770387726906279,37.975521253374239</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Δάφνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">142</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">175.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.116.1</SimpleData>
+		<SimpleData name="lat">37.950653119999998</SimpleData>
+		<SimpleData name="lon">23.735634489999999</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική πλατεία Δάφνης (Σταθμός Μετρό Δάφνης)</SimpleData>
+		<SimpleData name="dhmos">Δ.Δάφνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.733940234568852,37.948054111195333</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ιλίου (Νέων Λιοσίων)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">143</SimpleData>
+		<SimpleData name="peripherei">Αττικής</SimpleData>
+		<SimpleData name="nomarchia">Αθηνών</SimpleData>
+		<SimpleData name="id">189.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.20.1</SimpleData>
+		<SimpleData name="lat">38.040969609999998</SimpleData>
+		<SimpleData name="lon">23.697977880000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία “ΓΕΝΝΗΜΑΤΑ” - Κεντρική πλατεία του Δήμου Ιλίου</SimpleData>
+		<SimpleData name="dhmos">Δ.Ιλίου (Νέων Λιοσίων)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.696282690610925,38.038370543200763</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σητείας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">144</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Λασιθίου</SimpleData>
+		<SimpleData name="id">161.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.76.1</SimpleData>
+		<SimpleData name="lat">35.207444180000003</SimpleData>
+		<SimpleData name="lon">26.106593589999999</SimpleData>
+		<SimpleData name="perigrafh">ΓΡΑΦΕΙΟ ΠΛΗΡΟΦΟΡΙΩΝ ΔΗΜΟΥ-ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΟΛΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σητείας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.104890191868915,35.204866220423291</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νεαπόλεως Λασιθίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">145</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Λασιθίου</SimpleData>
+		<SimpleData name="id">280.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.148.1</SimpleData>
+		<SimpleData name="lat">35.255727059999998</SimpleData>
+		<SimpleData name="lon">25.607254840000000</SimpleData>
+		<SimpleData name="perigrafh">Κεντρική  πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Νεαπόλεως Λασιθίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.605564533301958,35.253142288661032</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ρεθύμνης (Πλ. Ηρώων Πολυτεχνείου)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">146</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ρεθύμνης</SimpleData>
+		<SimpleData name="id">174.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.108.1</SimpleData>
+		<SimpleData name="lat">35.369030680000002</SimpleData>
+		<SimpleData name="lon">24.470071480000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία Ηρώων Πολυτεχνείου</SimpleData>
+		<SimpleData name="dhmos">Δ.Ρεθύμνης (Πλ. Ηρώων Πολυτεχνείου)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.468411450553443,35.366430572036322</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ρεθύμνης (Ιστορικό Κέντρο)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">147</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ρεθύμνης</SimpleData>
+		<SimpleData name="id">277.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.132.1</SimpleData>
+		<SimpleData name="lat">35.366299880000000</SimpleData>
+		<SimpleData name="lon">24.472524109999998</SimpleData>
+		<SimpleData name="perigrafh">Ιστορικό κέντρο</SimpleData>
+		<SimpleData name="dhmos">Δ.Ρεθύμνης (Ιστορικό Κέντρο)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.470864065366463,35.363699796105287</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φοίνικα</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">148</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Ρεθύμνης</SimpleData>
+		<SimpleData name="id">1200.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.188.1</SimpleData>
+		<SimpleData name="lat">35.216071999999997</SimpleData>
+		<SimpleData name="lon">24.393896999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Φοίνικα</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.392242295930458,35.213470320686483</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Χανίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">149</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Χανίων</SimpleData>
+		<SimpleData name="id">42.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.116.1</SimpleData>
+		<SimpleData name="lat">35.518135020000003</SimpleData>
+		<SimpleData name="lon">24.023294910000001</SimpleData>
+		<SimpleData name="perigrafh">ΕΝΕΤΙΚΟ ΛΙΜΑΝΙ ΧΑΝΙΩΝ KAI ΠΕΡΙΟΧΗ ΚΟΥΜ ΚΑΠΙ</SimpleData>
+		<SimpleData name="dhmos">Δ.Χανίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.021644842170826,35.515529311086574</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μουζουρά</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">150</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Χανίων</SimpleData>
+		<SimpleData name="id">326.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.244.1</SimpleData>
+		<SimpleData name="lat">35.533991080000000</SimpleData>
+		<SimpleData name="lon">24.145746389999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΧΑΝΙΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μουζουρά</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.144092416801531,35.531387103927784</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γεωργιουπόλεως</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">151</SimpleData>
+		<SimpleData name="peripherei">Κρήτης</SimpleData>
+		<SimpleData name="nomarchia">Χανίων</SimpleData>
+		<SimpleData name="id">80.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.204.1</SimpleData>
+		<SimpleData name="lat">35.362475259999997</SimpleData>
+		<SimpleData name="lon">24.261018920000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Γεωργιουπόλεως</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.25936509539315,35.359872263117659</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Άφαντου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">152</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">1052.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.100.1</SimpleData>
+		<SimpleData name="lat">36.292074000000000</SimpleData>
+		<SimpleData name="lon">28.159085999999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ (ΕΛΕΥΘΕΡΙΑΣ)</SimpleData>
+		<SimpleData name="dhmos">Δ.Άφαντου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>28.157302004396552,36.289530923260564</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κω</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">153</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">279.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.140.1</SimpleData>
+		<SimpleData name="lat">36.896103640000000</SimpleData>
+		<SimpleData name="lon">27.289494840000000</SimpleData>
+		<SimpleData name="perigrafh">ΒΑ πλευρά του Λιμένος της ΚΩ,παραπλεύρως του Κάστρου της Νερατζιάς</SimpleData>
+		<SimpleData name="dhmos">Δ.Κω</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>27.287721087332031,36.893550969600014</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλυθιών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">154</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">32.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.92.1</SimpleData>
+		<SimpleData name="lat">36.339839419999997</SimpleData>
+		<SimpleData name="lon">28.205433620000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ/ΠΑΡΚΟ ΣΤΟ ΦΑΛΗΡΑΚΙ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλυθιών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>28.203647266568879,36.337297300215603</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλυμνίων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">155</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">210.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.220.1</SimpleData>
+		<SimpleData name="lat">36.954745680000002</SimpleData>
+		<SimpleData name="lon">26.979106720000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΟ ΔΗΜΟΤΙΚΟ ΚΑΤΑΣΤΗΜΑ ΣΤΟ ΛΙΜΑΝΙ ΤΗΣ ΚΑΛΥΜΝΟΥ ΚΑΙ ΝΕΑ ΜΑΡΙΝΑ ΤΟΥ ΝΗΣΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλυμνίων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.977340352644855,36.952188716425113</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γενναδίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">156</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">236.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.4.1</SimpleData>
+		<SimpleData name="lat">36.036201460000001</SimpleData>
+		<SimpleData name="lon">27.960194529999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Γενναδίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>27.958421761225473,36.033654051902559</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Θεολόγου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">157</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">34.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.100.1</SimpleData>
+		<SimpleData name="lat">36.366450000000000</SimpleData>
+		<SimpleData name="lon">28.077152000000002</SimpleData>
+		<SimpleData name="perigrafh">ΚΟΙΛΑΔΑ ΠΕΤΑΛΟΥΔΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Θεολόγου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>28.075368555346042,36.363906112177403</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πάτμου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">158</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Δωδεκανήσου</SimpleData>
+		<SimpleData name="id">184.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.164.1</SimpleData>
+		<SimpleData name="lat">37.323738790000000</SimpleData>
+		<SimpleData name="lon">26.544427979999998</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ-ΛΙΜΑΝΙ</SimpleData>
+		<SimpleData name="dhmos">Δ.Πάτμου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>26.54266540603523,37.321177458126449</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πρέβεζας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">159</SimpleData>
+		<SimpleData name="peripherei">Ηπείρου</SimpleData>
+		<SimpleData name="nomarchia">Πρεβέζης</SimpleData>
+		<SimpleData name="id">1099.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.164.1</SimpleData>
+		<SimpleData name="lat">38.956685000000000</SimpleData>
+		<SimpleData name="lon">20.747681000000000</SimpleData>
+		<SimpleData name="perigrafh">Πάρκο</SimpleData>
+		<SimpleData name="dhmos">Δ.Πρέβεζας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>20.746057313040716,38.954048978642206</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κορθίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">160</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">1001.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.4.1</SimpleData>
+		<SimpleData name="lat">37.776345999999997</SimpleData>
+		<SimpleData name="lon">24.946003000000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΚΑΙ ΚΕΝΤΡΙΚΟΣ ΠΕΖΟΔΡΟΜΟΣ ΟΡΜΟΥ ΚΟΡΘΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κορθίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.944276456430753,37.773763620866298</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Δ.Οίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">161</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">231.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.228.1</SimpleData>
+		<SimpleData name="lat">36.461900000000000</SimpleData>
+		<SimpleData name="lon">25.375890999999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ - ΣΤΑΘΜΟΣ ΜΕΤΑΦΟΡΑΣ-ΤΕΡΜΑ ΛΕΩΦΟΡΕΙΩΝ Κ.Τ.Ε.Λ. ΟΙΑΣ</SimpleData>
+		<SimpleData name="dhmos">Κ.Δ.Οίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.374181569093182,36.459317090342999</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φοίνικος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">162</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">8.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.204.1</SimpleData>
+		<SimpleData name="lat">37.397811400000002</SimpleData>
+		<SimpleData name="lon">24.879016090000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΑΤΑΦΥΓΙΟ ΤΟΥΡΙΣΤΙΚΩΝ ΣΚΑΦΩΝ ΦΟΙΝΙΚΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φοίνικος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.877300244891678,37.395225989061757</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Νάξου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">163</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">182.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.220.1</SimpleData>
+		<SimpleData name="lat">37.107498460000002</SimpleData>
+		<SimpleData name="lon">25.370365329999998</SimpleData>
+		<SimpleData name="perigrafh">ΛΙΜΕΝΑΣ ΝΑΞΟΥ,ΤΟΥΡΙΣΤΙΚΟ ΚΑΤΑΦΥΓΙΟ ΝΑΞΟΥ ΚΑΙ ΠΑΡΑΛΙΑΚΗ ΟΔΟΣ ΝΑΞΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Νάξου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.368641660650624,37.104918665223053</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μυκονίων (Αεροδρόμιο)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">164</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">313.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.244.1</SimpleData>
+		<SimpleData name="lat">37.437357620000000</SimpleData>
+		<SimpleData name="lon">25.345124129999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΡΑΤΙΚΟΣ ΑΕΡΟΛΙΜΕΝΑΣ ΜΥΚΟΝΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μυκονίων (Αεροδρόμιο)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.343393664086403,37.434779214464477</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μυκονίων (Λιμάνι Τούρλου)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">165</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">266.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.236.1</SimpleData>
+		<SimpleData name="lat">37.463515049999998</SimpleData>
+		<SimpleData name="lon">25.330593189999998</SimpleData>
+		<SimpleData name="perigrafh">ΝΕΟΣ ΛΙΜΕΝΑΣ ΠΕΡΙΟΧΗΣ ΤΟΥΡΛΟΥ ΜΥΚΟΝΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μυκονίων (Λιμάνι Τούρλου)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.32886254753873,37.460936574567022</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μπατσίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">166</SimpleData>
+		<SimpleData name="peripherei">Νοτίου Αιγαίου</SimpleData>
+		<SimpleData name="nomarchia">Κυκλάδων</SimpleData>
+		<SimpleData name="id">139.000000000000000</SimpleData>
+		<SimpleData name="ip">10.4.212.1</SimpleData>
+		<SimpleData name="lat">37.856727530000001</SimpleData>
+		<SimpleData name="lon">24.786177490000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία πλησίον της μαρίνας Μπατσίου</SimpleData>
+		<SimpleData name="dhmos">Δ.Μπατσίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>24.784453824565031,37.854143260092748</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φαρίδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">167</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Λακωνίας</SimpleData>
+		<SimpleData name="id">1004.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.12.1</SimpleData>
+		<SimpleData name="lat">36.957985000000001</SimpleData>
+		<SimpleData name="lon">22.450803000000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΞΗΡΟΚΑΜΠΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φαρίδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.449169894386802,36.95536320623588</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γερακίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">168</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Λακωνίας</SimpleData>
+		<SimpleData name="id">124.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.252.1</SimpleData>
+		<SimpleData name="lat">36.991917239999999</SimpleData>
+		<SimpleData name="lon">22.706573670000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ, ΠΛΗΣΙΟΝ ΔΗΜΑΡΧΕΙΟΥ, ΕΜΠΟΡΙΚΟ ΚΕΝΤΡΟ ΓΕΡΑΚΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Γερακίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.704932024776429,36.989299115480307</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ρειχέας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">169</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Λακωνίας</SimpleData>
+		<SimpleData name="id">87.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.212.1</SimpleData>
+		<SimpleData name="lat">36.915405280000002</SimpleData>
+		<SimpleData name="lon">22.996538380000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΟΙΚΙΣΜΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Ρειχέας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.994889565262749,36.912790846635282</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ασωπού</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">170</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Λακωνίας</SimpleData>
+		<SimpleData name="id">1028.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.196.1</SimpleData>
+		<SimpleData name="lat">36.730384999999998</SimpleData>
+		<SimpleData name="lon">22.854706000000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Ασωπού</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.85306544374744,36.727767832084695</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Τριπόλεως</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">171</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Αρκαδίας</SimpleData>
+		<SimpleData name="id">265.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.108.1</SimpleData>
+		<SimpleData name="lat">37.510404039999997</SimpleData>
+		<SimpleData name="lon">22.374938530000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΤΙΡΙΟ ΤΕΧΝΙΚΩΝ ΥΠΗΡΕΣΙΩΝ ΔΗΜΟΥ-ΠΛΑΤΕΙΑ ΔΙΚΑΣΤΙΚΟΥ ΜΕΓΑΡΟΥ -ΠΛΑΤΕΙΑ ΑΡΕΩ-ΠΕΖΟΔΡΟΜΟΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Τριπόλεως</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.373295805625478,37.50778359680028</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Δημητσάνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">172</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Αρκαδίας</SimpleData>
+		<SimpleData name="id">1135.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.36.1</SimpleData>
+		<SimpleData name="lat">37.595708000000002</SimpleData>
+		<SimpleData name="lon">22.039169999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Δημητσάνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.037535805666295,37.59308328463041</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φενέου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">173</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Κορινθίας</SimpleData>
+		<SimpleData name="id">1023.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.60.1</SimpleData>
+		<SimpleData name="lat">37.950797000000001</SimpleData>
+		<SimpleData name="lon">22.324926999999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ Δ. ΓΚΟΥΡΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φενέου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.323276071757867,37.948177937678096</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σικυώνος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">174</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Κορινθίας</SimpleData>
+		<SimpleData name="id">230.000000000000000</SimpleData>
+		<SimpleData name="ip">10.2.236.1</SimpleData>
+		<SimpleData name="lat">38.014548359999999</SimpleData>
+		<SimpleData name="lon">22.750169320000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ - ΠΕΖΟΔΡΟΜΟΣ ΚΛΕΙΣΘΕΝΟΥΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σικυώνος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.748503783415142,38.011935609907276</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Φιλιατρών</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">175</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">1114.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.148.1</SimpleData>
+		<SimpleData name="lat">37.157229999999998</SimpleData>
+		<SimpleData name="lon">21.586182000000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Φιλιατρών</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.584571333164931,37.154597198547712</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μεσσήνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">176</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">259.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.84.1</SimpleData>
+		<SimpleData name="lat">37.051083570000003</SimpleData>
+		<SimpleData name="lon">22.007929539999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΟ ΡΟΛΟΪ ΠΟΛΗΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μεσσήνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.006308060182743,37.0484560866499</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Μεθώνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">177</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">51.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.140.1</SimpleData>
+		<SimpleData name="lat">36.817522910000001</SimpleData>
+		<SimpleData name="lon">21.707877379999999</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΤΟΥ ΛΙΜΕΝΙΣΚΟΥ ΤΗΣ ΜΕΘΩΝΗΣ ΚΑΙ ΠΑΡΑΛΙΑ ΤΗΣ ΜΕΘΩΝΗΣ ΚΑΙ  ΠΛΑΤΕΙΑ ΔΗΜΑΡΧΕΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Μεθώνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.706270093580446,36.814890431054842</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κυπαρισσίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">178</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">17.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.68.1</SimpleData>
+		<SimpleData name="lat">37.251524600000003</SimpleData>
+		<SimpleData name="lon">21.668933039999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΓΕΩΡΓΙΟΥ ΚΑΛΑΝΤΖΑΚΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κυπαρισσίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.66731779224866,37.248893309381224</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Βαλύρας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">179</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">93.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.228.1</SimpleData>
+		<SimpleData name="lat">37.164926629999997</SimpleData>
+		<SimpleData name="lon">21.983012370000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ 25ης ΜΑΡΤΙΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Βαλύρας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.981389231763746,37.162299273827379</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Δωρίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">180</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">5.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.44.1</SimpleData>
+		<SimpleData name="lat">37.287460799999998</SimpleData>
+		<SimpleData name="lon">21.856774800000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Δωρίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.855152946888161,37.284832227125428</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλαμάτας (Ιστορικό Κέντρο)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">181</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">122.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.244.1</SimpleData>
+		<SimpleData name="lat">37.042624820000000</SimpleData>
+		<SimpleData name="lon">22.114323899999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ 23ης ΜΑΡΤΙΟΥ-ΙΣΤΟΡΙΚΟ ΚΕΝΤΡΟ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλαμάτας (Ιστορικό Κέντρο)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.112699319960004,37.039998757483112</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Καλαμάτας (Μαρίνα)</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">182</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">250.000000000000000</SimpleData>
+		<SimpleData name="ip">10.3.52.1</SimpleData>
+		<SimpleData name="lat">37.023993519999998</SimpleData>
+		<SimpleData name="lon">22.113325369999998</SimpleData>
+		<SimpleData name="perigrafh">ΜΑΡΙΝΑ ΚΑΛΑΜΑΤΑΣ</SimpleData>
+		<SimpleData name="dhmos">Δ.Καλαμάτας (Μαρίνα)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.111701217512884,37.021367367636941</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Κορώνης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">183</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">52.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.148.1</SimpleData>
+		<SimpleData name="lat">36.796921159999997</SimpleData>
+		<SimpleData name="lon">21.958368069999999</SimpleData>
+		<SimpleData name="perigrafh">ΠΑΡΑΛΙΑΚΗ ΖΩΝΗ-ΛΙΜΕΝΑΣ ΚΑΙ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Κορώνης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.956753488161237,36.794291995180593</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Πύλου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">184</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Μεσσηνίας</SimpleData>
+		<SimpleData name="id">1036.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.172.1</SimpleData>
+		<SimpleData name="lat">36.913587000000000</SimpleData>
+		<SimpleData name="lon">21.696373000000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Πύλου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.694764056368903,36.910954732832444</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ασκληπιείου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">185</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Αργολίδος</SimpleData>
+		<SimpleData name="id">1025.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.20.1</SimpleData>
+		<SimpleData name="lat">37.595692999999997</SimpleData>
+		<SimpleData name="lon">23.077576000000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Ασκληπιείου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.075909815325478,37.593082802339453</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Λυρκείας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">186</SimpleData>
+		<SimpleData name="peripherei">Πελοποννήσου</SimpleData>
+		<SimpleData name="nomarchia">Αργολίδος</SimpleData>
+		<SimpleData name="id">1064.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.100.1</SimpleData>
+		<SimpleData name="lat">37.705435000000001</SimpleData>
+		<SimpleData name="lon">22.551884999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Λυρκείας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.550232513026263,37.702817935675341</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Δομνίστης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">187</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Ευρυτανίας</SimpleData>
+		<SimpleData name="id">284.000000000000000</SimpleData>
+		<SimpleData name="ip">10.5.52.1</SimpleData>
+		<SimpleData name="lat">38.795902599999998</SimpleData>
+		<SimpleData name="lon">21.851116990000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΕΛΕΥΘΕΡΙΑΣ, -ΚΕΝΤΡΟ ΣΥΝΕΚΤΙΚΟΥ ΙΣΤΟΥ</SimpleData>
+		<SimpleData name="dhmos">Δ.Δομνίστης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.849461699295681,38.793281214255181</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αγράφων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">188</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Ευρυτανίας</SimpleData>
+		<SimpleData name="id">1018.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.12.1</SimpleData>
+		<SimpleData name="lat">39.139097999999997</SimpleData>
+		<SimpleData name="lon">21.649246000000002</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Αγράφων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.647589138894908,39.136475646669659</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Ποταμίας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">189</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Ευρυτανίας</SimpleData>
+		<SimpleData name="id">1039.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.56.1</SimpleData>
+		<SimpleData name="lat">38.826382000000002</SimpleData>
+		<SimpleData name="lon">21.742383000000000</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Ποταμίας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>21.740730452570631,38.823759240241159</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Λεβαδέων</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">190</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Βοιωτίας</SimpleData>
+		<SimpleData name="id">1125.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.84.1</SimpleData>
+		<SimpleData name="lat">38.433526000000001</SimpleData>
+		<SimpleData name="lon">22.872505000000000</SimpleData>
+		<SimpleData name="perigrafh">Πεζόδρομος</SimpleData>
+		<SimpleData name="dhmos">Δ.Λεβαδέων</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.87082608720452,38.430917196569368</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Γαλαξιδίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">191</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φωκίδος</SimpleData>
+		<SimpleData name="id">31.000000000000000</SimpleData>
+		<SimpleData name="ip">10.1.84.1</SimpleData>
+		<SimpleData name="lat">38.378200630000002</SimpleData>
+		<SimpleData name="lon">22.385226960000001</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΟ ΛΙΜΑΝΙ</SimpleData>
+		<SimpleData name="dhmos">Δ.Γαλαξιδίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.383564481376443,38.375584585423226</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Σπερχειάδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">192</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φθιώτιδος</SimpleData>
+		<SimpleData name="id">1081.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.132.1</SimpleData>
+		<SimpleData name="lat">38.909018000000003</SimpleData>
+		<SimpleData name="lon">22.125950000000000</SimpleData>
+		<SimpleData name="perigrafh">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ</SimpleData>
+		<SimpleData name="dhmos">Δ.Σπερχειάδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.12428338509044,38.906401145180332</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Αταλάντης</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">193</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φθιώτιδος</SimpleData>
+		<SimpleData name="id">1047.000000000000000</SimpleData>
+		<SimpleData name="ip">10.6.92.1</SimpleData>
+		<SimpleData name="lat">38.654634000000001</SimpleData>
+		<SimpleData name="lon">22.994900000000001</SimpleData>
+		<SimpleData name="perigrafh">ΠΛΑΤΕΙΑ ΑΓ. ΘΕΟΔΟΡΩΝ</SimpleData>
+		<SimpleData name="dhmos">Δ.Αταλάντης</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.993212136785111,38.652028184245154</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Θεσσαλιώτιδος</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">194</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φθιώτιδος</SimpleData>
+		<SimpleData name="id">1080.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.68.1</SimpleData>
+		<SimpleData name="lat">39.239333000000002</SimpleData>
+		<SimpleData name="lon">22.275939000000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Θεσσαλιώτιδος</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.274259843336932,39.236720195923645</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Δ.Στυλίδας</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">195</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φθιώτιδος</SimpleData>
+		<SimpleData name="id">1088.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.180.1</SimpleData>
+		<SimpleData name="lat">38.913277999999998</SimpleData>
+		<SimpleData name="lon">22.618531999999998</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Δ.Στυλίδας</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.616849786734729,38.91066823339731</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Παυλιανής</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">196</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φθιώτιδος</SimpleData>
+		<SimpleData name="id">1002.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.236.1</SimpleData>
+		<SimpleData name="lat">38.739967000000000</SimpleData>
+		<SimpleData name="lon">22.338028999999999</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Κ.Παυλιανής</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.33635964941686,38.737352232998134</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Κ.Λειανοκλαδίου</name>
+	<ExtendedData><SchemaData schemaUrl="#dhmosia_wifi">
+		<SimpleData name="gid">197</SimpleData>
+		<SimpleData name="peripherei">Στερεάς Ελλάδας</SimpleData>
+		<SimpleData name="nomarchia">Φθιώτιδος</SimpleData>
+		<SimpleData name="id">1077.000000000000000</SimpleData>
+		<SimpleData name="ip">10.7.92.1</SimpleData>
+		<SimpleData name="lat">38.915897000000001</SimpleData>
+		<SimpleData name="lon">22.304027000000001</SimpleData>
+		<SimpleData name="perigrafh">Πλατεία</SimpleData>
+		<SimpleData name="dhmos">Κ.Λειανοκλαδίου</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>22.302354606669262,38.913282730175752</coordinates></Point>
+  </Placemark>
+</Folder></Document></kml>

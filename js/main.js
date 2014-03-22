@@ -115,6 +115,23 @@ $("#login").on('pagebeforecreate', function() {
                 }
             });
 });
+$("#signup").on('pagebeforecreate', function() {
+    var mode = "signup";
+    $("#signupDiv").html(render('user_form', {mode: mode, "signup": true}))
+            .on("tap", "#submit" + mode + "Button", function() {
+                submitSignupForm();
+            })
+            .on('keypress', 'input', function(event) {
+                var keyPressed = event.which || event.keyCode;
+                if (keyPressed === 13) {
+                    submitSignupForm();
+                }
+            })
+            .on("change", "#" + mode + "_mail", function() {
+                checkEmailAvailability($(this), false);
+            });
+    createUserFormScroller(mode);
+});
 $("#home").on('pagebeforecreate', function() {
     $("#srv_categories_wrap").html(render('srv_categories', srv_categories))
             .trigger('create')
