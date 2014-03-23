@@ -1,5 +1,4 @@
 <?php
-
 if (!isset($_POST['action'])) {
     exit();
 }
@@ -31,7 +30,7 @@ switch ($_POST['action']) {
         // shouldn't happen
         break;
     case 'load_places':
-        echo json_encode(array("places" => getProfessionals()));
+        echo json_encode(array("places" => getPlaces($_POST['lat'], $_POST['lng'], $_POST['catid'])));
         break;
     case 'load_profile':
 //        $user = $_POST['user_id'];
@@ -52,15 +51,6 @@ switch ($_POST['action']) {
         $profileArray = array("profile" => $profile, "posts" => $posts, "past_days" => $pastDays);
         echo json_encode($profileArray);
         break;
-    case 'load_calendar':
-        $year = filter_var($_POST['year'], FILTER_SANITIZE_NUMBER_INT);
-        $month = filter_var($_POST['month'], FILTER_SANITIZE_NUMBER_INT);
-        $dateFrom = $year . '-' . $month . '-01';
-        $dateTo = $year . '-' . $month . '-31';
-        $user = 1;
-        $calendar = array("year" => $year, "month" => $month, "main_feeling" => getMainFeeling($user, null, $dateFrom, $dateTo), "days" => getCalendarDays($user, $dateFrom, $dateTo));
-        echo json_encode($calendar);
-        break;
     case 'edit_post':
         echo replacePost();
         break;
@@ -68,26 +58,4 @@ switch ($_POST['action']) {
 
 /* close connection */
 $con->close();
-
-function successJSON($content, $die = true) {
-    wrapJSON('SUCCESS', $content, $die);
-}
-
-function errorJSON($content, $die = true) {
-    wrapJSON('ERROR', $content, $die);
-}
-
-function wrapJSON($code, $content, $die = true) {
-    // encode content as {foo:bar,foobar:baz}
-    $content = json_encode((object) $content);
-    // strip the first character '{' from the json encoded string
-    $content = substr($content, 1, strlen($content) - 1);
-    // add the "code" part to the string
-    $buffer = '{"code":"' . $code . '",' . $content;
-
-    echo $buffer;
-    if ($die) {
-        die;
-    }
-}
 ?>

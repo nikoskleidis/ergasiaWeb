@@ -1,23 +1,5 @@
-function ajaxCall(url, data, callback) {
-    $.post(url, data, callback, "json");
-}
-
-function publicAjaxCall(data, callback) {
-    ajaxCall(ajax_url, data, callback);
-}
-function privateAjaxCall(action, data, callback) {
-    if (!localStorage || !localStorage.getItem("token_public") || !localStorage.getItem("token_private")) {
-        console.log("can't do private query: empty private/public tokens!");
-        return;
-    }
-    // used as seed for hashing the private token
-    var timestamp = Math.round(+new Date() / 1000);
-    ajaxCall(ajax_url + action, "POST", {
-        "timestamp": timestamp,
-        "token_public": localStorage.getItem("token_public"),
-        "hash": sha1(timestamp + localStorage.getItem("token_private")),
-        "data": data
-    }, callback);
+function ajaxCall(data, callback) {
+    $.post(ajax_url, data, callback, "json");
 }
 function render(tmpl_name, tmpl_data) {
     if (!render.tmpl_cache) {
@@ -80,7 +62,7 @@ function submitLoginForm() {
         showAlert("empty fields");
         return false;
     }
-    publicAjaxCall({
+    ajaxCall({
         "action": "login",
         "mail": mail,
         "pass": pass
@@ -183,46 +165,11 @@ function nullifyObjectProperties(obj) {
     return obj;
 }
 
-var accelerationWatch = null;
-
-function updateAcceleration(a) {
-    document.getElementById('x').innerHTML = roundNumber(a.x);
-    document.getElementById('y').innerHTML = roundNumber(a.y);
-    document.getElementById('z').innerHTML = roundNumber(a.z);
+function supports_geolocation() {
+    return 'geolocation' in navigator;
 }
-
-var toggleAccel = function() {
-    if (accelerationWatch !== null) {
-        navigator.accelerometer.clearWatch(accelerationWatch);
-        updateAcceleration({
-            x: "",
-            y: "",
-            z: ""
-        });
-        accelerationWatch = null;
-    } else {
-        var options = {};
-        options.frequency = 1000;
-        accelerationWatch = navigator.accelerometer.watchAcceleration(
-                updateAcceleration, function(ex) {
-                    showAlert("accel fail (" + ex.name + ": " + ex.message + ")");
-                }, options);
-    }
-};
-
-function check_network() {
-    var networkState = navigator.network.connection.type;
-
-    var states = {};
-    states[Connection.UNKNOWN] = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI] = 'WiFi connection';
-    states[Connection.CELL_2G] = 'Cell 2G connection';
-    states[Connection.CELL_3G] = 'Cell 3G connection';
-    states[Connection.CELL_4G] = 'Cell 4G connection';
-    states[Connection.NONE] = 'No network connection';
-
-    confirm('Connection type:\n ' + states[networkState]);
+function geolocation_error(err) {
+    console.warn('ERROR(' + err.code + '): ' + err.message);
 }
 
 function addScriptTag(src) {
@@ -240,15 +187,15 @@ function showAlert(message, title) {
     }
 }
 
-function myjsonpfunction(data){
-    console.log("callback");
-    console.log(data.responseData.results); //showing results data
-    $.each(data.responseData.results,function(i,rows){
-       console.log(rows.url); //showing  results url
+function myjsonpfunction(data) {
+//    console.log("callback");
+//    console.log(data.responseData.results); //showing results data
+    $.each(data.responseData.results, function(i, rows) {
+//        console.log(rows.url); //showing  results url
     });
 }
-      
-function testGooglePlaces(){
+
+function testGooglePlaces() {
     console.log("testing google places");
     var googleMapsKey = 'AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY';
     var url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?&callback=?';
@@ -261,15 +208,15 @@ function testGooglePlaces(){
         dataType: 'jsonp',
         jsonpCallback: 'myjsonpfunction',
         contentType: "application/json",
-        data : {
-            key : googleMapsKey,
+        data: {
+            key: googleMapsKey,
             query: 'restaurants in Sydney',
             sensor: true
         },
-        success: function(data){
-            console.log(data);
+        success: function(data) {
+//            console.log(data);
         },
-        error: function(data){
+        error: function(data) {
             console.log("failed");
         }
     });
@@ -282,16 +229,20 @@ function testGooglePlaces(){
  * @param {type} format
  * @returns {String}
  */
-function getDateInFormat(date, format){
+function getDateInFormat(date, format) {
     var dd = date.getDate();
-    var mm = date.getMonth()+1; //January is 0!
+    var mm = date.getMonth() + 1; //January is 0!
 
     var yyyy = date.getFullYear();
-    if(dd<10){dd='0'+dd;} 
-    if(mm<10){mm='0'+mm;}
-    
-    if (format === "YYYYMMDD"){
-        return yyyy+''+mm+''+dd;
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    if (format === "YYYYMMDD") {
+        return yyyy + '' + mm + '' + dd;
     }
 }
 

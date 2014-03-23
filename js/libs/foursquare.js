@@ -56,8 +56,8 @@ function getPointsFor(logLat, categoryList){
             categoryId: categoryList
         },
         success: function(data){
-            console.log("Places found:");
-            console.log(data);
+//            console.log("Places found:");
+//            console.log(data);
             resultList = data;
         },
         error: function(){
@@ -195,8 +195,8 @@ function getFsqCategoryList(){
             v:getDateInFormat(new Date(), fsq_dateFormat)          //Version parameter
         },
         success: function(data){
-            console.log("Category List:");
-            console.log(data.response.categories);
+//            console.log("Category List:");
+//            console.log(data.response.categories);
         },
         error: function(){
             console.log("failed");

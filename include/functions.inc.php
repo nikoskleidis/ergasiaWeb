@@ -55,13 +55,17 @@ function loginUser($membermail, $password) {
     return $user;
 }
 
-function getPlaces($sort = "id") {
+function getPlaces($lat, $lng, $catid = null, $sort = "distance", $maxDistanceMeters = 5) {
     global $con;
     $resultArray = array();
+    $categoryFilter = ($catid != null) ? " AND category_id = " . filter_var($catid, FILTER_SANITIZE_NUMBER_INT) : "";
+    $distanceCalc = "(6371 * acos(cos(radians(" . $lat . ")) * cos(radians(lat)) * cos(radians(lng) - radians(" . $lng . ")) + sin(radians(" . $lat . ")) * sin(radians(lat)))) ";
+    
     $query = "SELECT id, title, description, lat, lng, " .
-            "FLOOR(0 + (RAND() * 10000)) as distance " .
+            "$distanceCalc as distance, 'images/no-image-available.jpg' as avatar " .
             "FROM places " .
-            " ORDER BY " . $sort;
+            "WHERE $distanceCalc < $maxDistanceMeters" . $categoryFilter .
+            " ORDER BY " . $sort; 
     if ($result = $con->query($query)) {
         while ($obj = $result->fetch_object()) {
             $obj->distance = formatDistance($obj->distance);

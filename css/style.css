@@ -135,18 +135,18 @@ h2 {font-size:1.6em}
 #panel-links .panel_icon.settings{background-position: -40px 0px;width: 17px;/* margin-left: -1px; */}
 #panel-footer{position: absolute;left: 7%; bottom: 1.4%;font-size: 1.1em;line-height: 1.6em;white-space: nowrap}
 .panel_icon.log_out{background-position: -20px 2px;width: 16px;margin-right: 10%;}
-#places_list .prof_selection{width: 98%;padding: 2% 1% 1%;clear: both;color: #5a5c5c;text-shadow:none !important}
-#contact_profile,.prof_selection:nth-child(even),.contact_selection:nth-child(even){background: #f7f9f9}
-#places_list .prof_selection.tapped{background: #464648;color: #fff}
+#places_list .place_selection{width: 98%;padding: 2% 1% 1%;clear: both;color: #5a5c5c;text-shadow:none !important}
+#contact_profile,.place_selection:nth-child(even),.contact_selection:nth-child(even){background: #f7f9f9}
+#places_list .place_selection.tapped{background: #464648;color: #fff}
 .star-icon {position:relative}
 .star-icon.full:before, .star-icon.half:before {content: "\2605";position: absolute;left:0}
-.prof_selection .star-icon.full:before, .prof_selection .star-icon.half:before {color: #000}
-.prof_selection .star-icon{font-size: 1.2em;color: #000}
-.prof_selection.tapped .star-icon{color: #fff}
-.prof_selection.tapped .star-icon.full:before, .prof_selection.tapped .star-icon.half:before {color: #fff}
+.place_selection .star-icon.full:before, .place_selection .star-icon.half:before {color: #000}
+.place_selection .star-icon{font-size: 1.2em;color: #000}
+.place_selection.tapped .star-icon{color: #fff}
+.place_selection.tapped .star-icon.full:before, .place_selection.tapped .star-icon.half:before {color: #fff}
 .prof_img{width: 82%}
-.prof_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 0 !important;font-weight: normal !important;}
-.prof_selection .prof_name{font-size: 1.4em;}
+.place_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 0 !important;font-weight: normal !important;}
+.place_selection .prof_name{font-size: 1.4em;}
 .prof_distance{font-size: 1.5em;margin: 7px 0 3px;}
 .badge_big{width: 49px;height: 49px;}
 .badge_small{width: 24px;height: 24px;background-size: 148px;}
