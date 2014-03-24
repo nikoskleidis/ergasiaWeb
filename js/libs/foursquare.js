@@ -17,6 +17,10 @@ var catID_College_Cafeteria = "4bf58dd8d48988d1a1941735";
 var catID_Clothing_Store = "4bf58dd8d48988d103951735";
 var fsq_categoryList;
 
+var places = [];
+var hasLoaded = false;
+var loadedCounter = 0;
+
 function testFoursquareApi(){
     var coordinates = '37.976648,23.725871';
     getCoffeeShops(coordinates);
@@ -36,13 +40,12 @@ function getCoffeeShops(logLat){
  * @returns {data}
  */
 function getPointsFor(logLat, categoryList){
-    var resultList;
+    places = [];
     var url = "https://api.foursquare.com/v2/venues/search";
     $.ajax({
         url: url,
         method: 'GET',
         dataType: 'json',
-        async: false,
         data : {
             client_id : fsq_clientId,
             client_secret: fsq_clientSecret,
@@ -56,43 +59,42 @@ function getPointsFor(logLat, categoryList){
             categoryId: categoryList
         },
         success: function(data){
-//            console.log("Places found:");
-//            console.log(data);
-            resultList = data;
+            transformToDisplayObject(data); // results are displayed through this function
         },
         error: function(){
             console.log("failed");
         }
     });
     
-    transformToDisplayObject(resultList);
-    
-    return resultList;
+    return ;
 }
 
 function transformToDisplayObject(foursquareData){
-    var places = [];
     if(foursquareData && foursquareData.response && foursquareData.response.venues){
         var array = foursquareData.response.venues;
         len = array.length;
         for (var i = 0; i < len; i++){
-            var newPlace = [];
+            var newPlace = {};
             var fsq_obj = array[i];
             
             newPlace.id = fsq_obj.id;
-            newPlace.full_name = fsq_obj.name;
+            newPlace.title = fsq_obj.name;
             newPlace.distance = distanceToString(fsq_obj.location.distance);
-            
-            var placeInfo = extractInfo(fsq_obj);
-            newPlace.info = placeInfo.info;
-            newPlace.avatar = placeInfo.avatar;
-            newPlace.rating = placeInfo.rating; 
             
             places.push(newPlace);
         }
-        console.log("For display purposes");
-        console.log(places);
+        //create a list of ajax requests
+        var deferreds = [];
+        for (i=0;i<places.length;i++){
+            places[i].description = extractInfo(array[i]);
+            deferreds.push(getMoreInfoFor(array[i].id));
+        }
+        
+        $.when.apply($, deferreds).done(function(){
+            displayResults({ "places" : places });
+        });
     }
+    return places;
 }
 
 /**
@@ -110,13 +112,7 @@ function extractInfo(fsq_obj){
     info += fsq_obj.location.postalCode ? ", Postal Code: " + fsq_obj.location.postalCode : "";
     info += fsq_obj.contact.formattedPhone ? ", Phone: " + fsq_obj.contact.formattedPhone : "";
     
-    var moreInfo = getMoreInfoFor(fsq_obj.id);
-    
-    return {
-        info : info,
-        rating : moreInfo.rating,
-        avatar : moreInfo.avatar
-    };
+    return info;
 }
 
 /**
@@ -127,11 +123,11 @@ function extractInfo(fsq_obj){
 function getMoreInfoFor(id){
     var url = "https://api.foursquare.com/v2/venues/" + id;
     var moreInfo;
-    $.ajax({
+    return $.ajax({
         url: url,
         method: 'GET',
         dataType: 'json',
-        async: false,
+        //async: false,
         data : {
             client_id : fsq_clientId,
             client_secret: fsq_clientSecret,
@@ -142,23 +138,34 @@ function getMoreInfoFor(id){
             if (data && data.response && data.response.venue){
                 moreInfo = data.response.venue;
             }
+            var newInfo = [];
+    
+            if (moreInfo){
+                var photo;
+                if (moreInfo.photos && moreInfo.photos.groups[0] && moreInfo.photos.groups[0].items[0]){
+                    photo = moreInfo.photos.groups[0].items[0];
+                    newInfo.avatar = photo.prefix + "300x300" + photo.suffix;
+                }else{
+                    newInfo.avatar = "images/no-image-available.jpg";
+                }
+                if (moreInfo.rating){
+                    newInfo.rating = (moreInfo.rating/2).toFixed(1);
+                }else{
+                    newInfo.rating = 0;
+                }
+            }
+            for (i=0;i<places.length;i++){
+                if (places[i].id === moreInfo.id){
+                    places[i].rating = newInfo.rating;
+                    places[i].avatar = newInfo.avatar;
+                    break;
+                }
+            }
         },
         error: function(){
             console.log("failed");
         }
     });
-    var newInfo = [];
-    
-    if (moreInfo){
-        var photo;
-        if (moreInfo.photos && moreInfo.photos.groups[0] && moreInfo.photos.groups[0].items[0]){
-            photo = moreInfo.photos.groups[0].items[0];
-        }
-        newInfo.rating = (moreInfo.rating/2).toFixed(1);
-        newInfo.avatar = photo.prefix + "300x300" + photo.suffix;
-    }
-    
-    return newInfo;
 }
 
 /**

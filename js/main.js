@@ -12,12 +12,12 @@ var srv_categories = {
         {id: 2, parent: 'public_services', title: 'public_buildings'},
         {id: 3, parent: 'public_services', title: 'monuments'},
         {id: 4, parent: 'public_services', title: 'beaches'},
-        {parent: 'google_places', title: 'restaurants'},
-        {parent: 'google_places', title: 'coffee_places'},
-        {parent: 'google_places', title: 'clothes_shop'},
-        {parent: 'google_places', title: 'public_parks'},
-        {parent: 'foursquare', title: 'painting_events'},
-        {parent: 'foursquare', title: 'book_events'}
+        {id: 5, parent: 'foursquare', title: 'restaurants'},
+        {id: 6, parent: 'foursquare', title: 'coffee_places'},
+        {id: 7, parent: 'foursquare', title: 'clothes_shop'},
+        {id: 8, parent: 'foursquare', title: 'public_parks'},
+        {id: 9, parent: 'foursquare', title: 'painting_events'},
+        {id: 10, parent: 'foursquare', title: 'book_events'}
     ]
 };
 var app = {
@@ -33,16 +33,14 @@ var app = {
             }
         });
         if (supports_geolocation()) {
-                console.log(supports_geolocation())
-            navigator.geolocation.getCurrentPosition(function() {
-                alert(position.coords)
+            navigator.geolocation.getCurrentPosition(function(position) {
                 user_lat = position.coords.latitude;
                 user_lng = position.coords.longitude;
             }, geolocation_error,{maximumAge:60000, timeout:5000, enableHighAccuracy:true});
         }
-        getFsqCategoryList();
+        //getFsqCategoryList();
         //testGooglePlaces();
-        testFoursquareApi();
+        //testFoursquareApi();
     }
 };
 app.initialize();
@@ -116,6 +114,7 @@ $("#signup").on('pagebeforecreate', function() {
             });
     createUserFormScroller(mode);
 });
+
 $("#home").on('pagebeforecreate', function() {
     $("#srv_categories_wrap").html(render('srv_categories', srv_categories))
             .trigger('create')
@@ -123,19 +122,31 @@ $("#home").on('pagebeforecreate', function() {
                 if (user_lat > 0 && user_lng > 0) {
                     $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
                             .addClass("ui-focus");
-                    ajaxCall({
-                        action: 'load_places',
-                        catid: $(this).data("catid"),
-                        lat: user_lat,
-                        lng: user_lng
-                    },
-                    function(data) {
-                        $.mobile.loading("hide");
-                        var container = $("#places_list");
-                        container.html(render('places', data)).trigger('create');
-                        localizeElementTexts(container);
+                    var category = $(this).data("catid");
+                    if (category === 5){ //restaurants
+                        
+                    }else if (category === 6){ // coffee_places
+                        getCoffeeShops(user_lat + "," + user_lng);
+                    }else if (category === 7){ // clothes_shop
+                        
+                    }else if (category === 8){ //public_parks
+                        
+                    }else if (category === 9){ //painting_events
+                        
+                    }else if (category === 10){ //book_events
+                        
+                    }else{
+                        ajaxCall({
+                            action: 'load_places',
+                            catid: $(this).data("catid"),
+                            lat: user_lat,
+                            lng: user_lng
+                        },
+                        function(data) {
+                            displayResults(data);
+                        }
+                        );
                     }
-                    )
                     $.mobile.changePage('#places');
                 }
             })
@@ -143,6 +154,13 @@ $("#home").on('pagebeforecreate', function() {
                 $("#home").removeClass("google_places public_services").addClass(ui.newPanel.attr("id"));
             });
 });
+function displayResults(data){
+    $.mobile.loading("hide");
+    var container = $("#places_list");
+    container.html(render('places', data)).trigger('create');
+    localizeElementTexts(container);
+}
+
 $("#home").on('pagebeforeshow', function() {
     $("#srv_categories").find(".prof_cat_outer.ui-focus").each(function() {
         $(this).css({"width": (6 + $(this).width()) + "px", "height": (6 + $(this).height()) + "px"});
