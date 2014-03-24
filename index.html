@@ -40,18 +40,26 @@
     </head>
     <body>
         <div id="statusbar"></div>
-        <!--        <div data-role="page" id="login">
-                    <div data-role="header">
-                        <h1>Σύνδεση Χρήστη</h1>
-                    </div>
-                    <div data-role="content">
-                        <div id="loginDiv"></div>
-                    </div>
-                </div>-->
         <div data-role="page" id="home">
             <div class="header" data-role="header" data-position="fixed"></div>
             <div data-role="content" class="clear">
                 <div id="srv_categories_wrap" class="ajax_content"></div>
+            </div>
+        </div>
+        <div data-role="page" id="login" class="signInPage">
+            <div data-role="header">
+                <h1>Σύνδεση Χρήστη</h1>
+            </div>
+            <div data-role="content">
+                <div id="loginDiv" class="sign_wrap"></div>
+            </div>
+        </div>
+        <div data-role="page" id="signup" class="signInPage">
+            <div data-role="header">
+                <h1>Εγγραφή νέου Χρήστη</h1>
+            </div>
+            <div data-role="content">
+                <div id="signupDiv" class="sign_wrap"></div>
             </div>
         </div>
         <div data-role="page" id="places">
@@ -72,11 +80,23 @@
                 <div id="search_location_wrap"></div>
             </div>
         </div>
+        <div data-role="page" id="settings" class="neutral_bg">
+            <div class="container">
+                <div data-role="content" class="clear">
+                    <div class="white_bg">
+                        <div id="settings_wrap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div data-role="panel" id="left-panel" data-position="left" data-display="overlay">
         </div>
-        <script type="text/javascript" src="js/functions.js"></script>
-        <script type="text/javascript" src="js/foursquare.js"></script>
+        <script type="text/javascript" src="js/libs/foursquare.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll.core.js"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll.scroller.js"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll.datetime.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
         <script type="text/javascript" src="js/mapFunctions.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>

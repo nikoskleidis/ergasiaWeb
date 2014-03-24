@@ -1,0 +1,50 @@
+<form id="{{mode}}Form">
+    <input type="hidden" name="action" value="{{mode}}"/>
+    <div data-role="fieldcontain">
+        <span class="validation-msg" data-target="{{mode}}_first_name" data-langmsg="please_input_first_name"></span>
+        <input type="text" class="required" id="{{mode}}_first_name" name="first_name" placeholder="{{translate 'first_name' ''}}" value="{{profile.first_name}}"/>
+    </div>
+    <div data-role="fieldcontain">
+        <span class="validation-msg" data-target="{{mode}}_last_name" data-langmsg="please_input_last_name"></span>
+        <input type="text" class="required" id="{{mode}}_last_name" name="last_name" placeholder="{{translate 'last_name' ''}}" value="{{profile.last_name}}"/>
+    </div>
+    <div data-role="fieldcontain">
+        <span class="validation-msg" data-target="{{mode}}_mail" data-langmsg="please_input_email"></span>
+        <input type="email" class="email required" id="{{mode}}_mail" name="mail" placeholder="{{translate 'email' ''}}" value="{{profile.email}}"/>
+    </div>
+    <div data-role="fieldcontain">
+        <span class="validation-msg" data-target="{{mode}}_pass" data-langmsg="please_input_password"></span>
+        <input type="password" class="required password" id="{{mode}}_pass" name="pass" placeholder="{{translate 'password' ''}}" />
+        <span class="validation-msg" data-target="{{mode}}_repeat_pass" data-langmsg="passwords_no_match"></span>
+        <input type="password" class="required password_repeat" id="{{mode}}_repeat_pass" placeholder="{{translate 'repeat_password' ''}}" />
+    </div>
+    <div data-role="fieldcontain">
+        <span class="validation-msg" data-target="{{mode}}_gender" data-langmsg="please_select_gender"></span>
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <span class="validation-msg" data-target="gender1" data-langmsg="please_select_gender"></span>
+            <span class="validation-msg" data-target="gender2" data-langmsg="please_select_gender"></span>
+            <input name="gender" id="gender2" value="2" class="required" type="radio">
+            <label for="gender2">{{translate 'woman' ''}}</label>
+            <input name="gender" id="gender1" value="1" class="required" type="radio">
+            <label for="gender1">{{translate 'man' ''}}</label>
+        </fieldset>
+    </div>
+    <div data-role="fieldcontain">
+        <span class="validation-msg" data-target="{{mode}}_birth_date" data-langmsg="please_input_birth_date"></span>
+        <input type="text" class="required" id="{{mode}}_birth_date_scroll" placeholder="{{translate 'birth_date' ''}}" value="{{localizedate profile.birth_date}}"/>
+        <input type="hidden" class="required" id="{{mode}}_birth_date" name="birth_date" value="{{profile.birth_date}}"/>
+    </div>
+    <div class="errorMsg"></div>
+</form>
+{{#if signup}}
+<button id="submit{{mode}}Button" class="signButton"><span data-langmsg="{{mode}}"></span></button>
+<a href="#login" class="ui-btn ui-btn-b ui-mini"><span data-langmsg="login"></span></a>
+{{else}}
+<div class="ui-block-a">
+    <a id="cancel{{mode}}Button" href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="back"><span data-langmsg="cancelText"></span></a>
+</div>
+<div class="ui-block-b flrt">
+    <button id="submit{{mode}}Button" class="signButton" data-theme="b"><span data-langmsg="{{mode}}"></span></button>
+</div>
+<div class="clear"></div>
+{{/if}}

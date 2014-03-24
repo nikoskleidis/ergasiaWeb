@@ -1,9 +1,11 @@
 <div data-role="fieldcontain" class="ui-hide-label">
-    <label for="login_mail"><span data-langmsg="email"></span></label>
-    <input type="text" id="login_mail" value="" placeholder="Email" />
+    <span class="validation-msg" data-target="login_mail" data-langmsg="please_input_email"></span>
+    <input type="email" class="email required" id="login_mail" value="" placeholder="{{translate 'email' ''}}" />
 </div>
 <div data-role="fieldcontain" class="ui-hide-label">
-    <label for="login_pass"><span data-langmsg="password"></span></label>
-    <input type="password" id="login_pass" value="" placeholder="Password" />
+    <span class="validation-msg" data-target="login_pass" data-langmsg="please_input_password"></span>
+    <input type="password" class="required" id="login_pass" value="" placeholder="{{translate 'password' ''}}" />
 </div>
+<div id="loginErrorMsg" class="errorMsg"></div>
 <button id="submitLoginButton"><span data-langmsg="login"></span></button>
+<a href="#signup" class="ui-btn ui-btn-b ui-mini"><span data-langmsg="signup"></span></a>

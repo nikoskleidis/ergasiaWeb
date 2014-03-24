@@ -93,6 +93,8 @@
                     "public_parks": "Δημόσια Πάρκα",
                     "painting_events": "Εκδηλώσεις Ζωγραφικής",
                     "book_events": "Εκδηλώσεις Λογοτεχνίας",
+                    "edit_profile_details": "Επεξεργασία Προφίλ",
+                    "sign_out": "Αποσύνδεση",
                     "most_searched": "Most searched for",
                     "favourites": "Favourites",
                     "favourite_places": "Favourite Places",

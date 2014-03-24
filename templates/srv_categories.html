@@ -1,4 +1,4 @@
 <form id="search_categories_form"><input data-type="search" id="search_categories" placeholder="Search..."></form>
 <div id="srv_categories" data-filter="true" data-input="#search_categories">
-    {{#each categories}}<div class="prof_cat_outer prof_cat_{{parent}}"><div class="round_img prof_category {{title}}"></div><div class="cat_title">{{translate title ''}}</div></div>{{/each}}
+    {{#each categories}}<div class="prof_cat_outer prof_cat_{{parent}}" data-catid="{{id}}"><div class="round_img prof_category {{title}}"></div><div class="cat_title">{{translate title ''}}</div></div>{{/each}}
 </div>

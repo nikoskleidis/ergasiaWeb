@@ -1,5 +1,5 @@
 <?php
-$con = new mysqli('db27.grserver.gr', 'handpick_user', 'fsd&*#(s2)@^@@$-21', 'handpick_db');
+$con = new mysqli('db27.grserver.gr', 'ergasiaweb_user', 'fsd&*#(s2)@^@@$-21', 'ergasiaweb_db');
 if (mysqli_connect_errno()) {
     printf("Connection to database server failed: %s\n", mysqli_connect_error());
     exit();

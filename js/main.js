@@ -4,12 +4,14 @@ var headerHtml = '';
 var footerHtml = '';
 var ajax_url = 'http://ergasiaweb.gr.185-4-133-73.linuxzone33.grserver.gr/services/';
 var profileDataObj = {type: 'load_profile', user: null, fullname: null, rating: 0, avatar: 'images/no-image-available.jpg'};
+var user_lat = 37.983258;
+var user_lng = 23.644827;
 var srv_categories = {
     "categories": [
-        {parent: 'public_services', title: 'public_wifi'},
-        {parent: 'public_services', title: 'public_buildings'},
-        {parent: 'public_services', title: 'monuments'},
-        {parent: 'public_services', title: 'beaches'},
+        {id: 1, parent: 'public_services', title: 'public_wifi'},
+        {id: 2, parent: 'public_services', title: 'public_buildings'},
+        {id: 3, parent: 'public_services', title: 'monuments'},
+        {id: 4, parent: 'public_services', title: 'beaches'},
         {parent: 'google_places', title: 'restaurants'},
         {parent: 'google_places', title: 'coffee_places'},
         {parent: 'google_places', title: 'clothes_shop'},
@@ -30,32 +32,17 @@ var app = {
                 localizeElementTexts($(this));
             }
         });
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        navigator.splashscreen.hide();
-        if (navigator.network.connection.type == Connection.NONE) {
-            console.log("No internet");
-//            $("#home_network_button").text('No Internet Access')
-//                    .attr("data-icon", "delete")
-//                    .button('refresh');
+        if (supports_geolocation()) {
+                console.log(supports_geolocation())
+            navigator.geolocation.getCurrentPosition(function() {
+                alert(position.coords)
+                user_lat = position.coords.latitude;
+                user_lng = position.coords.longitude;
+            }, geolocation_error,{maximumAge:60000, timeout:5000, enableHighAccuracy:true});
         }
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-//        console.log('Received Event: ' + id);
+        getFsqCategoryList();
+        //testGooglePlaces();
+        testFoursquareApi();
     }
 };
 app.initialize();
@@ -112,13 +99,45 @@ $("#login").on('pagebeforecreate', function() {
                 }
             });
 });
+$("#signup").on('pagebeforecreate', function() {
+    var mode = "signup";
+    $("#signupDiv").html(render('user_form', {mode: mode, "signup": true}))
+            .on("tap", "#submit" + mode + "Button", function() {
+                submitSignupForm();
+            })
+            .on('keypress', 'input', function(event) {
+                var keyPressed = event.which || event.keyCode;
+                if (keyPressed === 13) {
+                    submitSignupForm();
+                }
+            })
+            .on("change", "#" + mode + "_mail", function() {
+                checkEmailAvailability($(this), false);
+            });
+    createUserFormScroller(mode);
+});
 $("#home").on('pagebeforecreate', function() {
     $("#srv_categories_wrap").html(render('srv_categories', srv_categories))
             .trigger('create')
             .on("tap", ".prof_cat_outer", function() {
-                $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
-                        .addClass("ui-focus");
-                $.mobile.changePage('#places');
+                if (user_lat > 0 && user_lng > 0) {
+                    $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
+                            .addClass("ui-focus");
+                    ajaxCall({
+                        action: 'load_places',
+                        catid: $(this).data("catid"),
+                        lat: user_lat,
+                        lng: user_lng
+                    },
+                    function(data) {
+                        $.mobile.loading("hide");
+                        var container = $("#places_list");
+                        container.html(render('places', data)).trigger('create');
+                        localizeElementTexts(container);
+                    }
+                    )
+                    $.mobile.changePage('#places');
+                }
             })
             .on("tabsbeforeactivate", "#categories_tabs", function(event, ui) {
                 $("#home").removeClass("google_places public_services").addClass(ui.newPanel.attr("id"));
@@ -130,30 +149,14 @@ $("#home").on('pagebeforeshow', function() {
     });
 });
 $("#places").on('pageinit', function() {
-    var container = $("#places_list");
-    
-    var coordinates = '37.976648,23.725871';
-    var data = getCoffeeShops(coordinates);
-    $.mobile.loading("hide");
-    container.html(render('places', data)).trigger('create');
-    localizeElementTexts(container);
-//    $.post(ajax_url, {
-//        action: 'load_places'
-//    },
-//    function(data) {
-//        console.log(data);
-//        $.mobile.loading("hide");
-//        container.html(render('places', data)).trigger('create');
-//        localizeElementTexts(container);
-//    }, "json");
-    container.on("tap", ".prof_selection", function(event) {
+    $("#places_list").on("tap", ".place_selection", function(event) {
         var target = $(event.target);
         if (target.is(".pickButton")) {
-            target.closest(".prof_selection").addClass("ui-focus");
+            target.closest(".place_selection").addClass("ui-focus");
             viewProfile(target.attr("data-id"), target.attr("data-name"), target.attr("data-rating"), target.attr("data-img"));
         } else {
             var isOpened = $(this).hasClass("tapped");
-            var currentSelection = $("#places_list").find(".prof_selection.tapped");
+            var currentSelection = $("#places_list").find(".place_selection.tapped");
             currentSelection.removeClass("tapped")
                     .find(".prof_details").slideUp("fast");
             if (!isOpened) {

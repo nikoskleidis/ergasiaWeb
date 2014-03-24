@@ -1,6 +1,6 @@
 <ul data-role="listview">
     {{#each places}}
-    <li class="prof_selection">
+    <li class="place_selection">
         <div class="prof_avatar">
             <img src="{{avatar}}" class="round_img"/>
             <div class="badges_icons">
@@ -10,8 +10,8 @@
             </div>
         </div>
         <div class="prof_basic_info">
-            <h3 class="prof_name">{{full_name}}</h3>
-            <p class="prof_descr">{{info}}</p>
+            <h3 class="prof_name">{{title}}</h3>
+            <p class="prof_descr">{{description}}</p>
         </div>
         <div class="prof_side_info">
             <div class="prof_rating">{{rate_icons rating}}</div>
@@ -21,10 +21,10 @@
         <div class="prof_details">
             <div class="prof_info">
                 <h4 class="prof_info_header"><span data-langmsg="info"></span>:</h4>
-                <p class="prof_full_descr">{{info}}</p>
+                <p class="prof_full_descr">{{description}}</p>
             </div>
             <div class="aligncenter">
-                <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{full_name}}" data-rating="{{rating}}" data-img="{{avatar}}">Pick</button>
+                <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{title}}" data-rating="{{rating}}" data-img="{{avatar}}">Details</button>
             </div>
         </div>
     </li>
