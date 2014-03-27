@@ -66,6 +66,12 @@
             <div class="header" data-role="header" data-position="fixed"></div>
             <div data-role="content" class="clear">
                 <div id="places_list" class="ajax_content"></div>
+                <div id="bottom_progress_bar" class="progress_bar">
+                    <div class="line"></div>
+                    <div class="break dot1"></div>
+                    <div class="break dot2"></div>
+                    <div class="break dot3"></div>
+                </div>
             </div>
         </div>
         <div data-role="page" id="rate_place">
@@ -91,6 +97,7 @@
         </div>
         <div data-role="panel" id="left-panel" data-position="left" data-display="overlay">
         </div>
+        <script type="text/javascript" src="js/libs/jquery.hammer-full.min.js"></script>
         <script type="text/javascript" src="js/libs/foursquare.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
         <script type="text/javascript" src="js/libs/mobiscroll.core.js"></script>

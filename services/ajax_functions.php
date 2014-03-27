@@ -30,7 +30,7 @@ switch ($_POST['action']) {
         // shouldn't happen
         break;
     case 'load_places':
-        echo json_encode(array("places" => getPlaces($_POST['lat'], $_POST['lng'], $_POST['catid'])));
+        echo json_encode(array("places" => getPlaces($_POST['lat'], $_POST['lng'], $_POST['catid'], $_POST['page'])));
         break;
     case 'load_profile':
 //        $user = $_POST['user_id'];

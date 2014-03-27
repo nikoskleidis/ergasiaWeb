@@ -48,6 +48,35 @@ function setChosenLang() {
     }
 }
 
+function displayCategoryResults(data) {
+    $.mobile.loading("hide");
+    var container = $("#places_list");
+    container.html(render('places', data)).trigger('create');
+    localizeElementTexts(container);
+}
+
+function appendCategoryResults(data) {
+    var container = $("#places_list");
+    container.append(render('places', data)).trigger('create');
+    localizeElementTexts(container);
+}
+
+function loadCategoryPlaces(catid, callback, page) {
+    var progress_bar = $("#bottom_progress_bar");
+    if (varExists(page) || (allowAppend && cat_page < 20 && $(window).scrollTop() + $(window).height() > $(document).height() - 750)) {
+        allowAppend = false;
+        progress_bar.show();
+        placesPage = page || (placesPage + 1);
+        ajaxCall({
+            action: 'load_places',
+            catid: catid,
+            lat: user_lat,
+            lng: user_lng,
+            page: placesPage
+        }, callback);
+    }
+}
+
 function appendLangScript() {
     addScriptTag("js/libs/cultures/globalize.culture." + langChosen + ".js");
     Globalize.culture(langChosen);
@@ -130,30 +159,9 @@ function renderRatingIcons(rating) {
     return html;
 }
 
-function changePicture() {
-    if (!navigator.camera) {
-        showAlert("Camera API not supported", "Error");
-        return;
-    }
-    var options = {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI,
-        sourceType: 1, // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-        encodingType: 0     // 0=JPG 1=PNG
-    };
-
-    navigator.camera.getPicture(
-            function(imageData) {
-                $('#edit_post_img').empty();
-                $('<img />', {'src': imageData, 'class': 'post_img'}).appendTo('#edit_post_img');
-                $('#feel_img').val(imageData);
-            },
-            function() {
-                showAlert('Error taking picture', 'Error');
-            },
-            options);
-
-    return false;
+function signoutUser() {
+    clearPrivateData();
+    $(":mobile-pagecontainer").pagecontainer("change", '#login');
 }
 
 function nullifyObjectProperties(obj) {

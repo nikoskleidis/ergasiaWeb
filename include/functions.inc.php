@@ -1,4 +1,5 @@
 <?php
+
 function checkExistingUserField($column, $value_to_check) {
     global $con;
     $query = "SELECT 1 " .
@@ -55,17 +56,17 @@ function loginUser($membermail, $password) {
     return $user;
 }
 
-function getPlaces($lat, $lng, $catid = null, $sort = "distance", $maxDistanceMeters = 5) {
+function getPlaces($lat, $lng, $catid = null, $page = 1, $sort = "distance", $maxDistanceMeters = 5) {
     global $con;
     $resultArray = array();
     $categoryFilter = ($catid != null) ? " AND category_id = " . filter_var($catid, FILTER_SANITIZE_NUMBER_INT) : "";
     $distanceCalc = "(6371 * acos(cos(radians(" . $lat . ")) * cos(radians(lat)) * cos(radians(lng) - radians(" . $lng . ")) + sin(radians(" . $lat . ")) * sin(radians(lat)))) ";
-    
+
     $query = "SELECT id, title, description, lat, lng, " .
             "$distanceCalc as distance, 'images/no-image-available.jpg' as avatar " .
             "FROM places " .
             "WHERE $distanceCalc < $maxDistanceMeters" . $categoryFilter .
-            " ORDER BY " . $sort; 
+            " ORDER BY " . $sort . " LIMIT " . (($page - 1) * 10) . ", 10";
     if ($result = $con->query($query)) {
         while ($obj = $result->fetch_object()) {
             $obj->distance = formatDistance($obj->distance);
@@ -75,7 +76,6 @@ function getPlaces($lat, $lng, $catid = null, $sort = "distance", $maxDistanceMe
     }
     return $resultArray;
 }
-
 
 function replaceUser() {
     global $con;
@@ -118,7 +118,6 @@ function replaceUser() {
         $stmt->close();
     }
 }
-
 
 function redirectToHome() {
     header("location: " . SERVER_PATH);

@@ -20,6 +20,8 @@ var srv_categories = {
         {id: 10, parent: 'foursquare', title: 'book_events'}
     ]
 };
+var placesPage = 1;
+var allowAppend = true;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -36,7 +38,7 @@ var app = {
             navigator.geolocation.getCurrentPosition(function(position) {
                 user_lat = position.coords.latitude;
                 user_lng = position.coords.longitude;
-            }, geolocation_error,{maximumAge:60000, timeout:5000, enableHighAccuracy:true});
+            }, geolocation_error, {maximumAge: 60000, timeout: 5000, enableHighAccuracy: true});
         }
         //getFsqCategoryList();
         //testGooglePlaces();
@@ -70,7 +72,7 @@ Handlebars.registerHelper('each_category', function(items) {
 $("div[data-role=page]").on('pageinit', function() {
     var header = $(this).find(".header");
     var footer = $(this).find(".footer");
-    header.html(headerHtml);
+    header.html(headerHtml).trigger("create");
     footer.html(footerHtml);
     header.find(".bars_link").on("tap", function(event) {
         slideTopMenu();
@@ -123,29 +125,20 @@ $("#home").on('pagebeforecreate', function() {
                     $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
                             .addClass("ui-focus");
                     var category = $(this).data("catid");
-                    if (category === 5){ //restaurants
-                        
-                    }else if (category === 6){ // coffee_places
+                    if (category === 5) { //restaurants
+
+                    } else if (category === 6) { // coffee_places
                         getCoffeeShops(user_lat + "," + user_lng);
-                    }else if (category === 7){ // clothes_shop
-                        
-                    }else if (category === 8){ //public_parks
-                        
-                    }else if (category === 9){ //painting_events
-                        
-                    }else if (category === 10){ //book_events
-                        
-                    }else{
-                        ajaxCall({
-                            action: 'load_places',
-                            catid: $(this).data("catid"),
-                            lat: user_lat,
-                            lng: user_lng
-                        },
-                        function(data) {
-                            displayResults(data);
-                        }
-                        );
+                    } else if (category === 7) { // clothes_shop
+
+                    } else if (category === 8) { //public_parks
+
+                    } else if (category === 9) { //painting_events
+
+                    } else if (category === 10) { //book_events
+
+                    } else {
+                        loadCategoryPlaces($(this).data("catid"), displayCategoryResults, 1);
                     }
                     $.mobile.changePage('#places');
                 }
@@ -154,12 +147,6 @@ $("#home").on('pagebeforecreate', function() {
                 $("#home").removeClass("google_places public_services").addClass(ui.newPanel.attr("id"));
             });
 });
-function displayResults(data){
-    $.mobile.loading("hide");
-    var container = $("#places_list");
-    container.html(render('places', data)).trigger('create');
-    localizeElementTexts(container);
-}
 
 $("#home").on('pagebeforeshow', function() {
     $("#srv_categories").find(".prof_cat_outer.ui-focus").each(function() {
@@ -183,7 +170,14 @@ $("#places").on('pageinit', function() {
                 });
             }
         }
-    });
+    })
+            .on("scrollstart", function() {
+                loadCategoryPlace($(this).data("catid"), displayCategoryResults, 1);
+            })
+            .on("scrollstop", function() {
+                loadCategoryPlace($(this).data("catid"), displayCategoryResults, 1);
+                appendArticles();
+            });
 });
 $("#rate_place").on('pagebeforecreate', function() {
     $("#rating_wrap").html(render('rate_place', {data: false}));
@@ -192,10 +186,24 @@ $("#rate_place").on('pagebeforeshow', function() {
     addProfileInfo("#rating_prof_name", "#rating_img", "#current_rating");
 });
 $("#settings").on('pagebeforecreate', function() {
-    $("#settings_wrap").html(render('settings', {data: false}));
-    $("#ranking_select").on("tap", ".ranking_selection", function() {
-        $(this).addClass("ui-focus");
-    });
+    $("#settings_wrap").html(render('settings', {data: false}))
+            .on("tap", "#editProfileButton", function() {
+                var mode = "edit_profile";
+                var popupElem = $("#editProfilePopup");
+                popupElem.html(render('user_form', $.extend(profileInfoObj, {mode: mode, "signup": false})))
+                        .on("tap", "#submit" + mode + "Button", function() {
+                            submitEditProfileForm();
+                        })
+                        .on("change", "#" + mode + "_mail", function() {
+                            checkEmailAvailability($(this), true);
+                        })
+                        .trigger("create");
+                localizeElementTexts(popupElem);
+                createUserFormScroller(mode);
+            })
+            .on("tap", "#profilePicButton", function() {
+                getPicture(0, "avatars");
+            });
 });
 $("#rate_place").on('pageshow', function() {
     var container = $("#rating_bars");
