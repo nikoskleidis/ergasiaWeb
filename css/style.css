@@ -94,6 +94,7 @@ h2 {font-size:1.6em}
 .ui-dialog-contain .ui-content{padding: 1.2em 2em .5em;}
 .flrt.ui-btn-inline{margin-right: 0}
 .ui-content {padding: 0}
+.ui-header .ui-title, .ui-footer .ui-title {margin: 0 20%;}
 
 .sign_wrap {padding: 0 3%;}
 .header-inner{text-align: center;float: left;width: 100%;background: #f8f9fa;border-bottom: 1px solid #bcbec0}

@@ -1,5 +1,61 @@
-function ajaxCall(data, callback) {
-    $.post(ajax_url, data, callback, "json");
+
+
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj));
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key));
+}
+Handlebars.registerHelper('dateformat', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), "dddd, d MMMM yyyy");
+});
+Handlebars.registerHelper('localizedate', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), localizeText("parseDateFormat"));
+});
+Handlebars.registerHelper('postdateformat', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), 'dd MMM yyyy');
+});
+Handlebars.registerHelper('datetime', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd HH:mm:ss'), 'dd MMM, HH:mmtt');
+});
+Handlebars.registerHelper('translate', function(text, prefix) {
+    return localizeText(prefix + text);
+});
+Handlebars.registerHelper('month_name', function(month) {
+    return Globalize.culture().calendars.standard.months.names[month - 1];
+});
+Handlebars.registerHelper('rate_icons', function(rating) {
+    return new Handlebars.SafeString(renderRatingIcons(rating));
+});
+Handlebars.registerHelper('each_category', function(items) {
+    var out = "";
+
+    for (var i = 0, l = items.length; i < l; i++) {
+        var prof_cat = items[i];
+        out += '<div class="prof_cat_outer"><div class="round_img prof_category ' + prof_cat.title + '"></div><div class="cat_title">' + localizeText(prof_cat.title) + '</div></div>';
+    }
+
+    return out;
+});
+
+function ajaxCall(url, data, callback) {
+    $.post(url, data, callback, "json");
+}
+function publicAjaxCall(data, callback) {
+    ajaxCall(ajax_url, data, callback);
+}
+function privateAjaxCall(data, callback) {
+    if (!(varExists(loginObj))) {
+        console.log("can't do private query: empty private/public tokens!");
+        return;
+    }
+    var timestamp = Math.round(+new Date() / 1000);
+    ajaxCall(ajax_url, {
+        "timestamp": timestamp,
+        "public_token": loginObj.public_token,
+        "private_token": loginObj.private_token,
+        "data": data
+    }, callback);
 }
 function render(tmpl_name, tmpl_data) {
     if (!render.tmpl_cache) {
@@ -60,7 +116,7 @@ function setLoginObj(loginUsrObj) {
     }
     if (varExists(localStorage["login_obj"])) {
         loginObj = localStorage.getObj("login_obj");
-        viewProfile(null, null, null);
+        $(":mobile-pagecontainer").pagecontainer("change", '#home');
     }
 }
 
@@ -83,7 +139,7 @@ function loadCategoryPlaces(catid, callback, page) {
         allowAppend = false;
         progress_bar.show();
         placesPage = page || (placesPage + 1);
-        ajaxCall({
+        privateAjaxCall({
             action: 'load_places',
             catid: catid,
             lat: user_lat,
@@ -98,7 +154,13 @@ function appendLangScript() {
     Globalize.culture(langChosen);
 }
 
-
+function ratePlace(placeId, name, rating, avatar) {
+    profileDataObj.user = placeId;
+    profileDataObj.fullname = name;
+    profileDataObj.rating = rating;
+    profileDataObj.avatar = avatar;
+    $(":mobile-pagecontainer").pagecontainer("change", '#rate_place');
+}
 
 function submitLoginForm() {
     var mail = $("#login_mail").val();

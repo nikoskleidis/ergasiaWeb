@@ -49,44 +49,6 @@ var app = {
 };
 app.initialize();
 
-Storage.prototype.setObj = function(key, obj) {
-    return this.setItem(key, JSON.stringify(obj));
-}
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key));
-}
-Handlebars.registerHelper('dateformat', function(time) {
-    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), "dddd, d MMMM yyyy");
-});
-Handlebars.registerHelper('localizedate', function(time) {
-    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), localizeText("parseDateFormat"));
-});
-Handlebars.registerHelper('postdateformat', function(time) {
-    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), 'dd MMM yyyy');
-});
-Handlebars.registerHelper('datetime', function(time) {
-    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd HH:mm:ss'), 'dd MMM, HH:mmtt');
-});
-Handlebars.registerHelper('translate', function(text, prefix) {
-    return localizeText(prefix + text);
-});
-Handlebars.registerHelper('month_name', function(month) {
-    return Globalize.culture().calendars.standard.months.names[month - 1];
-});
-Handlebars.registerHelper('rate_icons', function(rating) {
-    return new Handlebars.SafeString(renderRatingIcons(rating));
-});
-Handlebars.registerHelper('each_category', function(items) {
-    var out = "";
-
-    for (var i = 0, l = items.length; i < l; i++) {
-        var prof_cat = items[i];
-        out += '<div class="prof_cat_outer"><div class="round_img prof_category ' + prof_cat.title + '"></div><div class="cat_title">' + localizeText(prof_cat.title) + '</div></div>';
-    }
-
-    return out;
-});
-
 $("div[data-role=page]").on('pageinit', function() {
     var header = $(this).find(".header");
     header.html(headerHtml).trigger("create");
@@ -99,6 +61,11 @@ $("div[data-role=page]").on('pageshow', function() {
 });
 $("div[data-role=page]").on('pagebeforeshow', function() {
     $(this).find(".ui-focus").removeClass("ui-focus");
+});
+$("div[data-role=page]").not(".signInPage").on('pagebeforeshow', function() {
+    if (loginObj == null) {
+        $(":mobile-pagecontainer").pagecontainer("change", '#login');
+    }
 });
 $("#login").on('pagebeforecreate', function() {
     $("#loginDiv").html(render('login', {data: false}))
