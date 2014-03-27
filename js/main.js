@@ -1,7 +1,6 @@
 var langChosen = '';
 var feelings = null;
 var headerHtml = '';
-var footerHtml = '';
 var ajax_url = 'http://ergasiaweb.gr.185-4-133-73.linuxzone33.grserver.gr/services/';
 var profileDataObj = {type: 'load_profile', user: null, fullname: null, rating: 0, avatar: 'images/no-image-available.jpg'};
 var loginObj = null;
@@ -23,14 +22,15 @@ var srv_categories = {
 };
 var placesPage = 1;
 var allowAppend = true;
+var scrollInitOpts = null;
 var app = {
     // Application Constructor
     initialize: function() {
         setChosenLang();
         appendLangScript();
         setLoginObj();
+    setScrollInitOpts();
         headerHtml = render('header', {data: false});
-        footerHtml = render('footer', {data: false});
         $("#left-panel").html(render('left_panel', {data: false})).panel({
             create: function() {
                 localizeElementTexts($(this));
@@ -48,6 +48,22 @@ var app = {
     }
 };
 app.initialize();
+
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj));
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key));
+}
+Handlebars.registerHelper('dateformat', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), "dddd, d MMMM yyyy");
+});
+Handlebars.registerHelper('localizedate', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), localizeText("parseDateFormat"));
+});
+Handlebars.registerHelper('postdateformat', function(time) {
+    return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd'), 'dd MMM yyyy');
+});
 Handlebars.registerHelper('datetime', function(time) {
     return Globalize.format(Globalize.parseDate(time, 'yyyy-MM-dd HH:mm:ss'), 'dd MMM, HH:mmtt');
 });
@@ -73,12 +89,7 @@ Handlebars.registerHelper('each_category', function(items) {
 
 $("div[data-role=page]").on('pageinit', function() {
     var header = $(this).find(".header");
-    var footer = $(this).find(".footer");
     header.html(headerHtml).trigger("create");
-    footer.html(footerHtml);
-    header.find(".bars_link").on("tap", function(event) {
-        slideTopMenu();
-    });
     localizeElementTexts($(this));
 });
 $("div[data-role=page]").on('pageshow', function() {

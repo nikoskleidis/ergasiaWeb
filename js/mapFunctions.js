@@ -159,3 +159,10 @@ function reRenderMap(result, markerIcon, addressNo) {
 function alertAddressNotFound() {
     showAlert(addressNotFoundMsg, addressNotFoundTitle);
 }
+
+function supports_geolocation() {
+    return 'geolocation' in navigator;
+}
+function geolocation_error(err) {
+    console.warn('ERROR(' + err.code + '): ' + err.message);
+}

@@ -37,7 +37,7 @@ button,input,select,textarea {font-size: 100%;margin: 0;font-family: inherit;ver
 button,input {line-height: normal;}
 input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
-input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],textarea {border: 1px solid #ccc;border-radius: 3px;}
+input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],textarea {border: 2px solid #ccc;border-radius: 3px;/* margin: 1%; */min-height: 2.8em;font-size: 1.2em;}
 textarea {overflow: auto;padding: 4% 2%;vertical-align: top;width: 95%;resize: vertical}
 .fllt{float: left}
 .flrt{float: right}
@@ -52,6 +52,8 @@ textarea {overflow: auto;padding: 4% 2%;vertical-align: top;width: 95%;resize: v
 .aligncenter{text-align:center}
 .alignright{text-align:right}
 .alignjust{text-align:justify}
+.errorMsg{color: red;padding: 1em;font-size: 1.2em;display:none}
+.validation-msg{display:none}
 
 @keyframes fade {from { opacity: 1.0; }50% { opacity: 0.4; }to { opacity: 1.0; }}
 
@@ -93,6 +95,7 @@ h2 {font-size:1.6em}
 .flrt.ui-btn-inline{margin-right: 0}
 .ui-content {padding: 0}
 
+.sign_wrap {padding: 0 3%;}
 .header-inner{text-align: center;float: left;width: 100%;background: #f8f9fa;border-bottom: 1px solid #bcbec0}
 #search_categories_form{padding-top: 3.5%;background: #f8f9fa;border-bottom: 1px solid #bcbec0}
 .home_link{font-size: 1.2em;line-height: 3.2em;text-shadow: none}
