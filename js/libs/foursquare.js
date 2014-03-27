@@ -91,7 +91,7 @@ function transformToDisplayObject(foursquareData){
         }
         
         $.when.apply($, deferreds).done(function(){
-            displayResults({ "places" : places });
+            displayCategoryResults({ "places" : places });
         });
     }
     return places;
