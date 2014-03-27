@@ -4,6 +4,7 @@ var headerHtml = '';
 var footerHtml = '';
 var ajax_url = 'http://ergasiaweb.gr.185-4-133-73.linuxzone33.grserver.gr/services/';
 var profileDataObj = {type: 'load_profile', user: null, fullname: null, rating: 0, avatar: 'images/no-image-available.jpg'};
+var loginObj = null;
 var user_lat = 37.983258;
 var user_lng = 23.644827;
 var srv_categories = {
@@ -27,6 +28,7 @@ var app = {
     initialize: function() {
         setChosenLang();
         appendLangScript();
+        setLoginObj();
         headerHtml = render('header', {data: false});
         footerHtml = render('footer', {data: false});
         $("#left-panel").html(render('left_panel', {data: false})).panel({

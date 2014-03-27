@@ -34,6 +34,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(80) NOT NULL,
   `password` varchar(32) NOT NULL,
+   public_token VARCHAR(40) NOT NULL,
+   private_token VARCHAR(40) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `gender` TINYINT(1) COMMENT '1 man, 2 woman',

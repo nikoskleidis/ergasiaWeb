@@ -48,6 +48,16 @@ function setChosenLang() {
     }
 }
 
+function setLoginObj(loginUsrObj) {
+    if (varExists(loginUsrObj)) {
+        localStorage.setObj("login_obj", loginUsrObj);
+    }
+    if (varExists(localStorage["login_obj"])) {
+        loginObj = localStorage.getObj("login_obj");
+        viewProfile(null, null, null);
+    }
+}
+
 function displayCategoryResults(data) {
     $.mobile.loading("hide");
     var container = $("#places_list");
@@ -82,43 +92,49 @@ function appendLangScript() {
     Globalize.culture(langChosen);
 }
 
+
+
 function submitLoginForm() {
     var mail = $("#login_mail").val();
     var pass = $("#login_pass").val();
 
-    if (mail.length === 0 || pass.length === 0) {
-        console.log("! empty fields");
-        showAlert("empty fields");
-        return false;
+    if (validateForm($("#loginDiv"), $("#loginErrorMsg"))) {
+        publicAjaxCall({
+            "action": "login",
+            "mail": mail,
+            "pass": pass
+        }, function(result) {
+            loginUser(result, "login_failed_msg");
+        });
     }
-    ajaxCall({
-        "action": "login",
-        "mail": mail,
-        "pass": pass
-    }, function(result) {
-        if (result && result.code && result.code === "SUCCESS" && result.token_private && result.token_public) {
-            localStorage.setItem("token_private", result.token_private);
-            localStorage.setItem("token_public", result.token_public);
-            localStorage.setItem("id", result.id); // you can store whatever other data you want
-            $.mobile.changePage('#home');
-            return;
-        } else {
-            showAlert("login failed");
-        }
-    });
 }
 
-function slideTopMenu() {
-    $('#panel-menu').slideToggle("fast")
-            .next("div").toggleClass("transparent");
+function submitSignupForm() {
+    var formObj = $("#signupForm");
+    if (validateForm(formObj, formObj.find(".errorMsg"))) {
+        publicAjaxCall(formObj.serialize(), function(result) {
+            loginUser(result, "signup_failed_msg");
+        });
+    }
 }
 
-function viewProfile(userId, name, rating, avatar) {
-    profileDataObj.user = userId;
-    profileDataObj.fullname = name;
-    profileDataObj.rating = rating;
-    profileDataObj.avatar = avatar;
-    $.mobile.changePage('#rate_place');
+function submitEditProfileForm() {
+    var formObj = $("#edit_profileForm");
+    if (validateForm(formObj, formObj.find(".errorMsg"))) {
+        $("#editProfilePopup").popup("close");
+        privateAjaxCall(formObj.serialize(), function(result) {
+            setProfileInfoObj({"profile": result});
+        });
+    }
+}
+
+function loginUser(result, alertMsg) {
+    if (result && result.public_token && result.private_token && result.first_name) {
+        setLoginObj(result);
+    } else {
+        var printMsg = varExists(result.message) ? result.message : alertMsg;
+        showAlert(localizeText(printMsg));
+    }
 }
 
 function addProfileInfo(nameElem, imgElem, ratingElem) {
@@ -157,6 +173,11 @@ function renderRatingIcons(rating) {
         html += '<span class="star-icon' + appendClass + '">☆</span>';
     }
     return html;
+}
+
+function clearPrivateData() {
+    loginObj = null;
+    localStorage.removeItem("login_obj");
 }
 
 function signoutUser() {
