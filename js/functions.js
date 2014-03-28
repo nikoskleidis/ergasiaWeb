@@ -155,6 +155,19 @@ function loadCategoryPlaces(catid, callback, page) {
     }
 }
 
+function loadFavouritePlaces() {
+    $("#left-panel").panel("close");
+    $.mobile.loading("show");
+    $("#places_list").empty();
+    $("#top_progress_bar").show();
+    privateAjaxCall({
+        action: 'load_favourite_places',
+        lat: user_lat,
+        lng: user_lng
+    }, displayCategoryResults);
+    $(":mobile-pagecontainer").pagecontainer("change", '#places');
+}
+
 function appendCategoryPlaces() {
     if ($("#places_list").data("catid").length > 0) {
         loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
@@ -198,13 +211,13 @@ function submitEditProfileForm() {
     if (validateForm(formObj, formObj.find(".errorMsg"))) {
         $("#editProfilePopup").popup("close");
         privateAjaxCall(formObj.serialize(), function(result) {
-            setProfileInfoObj({"profile": result});
+//            setLoginObj({"profile": result});
         });
     }
 }
 
-function checkFavouriteResponse(result){
-    if(result.code != "SUCCESS") {
+function checkFavouriteResponse(result) {
+    if (result.code != "SUCCESS") {
         alert('Παρουσιάστηκε κάποιο απρόσμενο σφάλμα!');
     }
 }
@@ -215,18 +228,6 @@ function loginUser(result, alertMsg) {
     } else {
         var printMsg = varExists(result.message) ? result.message : alertMsg;
         showAlert(localizeText(printMsg));
-    }
-}
-
-function addProfileInfo(nameElem, imgElem, ratingElem) {
-    if (varExists(nameElem)) {
-        $(nameElem).html(profileDataObj.fullname);
-    }
-    if (varExists(imgElem)) {
-        $(imgElem).attr("src", profileDataObj.avatar);
-    }
-    if (varExists(ratingElem)) {
-        $(ratingElem).html(renderRatingIcons(profileDataObj.rating));
     }
 }
 
@@ -244,7 +245,7 @@ function renderRatingIcons(rating) {
     var html = '';
     for (var i = 1; i <= 5; i++)
     {
-        if(isNaN(rating)) {
+        if (isNaN(rating)) {
             break;
         }
         var appendClass = 'empty';
@@ -296,9 +297,6 @@ function createUserFormScroller(mode) {
     }));
 }
 function checkEmailAvailability(mailObj, excludeCurrent) {
-    if (excludeCurrent && mailObj.val() == profileInfoObj.profile.email) {
-        return;
-    }
     if (validateMail(mailObj.val())) {
         mailObj.addClass("ui-autocomplete-loading");
         publicAjaxCall({action: 'check_mail', email: mailObj.val()},

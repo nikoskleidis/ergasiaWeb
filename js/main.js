@@ -2,7 +2,6 @@ var langChosen = '';
 var feelings = null;
 var headerHtml = '';
 var ajax_url = 'http://ergasiaweb.gr.185-4-133-73.linuxzone33.grserver.gr/services/';
-var profileDataObj = {type: 'load_profile', user: null, fullname: null, rating: 0, avatar: 'images/no-image-available.jpg'};
 var loginObj = null;
 var user_lat = 37.993442;
 var user_lng = 23.730506;
@@ -34,6 +33,7 @@ var app = {
         $("#left-panel").html(render('left_panel', {data: false})).panel({
             create: function() {
                 localizeElementTexts($(this));
+                $(this).on("tap", ".favourites_link", loadFavouritePlaces)
             }
         });
         if (supports_geolocation()) {
@@ -116,7 +116,7 @@ $("#home").on('pagebeforecreate', function() {
                         places_wrapper.data("catid", catid);
                         loadCategoryPlaces(catid, displayCategoryResults, 1);
                     }
-                    $.mobile.changePage('#places');
+                    $(":mobile-pagecontainer").pagecontainer("change", '#places');
                 }
             })
             .on("tabsbeforeactivate", "#categories_tabs", function(event, ui) {
@@ -170,7 +170,7 @@ $("#settings").on('pagebeforecreate', function() {
             .on("tap", "#editProfileButton", function() {
                 var mode = "edit_profile";
                 var popupElem = $("#editProfilePopup");
-                popupElem.html(render('user_form', $.extend(profileInfoObj, {mode: mode, "signup": false})))
+                popupElem.html(render('user_form', {mode: mode, "signup": false}))
                         .on("tap", "#submit" + mode + "Button", function() {
                             submitEditProfileForm();
                         })
