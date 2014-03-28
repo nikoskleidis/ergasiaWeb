@@ -173,8 +173,35 @@ function appendCategoryPlaces() {
         loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
     } else if (allowAppend) {
         allowAppend = false;
-        getFoursquareResults($("#places_list").data("category"), appendCategoryResults, $("#places_list .place_selection").length);
+        getFoursquareResults($("#places_list").data("category"), appendCategoryResults, $("#places_list .place_selection").length, 10);
     }
+}
+
+function appendMarkers(data) {
+    $.each(data.places, function(key, item) {
+        console.log(item);
+        var latlng = new google.maps.LatLng(item.lat, item.lng);
+        var icon = null;
+        var marker = addIcon(map, latlng, icon, item.title);
+        var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">' + item.title + '</h1>' +
+                '<div id="bodyContent"><p>' + item.description +
+                '</p>' +
+                '</div>' +
+                '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        infoWindows.push(infowindow);
+        google.maps.event.addListener(marker, 'click', function() {
+            closeAllInfoWindows();
+            infowindow.open(map, marker);
+        });
+
+    });
 }
 
 function appendLangScript() {
@@ -322,7 +349,6 @@ function showAlert(message, title) {
         alert(title ? (title + ": " + message) : message);
     }
 }
-
 
 function validateURL(url) {
     var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
@@ -511,4 +537,5 @@ function getDateInFormat(date, format) {
             update();
         });
     };
-})(jQuery);
+}
+)(jQuery);

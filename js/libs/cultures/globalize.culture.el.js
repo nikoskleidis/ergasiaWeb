@@ -95,7 +95,7 @@
                     "libraries": "Βιβλιοθήκες",
                     "sign_out": "Αποσύνδεση",
                     "favourites": "Αγαπημένα",
-                    "favourite_places": "Favourite Places",
+                    "favourite_places": "Προβολή Χάρτη",
                     "meter_short": "m",
                     "km_short": "km",
                     "info": "Πληροφορίες",

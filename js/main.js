@@ -40,7 +40,7 @@ var app = {
             navigator.geolocation.getCurrentPosition(function(position) {
                 user_lat = position.coords.latitude;
                 user_lng = position.coords.longitude;
-            }, geolocation_error, {maximumAge: 60000, timeout: 5000, enableHighAccuracy: true});
+            }, geolocation_error, {maximumAge: 60000, timeout: 10000, enableHighAccuracy: true});
         }
         //getFsqCategoryList();
         //testGooglePlaces();
@@ -111,7 +111,7 @@ $("#home").on('pagebeforecreate', function() {
                     places_wrapper.empty().data("catid", "").data("category", "");
                     if (third_party_load) { //apo trito server, p.x. foursquare
                         places_wrapper.data("category", category);
-                        getFoursquareResults(category, displayCategoryResults, 0);
+                        getFoursquareResults(category, displayCategoryResults, 0, 10);
                     } else { //apo to diko mas server
                         places_wrapper.data("catid", catid);
                         loadCategoryPlaces(catid, displayCategoryResults, 1);
@@ -188,24 +188,24 @@ $("#settings").on('pagebeforecreate', function() {
 $("#search_location").on('pagebeforecreate', function() {
     $("#search_location_wrap").html(render('search_location', {data: false}));
 })
+        .on('pagebeforeshow', function() {
+            deleteOverlays();
+        })
         .on('pageshow', function() {
             $("#search_location_loader").show().removeClass("finished_loader").fadeOut(2000, 'linear', function() {
                 $("#search_location_loader").not(".finished_loader").fadeIn(2000, 'linear');
             });
-            if (navigator.geolocation) {
-                var options = {timeout: 31000, enableHighAccuracy: true, maximumAge: 90000};
-                navigator.geolocation.getCurrentPosition(
-                        function(position) {
-                            $("#search_location_loader").hide().addClass("finished_loader");
-                            var lat = position.coords.latitude;
-                            var lng = position.coords.longitude;
-                            reverseGeocode(lat, lng, "GR");
-                            initializeMap(14, true, lat, lng, 'images/map_icon.png');
-                        },
-                        function() {
-                            showAlert('Error getting location');
-                        }, options);
-            } else {
-                showAlert("no geolocation!!!", "no");
-            }
+            window.setTimeout(function() {
+                $("#search_location_loader").hide().addClass("finished_loader");
+                reverseGeocode(user_lat, user_lng, "GR");
+                initializeMap(14, true, user_lat, user_lng, 'images/map_icon.png');
+                privateAjaxCall({
+                    action: 'load_places',
+                    catid: null,
+                    lat: user_lat,
+                    lng: user_lng,
+                    page: 1
+                }, appendMarkers);
+                getFoursquareResults('', appendMarkers, 0, 50);
+            }, 3500);
         });

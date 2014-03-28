@@ -1,9 +1,7 @@
 var map;
 var geocoder = new google.maps.Geocoder();
-var infowindow = new google.maps.InfoWindow({
-    pixelOffset: new google.maps.Size(0, 30)
-});
 var markersArray = [];
+var infoWindows = [];
 
 function initializeMap(zoomLevel, createMarker, lat, lng, markerIcon) {
     if (lat == null) {
@@ -25,9 +23,6 @@ function initializeMap(zoomLevel, createMarker, lat, lng, markerIcon) {
         }
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-    google.maps.event.addListenerOnce(map, 'idle', function() {
-        $("#search_location_loader").hide();
-    });
     google.maps.event.addListener(map, 'zoom_changed', function() {
         if (map.getZoom() < 8) {
             map.setZoom(8);
@@ -117,18 +112,15 @@ function addMarker(map, position) {
     });
     markersArray.push(marker);
 }
-function addIcon(map, position, icon, title, addressNo) {
+function addIcon(map, position, icon, title) {
     var marker = new google.maps.Marker({
         map: map,
         position: position,
         icon: icon,
         title: title
     });
-    if (addressNo.toString().length == 0) {
-        markersArray.push(marker);
-    } else {
-        markersArray[addressNo] = marker;
-    }
+    markersArray.push(marker);
+    return marker;
 }
 // Deletes all overlays in the array by removing references to them
 function deleteOverlays() {
@@ -138,12 +130,12 @@ function deleteOverlays() {
         }
         markersArray.length = 0;
     }
-    if (typeof infoBoxesArray != 'undefined') {
-        for (l in infoBoxesArray) {
-            infoBoxesArray[l].close();
-        }
-        infoBoxesArray.length = 0;
-    }
+    closeAllInfoWindows();
+}
+function closeAllInfoWindows() {
+  for (var i=0;i<infoWindows.length;i++) {
+     infoWindows[i].close();
+  }
 }
 function reRenderMap(result, markerIcon, addressNo) {
     map.setCenter(result.geometry.location);

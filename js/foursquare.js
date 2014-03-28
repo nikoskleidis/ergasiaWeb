@@ -35,7 +35,7 @@ function testFoursquareApi() {
  * @param {type} categoryList
  * @returns {data}
  */
-function getFoursquareResults(categoryList, callback, offset) {
+function getFoursquareResults(categoryList, callback, offset, limit) {
     places = [];
     var url = "https://api.foursquare.com/v2/venues/explore";
     $.ajax({
@@ -50,7 +50,7 @@ function getFoursquareResults(categoryList, callback, offset) {
             llAcc: 10000.0, //Accuracy of latitude and longitude, in meters
             alt: 0, //Altitude of the user's location, in meters.
             altAcc: 10000.0, //Accuracy of the user's altitude, in meters.
-            limit: 10, //Number of results to return, up to 50.
+            limit: limit, //Number of results to return, up to 50.
             offset: offset, 
             v: getDateInFormat(new Date(), fsq_dateFormat), //Version parameter
             categoryId: categoryList
@@ -75,6 +75,8 @@ function transformToDisplayObject(foursquareData, callback) {
             newPlace.id = fsq_obj.id;
             newPlace.title = fsq_obj.name;
             newPlace.distance = distanceToString(fsq_obj.location.distance);
+            newPlace.lat = fsq_obj.location.lat;
+            newPlace.lng = fsq_obj.location.lng;
 
             places.push(newPlace);
         }

@@ -69,7 +69,7 @@
                     "sign_out": "Sign Out",
                     "most_searched": "Most searched for",
                     "favourites": "Favourites",
-                    "favourite_places": "Favourite Places",
+                    "favourite_places": "Browse Map",
                     "meter_short": "m",
                     "km_short": "km",
                     "info": "Info",
