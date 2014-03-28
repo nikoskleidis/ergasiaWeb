@@ -1,27 +1,27 @@
-<ul class="places_cat_list" data-role="listview" data-catid="">
-    {{#each places}}
-    <li class="place_selection">
-        <div class="prof_avatar">
-            <img src="{{avatar}}" class="round_img"/>
+{{#each places}}
+<li class="place_selection">
+    <div class="prof_avatar">
+        <img src="{{avatar}}" class="round_img"/>
+    </div>
+    <div class="prof_basic_info">
+        <h3 class="prof_name">{{title}}</h3>
+        <p class="prof_descr">{{{short_descr}}}</p>
+    </div>
+    <div class="prof_side_info">
+        <div class="prof_rating">{{rate_icons rating}}</div>
+        <div class="prof_distance">{{distance}}</div>
+        <div class="badge badge_small available"></div>
+    </div>
+    <div class="prof_details">
+        <div class="prof_info">
+            {{#if description}}
+            <h4 class="prof_info_header"><span data-langmsg="info"></span>:</h4>
+            <p class="prof_full_descr">{{{description}}}</p>
+            {{/if}}
         </div>
-        <div class="prof_basic_info">
-            <h3 class="prof_name">{{title}}</h3>
-            <p class="prof_descr">{{{short_descr}}}</p>
+        <div class="aligncenter">
+            <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{title}}" data-rating="{{rating}}" data-img="{{avatar}}"><span data-langmsg="details"></span></button>
         </div>
-        <div class="prof_side_info">
-            <div class="prof_rating">{{rate_icons rating}}</div>
-            <div class="prof_distance">{{distance}}</div>
-            <div class="badge badge_small available"></div>
-        </div>
-        <div class="prof_details">
-            <div class="prof_info">
-                <h4 class="prof_info_header"><span data-langmsg="info"></span>:</h4>
-                <p class="prof_full_descr">{{{description}}}</p>
-            </div>
-            <div class="aligncenter">
-                <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{title}}" data-rating="{{rating}}" data-img="{{avatar}}"><span data-langmsg="details"></span></button>
-            </div>
-        </div>
-    </li>
-    {{/each}}
-</ul>
+    </div>
+</li>
+{{/each}}

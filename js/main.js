@@ -104,12 +104,17 @@ $("#home").on('pagebeforecreate', function() {
                 if (user_lat > 0 && user_lng > 0) {
                     $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
                             .addClass("ui-focus");
+                    var catid = $(this).data("catid");
+                    var category = $(this).data("category");
                     var third_party_load = ($(this).data("third_party") == 1) ? true : false;
+                    var places_wrapper = $("#places_list");
+                    places_wrapper.empty();
                     if (third_party_load) { //apo trito server, p.x. foursquare
-                        $("#places_list").empty();
-                        getFoursquareResults(user_lat + "," + user_lng, $(this).data("category"), displayCategoryResults);
+                        places_wrapper.data("catid", catid);
+                        getFoursquareResults(user_lat + "," + user_lng, category, displayCategoryResults);
                     } else { //apo to diko mas server
-                        loadCategoryPlaces($(this).data("catid"), displayCategoryResults, 1);
+                        places_wrapper.data("catid", catid);
+                        loadCategoryPlaces(catid, displayCategoryResults, 1);
                     }
                     $.mobile.changePage('#places');
                 }
@@ -143,10 +148,10 @@ $("#places").on('pageinit', function() {
         }
     })
             .on("scrollstart", function() {
-                loadCategoryPlaces($("#places_list .places_cat_list").data("catid"), appendCategoryResults, false);
+                loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
             })
             .on("scrollstop", function() {
-                loadCategoryPlaces($("#places_list .places_cat_list").data("catid"), appendCategoryResults, false);
+                loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
             });
 });
 $("#rate_place").on('pagebeforecreate', function() {

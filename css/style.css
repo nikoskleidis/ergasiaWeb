@@ -106,7 +106,7 @@ h2 {font-size:1.6em}
 .top_menu_link.info_link{background-position: -72px 3px;margin-top: 1.1%;}
 .prof_cat_outer{display: inline-block;width: 50%;padding: 5% 0;text-align: center}
 .prof_cat_google_places{background-color: #FFF}
-.cat_top_divider,.prof_cat_google_places:nth-child(5),.prof_cat_google_places:nth-child(6),
+.cat_top_divider,.prof_cat_foursquare:nth-child(5),.prof_cat_foursquare:nth-child(6),
 .prof_cat_foursquare:nth-child(9),.prof_cat_foursquare:nth-child(10){border-top: 1px solid #abaeb0} 
 .prof_cat_outer.filtered{border-top: none;background-color: transparent}
 .prof_cat_outer.ui-focus{margin: 3px}
@@ -151,6 +151,7 @@ h2 {font-size:1.6em}
 .prof_img{width: 82%}
 .place_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 2% 0 !important;font-weight: normal !important;}
 .place_selection .prof_name{font-size: 1.4em;}
+#places_list .place_selection.tapped .prof_name{white-space: normal;}
 .prof_distance{font-size: 1.5em;margin: 7px 0 3px;}
 .badge_big{width: 49px;height: 49px;}
 .badge_small{width: 24px;height: 24px;background-size: 148px;}
@@ -218,7 +219,7 @@ h2 {font-size:1.6em}
 .ranking_text{line-height: 1.2em;}
 .ui-listview>li h4.ranking_title{margin: .2em 0 .1em;}
 .prof_side_info .prof_rating {font-size: 1.3em;}
-.progress_bar{position: relative;width:100%;height: 2px;display: none;margin-top: 5px;}
+.progress_bar{position: relative;width:100%;height: 2px;display: none}
 .line{position:absolute;background:#4a8df8;width:100%;height:2px;}
 .break{position:absolute;background:#fff;width:6px;height:2px;}
 .dot1{-webkit-animation: loading 2s infinite;-moz-animation: loading 2s infinite;-ms-animation: loading 2s infinite;-o-animation: loading 2s infinite;animation: loading 2s infinite;}

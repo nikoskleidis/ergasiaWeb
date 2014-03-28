@@ -121,24 +121,31 @@ function setLoginObj(loginUsrObj) {
 }
 
 function displayCategoryResults(data) {
-    $.mobile.loading("hide");
     var container = $("#places_list");
-    container.html(render('places', data)).trigger('create');
+    $.mobile.loading("hide");
+    $("#top_progress_bar").hide();
+    container.html(render('places', data)).listview("refresh");
     localizeElementTexts(container);
 }
 
 function appendCategoryResults(data) {
+    allowAppend = true;
     var container = $("#places_list");
-    container.append(render('places', data)).trigger('create');
+    $("#bottom_progress_bar").hide();
+    container.append(render('places', data)).listview("refresh");
     localizeElementTexts(container);
 }
 
 function loadCategoryPlaces(catid, callback, page) {
-    var progress_bar = $("#bottom_progress_bar");
-    if (varExists(page) || (allowAppend && cat_page < 20 && $(window).scrollTop() + $(window).height() > $(document).height() - 750)) {
-        allowAppend = false;
-        $("#places_list").empty();
-        progress_bar.show();
+    if (page == 1 || (allowAppend && placesPage < 20 && $(window).scrollTop() + $(window).height() > $(document).height() - 400)) {
+        if (page == 1) {
+            $.mobile.loading("show");
+            $("#places_list").empty();
+            $("#top_progress_bar").show();
+        } else {
+            allowAppend = false;
+            $("#bottom_progress_bar").show();
+        }
         placesPage = page || (placesPage + 1);
         privateAjaxCall({
             action: 'load_places',
