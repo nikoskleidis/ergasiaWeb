@@ -15,6 +15,7 @@ var catID_Gaming_Cafe = "4bf58dd8d48988d18d941735";
 var catID_Internet_Cafe = "4bf58dd8d48988d1f0941735";
 var catID_College_Cafeteria = "4bf58dd8d48988d1a1941735";
 var catID_Clothing_Store = "4bf58dd8d48988d103951735";
+var catID_Art_Gallery = "4bf58dd8d48988d1e2931735";
 var fsq_categoryList;
 
 var places = [];
@@ -26,11 +27,6 @@ function testFoursquareApi() {
     getCoffeeShops(coordinates);
 }
 
-function getCoffeeShops(logLat) {
-    var categories = catID_Cafe + "," + catID_Cafeteria + "," + catID_Internet_Cafe + "," + catID_College_Cafeteria;
-    return getPointsFor(logLat, categories);
-}
-
 /**
  * Find all points of the specified category arround the given coordinates
  * Transforms the given data to the form required in places.html template
@@ -39,10 +35,9 @@ function getCoffeeShops(logLat) {
  * @param {type} categoryList
  * @returns {data}
  */
-function getPointsFor(logLat, categoryList) {
-    $("#places_list").empty();
+function getFoursquareResults(logLat, categoryList, callback) {
     places = [];
-    var url = "https://api.foursquare.com/v2/venues/search";
+    var url = "https://api.foursquare.com/v2/venues/explore";
     $.ajax({
         url: url,
         method: 'GET',
@@ -56,27 +51,26 @@ function getPointsFor(logLat, categoryList) {
             alt: 0, //Altitude of the user's location, in meters.
             altAcc: 10000.0, //Accuracy of the user's altitude, in meters.
             limit: 10, //Number of results to return, up to 50.
+            offset: 0, 
             v: getDateInFormat(new Date(), fsq_dateFormat), //Version parameter
             categoryId: categoryList
         },
         success: function(data) {
-            transformToDisplayObject(data); // results are displayed through this function
+            transformToDisplayObject(data, callback); // results are displayed through this function
         },
         error: function() {
             console.log("failed");
         }
     });
-
-    return;
 }
 
-function transformToDisplayObject(foursquareData) {
-    if (foursquareData && foursquareData.response && foursquareData.response.venues) {
-        var array = foursquareData.response.venues;
-        len = array.length;
+function transformToDisplayObject(foursquareData, callback) {
+    if (foursquareData && foursquareData.response && foursquareData.response.groups) {
+        var array = foursquareData.response.groups[0].items;
+        var len = array.length;
         for (var i = 0; i < len; i++) {
             var newPlace = {};
-            var fsq_obj = array[i];
+            var fsq_obj = array[i].venue;
 
             newPlace.id = fsq_obj.id;
             newPlace.title = fsq_obj.name;
@@ -87,13 +81,14 @@ function transformToDisplayObject(foursquareData) {
         //create a list of ajax requests
         var deferreds = [];
         for (i = 0; i < places.length; i++) {
-            places[i].short_descr = extractShortDescr(array[i]);
-            places[i].description = extractInfo(array[i]);
-            deferreds.push(getMoreInfoFor(array[i].id));
+            var tmp_fsq_obj = array[i].venue;
+            places[i].short_descr = extractShortDescr(tmp_fsq_obj);
+            places[i].description = extractInfo(tmp_fsq_obj);
+            deferreds.push(getMoreInfoFor(tmp_fsq_obj.id));
         }
 
         $.when.apply($, deferreds).done(function() {
-            displayCategoryResults({"places": places});
+            callback({"places": places});
         });
     }
     return places;

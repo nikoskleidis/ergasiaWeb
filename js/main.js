@@ -8,16 +8,16 @@ var user_lat = 37.993442;
 var user_lng = 23.730506;
 var srv_categories = {
     "categories": [
-        {id: 1, parent: 'public_services', title: 'public_wifi'},
-        {id: 2, parent: 'public_services', title: 'public_buildings'},
-        {id: 3, parent: 'public_services', title: 'monuments'},
-        {id: 4, parent: 'public_services', title: 'beaches'},
-        {id: 5, parent: 'foursquare', title: 'restaurants'},
-        {id: 6, parent: 'foursquare', title: 'coffee_places'},
-        {id: 7, parent: 'foursquare', title: 'clothes_shop'},
-        {id: 8, parent: 'foursquare', title: 'public_parks'},
-        {id: 9, parent: 'foursquare', title: 'painting_events'},
-        {id: 10, parent: 'foursquare', title: 'book_events'}
+        {id: 1, third_party: 0, parent: 'public_services', title: 'public_wifi'},
+        {id: 2, third_party: 0, parent: 'public_services', title: 'public_buildings'},
+        {id: 3, third_party: 0, parent: 'public_services', title: 'monuments'},
+        {id: 4, third_party: 0, parent: 'public_services', title: 'beaches'},
+        {id: 5, third_party: 1, parent: 'foursquare', title: 'restaurants', category: catID_Food},
+        {id: 6, third_party: 1, parent: 'foursquare', title: 'coffee_places', category: catID_Cafe + "," + catID_Cafeteria + "," + catID_Internet_Cafe + "," + catID_College_Cafeteria},
+        {id: 7, third_party: 1, parent: 'foursquare', title: 'clothes_shop', category: catID_Clothing_Store},
+        {id: 8, third_party: 1, parent: 'foursquare', title: 'public_parks', category: catID_Stadium},
+        {id: 9, third_party: 1, parent: 'foursquare', title: 'art_gallery', category: catID_Art_Gallery},
+        {id: 10, third_party: 1, parent: 'foursquare', title: 'libraries', category: catID_Library}
     ]
 };
 var placesPage = 1;
@@ -29,7 +29,7 @@ var app = {
         setChosenLang();
         appendLangScript();
         setLoginObj();
-    setScrollInitOpts();
+        setScrollInitOpts();
         headerHtml = render('header', {data: false});
         $("#left-panel").html(render('left_panel', {data: false})).panel({
             create: function() {
@@ -104,20 +104,11 @@ $("#home").on('pagebeforecreate', function() {
                 if (user_lat > 0 && user_lng > 0) {
                     $(this).css({"width": ($(this).width() - 6) + "px", "height": ($(this).height() - 6) + "px"})
                             .addClass("ui-focus");
-                    var category = $(this).data("catid");
-                    if (category === 5) { //restaurants
-
-                    } else if (category === 6) { // coffee_places
-                        getCoffeeShops(user_lat + "," + user_lng);
-                    } else if (category === 7) { // clothes_shop
-
-                    } else if (category === 8) { //public_parks
-
-                    } else if (category === 9) { //painting_events
-
-                    } else if (category === 10) { //book_events
-
-                    } else {
+                    var third_party_load = ($(this).data("third_party") == 1) ? true : false;
+                    if (third_party_load) { //apo trito server, p.x. foursquare
+                        $("#places_list").empty();
+                        getFoursquareResults(user_lat + "," + user_lng, $(this).data("category"), displayCategoryResults);
+                    } else { //apo to diko mas server
                         loadCategoryPlaces($(this).data("catid"), displayCategoryResults, 1);
                     }
                     $.mobile.changePage('#places');
