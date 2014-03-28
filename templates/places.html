@@ -8,9 +8,15 @@
         <p class="prof_descr">{{{short_descr}}}</p>
     </div>
     <div class="prof_side_info">
+        {{#if ../with_rating}}
         <div class="prof_rating">{{rate_icons rating}}</div>
+        {{else}}
+        <div class="add_to_favourite">
+            <span class="star-icon {{is_favourite}}">☆</span>
+        </div>
+        {{/if}}
+        <div class="clear"></div>
         <div class="prof_distance">{{distance}}</div>
-        <div class="badge badge_small available"></div>
     </div>
     <div class="prof_details">
         <div class="prof_info">
@@ -19,9 +25,9 @@
             <p class="prof_full_descr">{{{description}}}</p>
             {{/if}}
         </div>
-<!--        <div class="aligncenter">
-            <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{title}}" data-rating="{{rating}}" data-img="{{avatar}}"><span data-langmsg="details"></span></button>
-        </div>-->
+        <!--        <div class="aligncenter">
+                    <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{title}}" data-rating="{{rating}}" data-img="{{avatar}}"><span data-langmsg="details"></span></button>
+                </div>-->
     </div>
 </li>
 {{/each}}

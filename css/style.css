@@ -143,29 +143,20 @@ h2 {font-size:1.6em}
 #places_list .place_selection.tapped{background: #464648;color: #fff}
 .star-icon {position:relative}
 .star-icon:before{content: "\2605";position: absolute;left:0;overflow: hidden;font-size: 1.2em;color: #68be61;margin: -1px}
-.star-icon.empty:before{width: 0%}
+.star-icon.empty:before, .add_to_favourite .star-icon.not_added:before{width: 0%}
 .star-icon.one_third:before {width: 48%}
 .star-icon.half:before {width: 58%}
 .star-icon.two_third:before {width: 71%}
 .place_selection.tapped .star-icon,.place_selection.tapped .star-icon:before{color: #fff}
+.add_to_favourite {text-align: right;margin: 0 .5em .5em;}
+.add_to_favourite .star-icon{font-size: 2.4em;color: #FFD700;}
+.add_to_favourite .star-icon.added:before{text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.9);}
+.add_to_favourite .star-icon.added:before{color: #FFD700}
 .prof_img{width: 82%}
 .place_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 2% 0 !important;font-weight: normal !important;}
 .place_selection .prof_name{font-size: 1.4em;}
 #places_list .place_selection.tapped .prof_name{white-space: normal;}
 .prof_distance{font-size: 1.5em;}
-.badge_big{width: 49px;height: 49px;}
-.badge_small{width: 24px;height: 24px;background-size: 148px;}
-.badge_small.available{margin-top: 8%;float: right;background-position: 0 0}
-.badge_small.certified{background-position: -74px 0}
-.badge_small.offers{background-position: -100px 0}
-.badge_small.suggested{background-position: -124px 0}
-.badge_big.location{background-position: -49px 0;}
-.badge_big.available{background-position: 0 0}
-.badge_big.certified{background-position: -151px 0;}
-.badge_big.offers{background-position: -203px 0;}
-.badge_big.suggested{background-position: -254px 0;}
-.prof_badges{position: absolute;bottom: 0;right: 0}
-.prof_badges .badge{float: right;margin-left: -12%;}
 .prof_avatar,.prof_basic_info,.prof_side_info{float: left}
 .prof_avatar{width: 24%;position: relative}
 .prof_basic_info{width: 46%;margin: 0 1%}
@@ -194,21 +185,7 @@ h2 {font-size:1.6em}
 .prof_details .badge{display: inline-block;margin-right: 2.5%;vertical-align: middle}
 .prof_details .badge_descr{display: inline-block;vertical-align: middle;width: 90%;white-space: normal;}
 .prof_side_info .badge{display: inline-block}
-.contact_img_wrap{width: 46%;text-align: center;}
-.contact_img_wrap img{width: 80%}
-.contact_profile_info{width: 49%;font-size: 1.1em;padding-top: 6%;}
-.contact_profile_info h2{font-size: 1.3em;padding-bottom: .2em;}
-#contact_profile{padding: 20% 0 12%}
-#response_wrap{text-align: center;font-size: 1.4em;padding: 20% 10%}
-#rating_header{text-align: center;font-size: 1.6em;padding: 20% 0 6%}
-.rating_info{margin-top: 8%;}
-#current_rating{margin-top: 10%}
-#current_rating .star-icon{font-size: 2.4em;color: #939598}
-#current_rating .star-icon.full:before, #current_rating .star-icon.half:before {color: #68be61}
 .response_icon{background:url('../images/acceptance.png') no-repeat scroll transparent;width: 201px;height:201px;display: inline-block;margin-bottom: 10%;}
-#rating_bars .rating_label{margin: .5em 0 .4em .5em;}
-.rating_bar{display: inline-block;height:50px}
-.rating_score{line-height:50px;vertical-align: top}
 .app_info_wrap{font-size: .9em;padding: .5em}
 .app_info_wrap p{margin-top: .3em}
 .app_info_wrap>h1, .app_info_wrap>h2, .app_info_wrap>h3{line-height: .9em;margin-bottom: .5em}

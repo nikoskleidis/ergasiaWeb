@@ -45,7 +45,7 @@ else if (!empty($_REQUEST['public_token']) && !empty($_REQUEST['private_token'])
     }
     switch ($data['action']) {
         case 'load_places':
-            echo json_encode(array("catid" => $data['catid'], "places" => getPlaces($data['lat'], $data['lng'], $data['catid'], $data['page'])));
+            echo json_encode(array("catid" => $data['catid'], "places" => getPlaces($userId, $data['lat'], $data['lng'], $data['catid'], $data['page'])));
             break;
     }
 }

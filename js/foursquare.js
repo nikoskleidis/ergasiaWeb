@@ -88,7 +88,7 @@ function transformToDisplayObject(foursquareData, callback) {
         }
 
         $.when.apply($, deferreds).done(function() {
-            callback({"places": places});
+            callback({"places": places, "with_rating": true});
         });
     }
     return places;

@@ -96,13 +96,15 @@ function updatePrivateToken($userId) {
     return $result;
 }
 
-function getPlaces($lat, $lng, $catid = null, $page = 1, $sort = "distance") {
+function getPlaces($userId, $lat, $lng, $catid = null, $page = 1, $sort = "distance") {
     $categoryFilter = ($catid != null) ? " AND category_id = " . filter_var($catid, FILTER_SANITIZE_NUMBER_INT) : "";
     $distanceCalc = "(6371 * acos(cos(radians(" . $lat . ")) * cos(radians(lat)) * cos(radians(lng) - radians(" . $lng . ")) + sin(radians(" . $lat . ")) * sin(radians(lat)))) ";
 
     $query = "SELECT p.id, p.title, p.description, p.lat, p.lng, " .
-            "$distanceCalc as distance, 'images/no-image-available.jpg' as avatar " .
-            "FROM places p, categories c " .
+            "$distanceCalc as distance, 'images/no-image-available.jpg' as avatar, " .
+            "IF(uf.place_id, 'added', 'not_added') as is_favourite " .
+            "FROM categories c, places p LEFT OUTER JOIN " . 
+                "(SELECT place_id FROM user_favourites WHERE user_id = $userId) uf ON (uf.place_id = p.id) " .
             "WHERE c.id = p.category_id $categoryFilter AND $distanceCalc < c.search_distance" . 
             " ORDER BY " . $sort . " LIMIT " . (($page - 1) * 10) . ", 10";
     $resultArray = fetchQueryArray($query);
