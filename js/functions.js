@@ -137,6 +137,7 @@ function loadCategoryPlaces(catid, callback, page) {
     var progress_bar = $("#bottom_progress_bar");
     if (varExists(page) || (allowAppend && cat_page < 20 && $(window).scrollTop() + $(window).height() > $(document).height() - 750)) {
         allowAppend = false;
+        $("#places_list").empty();
         progress_bar.show();
         placesPage = page || (placesPage + 1);
         privateAjaxCall({

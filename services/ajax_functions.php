@@ -2,7 +2,7 @@
 
 require_once '../include/basicVars.inc.php';
 require_once '../include/utility.php';
-require_once '../include/functions.inc.php';
+require_once '../include/db_functions.inc.php';
 require '../include/DBconnection.inc.php';
 if (isset($_POST['action'])) {
     //public calls
@@ -45,7 +45,7 @@ else if (!empty($_REQUEST['public_token']) && !empty($_REQUEST['private_token'])
     }
     switch ($data['action']) {
         case 'load_places':
-            echo json_encode(array("places" => getPlaces($_POST['lat'], $_POST['lng'], $_POST['catid'], $_POST['page'])));
+            echo json_encode(array("catid" => $data['catid'], "places" => getPlaces($data['lat'], $data['lng'], $data['catid'], $data['page'])));
             break;
     }
 }

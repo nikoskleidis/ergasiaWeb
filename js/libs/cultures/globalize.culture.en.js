@@ -117,6 +117,7 @@
                     "profile": "Profile",
                     "edit_profile_details": "Edit Profile Details",
                     "edit_profile": "Save",
+                    "details": "Details",
                     "favourite_places_link_descr": "Manage your most common places",
                     "settings_link_descr": "Manage more settings",
                     "google_places": "Google Places",

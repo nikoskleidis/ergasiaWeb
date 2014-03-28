@@ -21,12 +21,12 @@ var places = [];
 var hasLoaded = false;
 var loadedCounter = 0;
 
-function testFoursquareApi(){
+function testFoursquareApi() {
     var coordinates = '37.976648,23.725871';
     getCoffeeShops(coordinates);
 }
 
-function getCoffeeShops(logLat){
+function getCoffeeShops(logLat) {
     var categories = catID_Cafe + "," + catID_Cafeteria + "," + catID_Internet_Cafe + "," + catID_College_Cafeteria;
     return getPointsFor(logLat, categories);
 }
@@ -39,59 +39,61 @@ function getCoffeeShops(logLat){
  * @param {type} categoryList
  * @returns {data}
  */
-function getPointsFor(logLat, categoryList){
+function getPointsFor(logLat, categoryList) {
+    $("#places_list").empty();
     places = [];
     var url = "https://api.foursquare.com/v2/venues/search";
     $.ajax({
         url: url,
         method: 'GET',
         dataType: 'json',
-        data : {
-            client_id : fsq_clientId,
+        data: {
+            client_id: fsq_clientId,
             client_secret: fsq_clientSecret,
-            ll: logLat,    //Required. Latitude and longitude to search near.
-            radius: 800,        //Limit results to venues within this many meters of the specified location. Defaults to a city-wide area.
-            llAcc: 10000.0,     //Accuracy of latitude and longitude, in meters
-            alt: 0,             //Altitude of the user's location, in meters.
-            altAcc: 10000.0,    //Accuracy of the user's altitude, in meters.
-            limit: 10,          //Number of results to return, up to 50.
-            v:getDateInFormat(new Date(), fsq_dateFormat),          //Version parameter
+            ll: logLat, //Required. Latitude and longitude to search near.
+            radius: 800, //Limit results to venues within this many meters of the specified location. Defaults to a city-wide area.
+            llAcc: 10000.0, //Accuracy of latitude and longitude, in meters
+            alt: 0, //Altitude of the user's location, in meters.
+            altAcc: 10000.0, //Accuracy of the user's altitude, in meters.
+            limit: 10, //Number of results to return, up to 50.
+            v: getDateInFormat(new Date(), fsq_dateFormat), //Version parameter
             categoryId: categoryList
         },
-        success: function(data){
+        success: function(data) {
             transformToDisplayObject(data); // results are displayed through this function
         },
-        error: function(){
+        error: function() {
             console.log("failed");
         }
     });
-    
-    return ;
+
+    return;
 }
 
-function transformToDisplayObject(foursquareData){
-    if(foursquareData && foursquareData.response && foursquareData.response.venues){
+function transformToDisplayObject(foursquareData) {
+    if (foursquareData && foursquareData.response && foursquareData.response.venues) {
         var array = foursquareData.response.venues;
         len = array.length;
-        for (var i = 0; i < len; i++){
+        for (var i = 0; i < len; i++) {
             var newPlace = {};
             var fsq_obj = array[i];
-            
+
             newPlace.id = fsq_obj.id;
             newPlace.title = fsq_obj.name;
             newPlace.distance = distanceToString(fsq_obj.location.distance);
-            
+
             places.push(newPlace);
         }
         //create a list of ajax requests
         var deferreds = [];
-        for (i=0;i<places.length;i++){
+        for (i = 0; i < places.length; i++) {
+            places[i].short_descr = extractShortDescr(array[i]);
             places[i].description = extractInfo(array[i]);
             deferreds.push(getMoreInfoFor(array[i].id));
         }
-        
-        $.when.apply($, deferreds).done(function(){
-            displayCategoryResults({ "places" : places });
+
+        $.when.apply($, deferreds).done(function() {
+            displayCategoryResults({"places": places});
         });
     }
     return places;
@@ -103,16 +105,28 @@ function transformToDisplayObject(foursquareData){
  * @param {type} fsq_obj
  * @returns info
  */
-function extractInfo(fsq_obj){
-    var info;
-    info = fsq_obj.location.address ? "Address:" + fsq_obj.location.address : "";
-    info += fsq_obj.location.city ? ", City: " + fsq_obj.location.city : "";
-    info += fsq_obj.location.crossStreet ? ", Closest Street: " + fsq_obj.location.crossStreet : "";
-    info += fsq_obj.location.state ? ", Area: " + fsq_obj.location.state : "";
-    info += fsq_obj.location.postalCode ? ", Postal Code: " + fsq_obj.location.postalCode : "";
-    info += fsq_obj.contact.formattedPhone ? ", Phone: " + fsq_obj.contact.formattedPhone : "";
-    
+function extractInfo(fsq_obj) {
+    var info = fsq_obj.location.address ? "Address:" + fsq_obj.location.address : "";
+    info += fsq_obj.location.city ? ",<br/>City: " + fsq_obj.location.city : "";
+    info += fsq_obj.location.crossStreet ? ",<br/>Closest Street: " + fsq_obj.location.crossStreet : "";
+    info += fsq_obj.location.state ? ",<br/>Area: " + fsq_obj.location.state : "";
+    info += fsq_obj.location.postalCode ? ",<br/>Postal Code: " + fsq_obj.location.postalCode : "";
+    info += fsq_obj.contact.formattedPhone ? ",<br/>Phone: " + fsq_obj.contact.formattedPhone : "";
+
     return info;
+}
+
+/**
+ * Fill in the "short_descr" field of the displayed object
+ * 
+ * @param {type} fsq_obj
+ * @returns short_descr
+ */
+function extractShortDescr(fsq_obj) {
+    var short_descr = fsq_obj.location.address ? "Address:" + fsq_obj.location.address : "";
+    short_descr += fsq_obj.location.city ? ", City: " + fsq_obj.location.city : "";
+
+    return short_descr;
 }
 
 /**
@@ -120,7 +134,7 @@ function extractInfo(fsq_obj){
  * @param {type} id
  * @returns {Array|getMoreInfoFor.newInfo}
  */
-function getMoreInfoFor(id){
+function getMoreInfoFor(id) {
     var url = "https://api.foursquare.com/v2/venues/" + id;
     var moreInfo;
     return $.ajax({
@@ -128,41 +142,41 @@ function getMoreInfoFor(id){
         method: 'GET',
         dataType: 'json',
         //async: false,
-        data : {
-            client_id : fsq_clientId,
+        data: {
+            client_id: fsq_clientId,
             client_secret: fsq_clientSecret,
-            limit: 1,          //Number of results to return, up to 200.
-            v:getDateInFormat(new Date(), fsq_dateFormat)          //Version parameter
+            limit: 1, //Number of results to return, up to 200.
+            v: getDateInFormat(new Date(), fsq_dateFormat)          //Version parameter
         },
-        success: function(data){
-            if (data && data.response && data.response.venue){
+        success: function(data) {
+            if (data && data.response && data.response.venue) {
                 moreInfo = data.response.venue;
             }
             var newInfo = [];
-    
-            if (moreInfo){
+
+            if (moreInfo) {
                 var photo;
-                if (moreInfo.photos && moreInfo.photos.groups[0] && moreInfo.photos.groups[0].items[0]){
+                if (moreInfo.photos && moreInfo.photos.groups[0] && moreInfo.photos.groups[0].items[0]) {
                     photo = moreInfo.photos.groups[0].items[0];
                     newInfo.avatar = photo.prefix + "300x300" + photo.suffix;
-                }else{
+                } else {
                     newInfo.avatar = "images/no-image-available.jpg";
                 }
-                if (moreInfo.rating){
-                    newInfo.rating = (moreInfo.rating/2).toFixed(1);
-                }else{
+                if (moreInfo.rating) {
+                    newInfo.rating = (moreInfo.rating / 2).toFixed(1);
+                } else {
                     newInfo.rating = 0;
                 }
             }
-            for (i=0;i<places.length;i++){
-                if (places[i].id === moreInfo.id){
+            for (i = 0; i < places.length; i++) {
+                if (places[i].id === moreInfo.id) {
                     places[i].rating = newInfo.rating;
                     places[i].avatar = newInfo.avatar;
                     break;
                 }
             }
         },
-        error: function(){
+        error: function() {
             console.log("failed");
         }
     });
@@ -175,11 +189,11 @@ function getMoreInfoFor(id){
  * @param {type} distance
  * @returns {String}
  */
-function distanceToString(distance){
-    if (distance < 1000){
+function distanceToString(distance) {
+    if (distance < 1000) {
         return distance + "m";
-    }else{
-        distance = distance/1000;
+    } else {
+        distance = distance / 1000;
         return distance.toFixed(2) + "km";
     }
 }
@@ -190,22 +204,22 @@ function distanceToString(distance){
  * 
  * @returns {undefined}
  */
-function getFsqCategoryList(){
+function getFsqCategoryList() {
     var url = "https://api.foursquare.com/v2/venues/categories";
     $.ajax({
         url: url,
         method: 'GET',
         dataType: 'json',
-        data : {
-            client_id : fsq_clientId,
+        data: {
+            client_id: fsq_clientId,
             client_secret: fsq_clientSecret,
-            v:getDateInFormat(new Date(), fsq_dateFormat)          //Version parameter
+            v: getDateInFormat(new Date(), fsq_dateFormat)          //Version parameter
         },
-        success: function(data){
+        success: function(data) {
 //            console.log("Category List:");
 //            console.log(data.response.categories);
         },
-        error: function(){
+        error: function() {
             console.log("failed");
         }
     });

@@ -149,7 +149,7 @@ h2 {font-size:1.6em}
 .place_selection.tapped .star-icon{color: #fff}
 .place_selection.tapped .star-icon.full:before, .place_selection.tapped .star-icon.half:before {color: #fff}
 .prof_img{width: 82%}
-.place_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 0 !important;font-weight: normal !important;}
+.place_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 2% 0 !important;font-weight: normal !important;}
 .place_selection .prof_name{font-size: 1.4em;}
 .prof_distance{font-size: 1.5em;margin: 7px 0 3px;}
 .badge_big{width: 49px;height: 49px;}
@@ -166,12 +166,12 @@ h2 {font-size:1.6em}
 .prof_badges{position: absolute;bottom: 0;right: 0}
 .prof_badges .badge{float: right;margin-left: -12%;}
 .prof_avatar,.prof_basic_info,.prof_side_info{float: left}
-.prof_avatar{width: 25%;position: relative}
+.prof_avatar{width: 24%;position: relative}
 .prof_basic_info{width: 46%;margin: 0 1%}
-.prof_side_info{width: 26%;text-align: right;padding-top: 1.2%;}
+.prof_side_info{width: 28%;text-align: right;padding-top: 1.2%;}
 .round_img{border: 1px solid #646464;border-radius: 50% !important}
-#places_list .prof_avatar img{width: 80%}
-.prof_details{clear: both;display: none;padding: 1em}
+#places_list .prof_avatar img{width: 90%}
+.prof_details{clear: both;display: none;padding: .1em 1em .6em}
 .badge_descr{line-height: 1.3em;margin-left: 2.2%;}
 .prof_info_details_wrap{padding: 4% 0 6%}
 .pickButton{background: #68be61 !important;color: #fff !important;border-color: transparent !important;text-shadow: none !important;font-size: 1.2em;padding: 0.4em 1.3em;}
@@ -190,8 +190,6 @@ h2 {font-size:1.6em}
 #map_canvas{width: 100%;height:90%}
 .map_label{margin: 4% 0 2%}
 .prof_info{padding: 0 0 1em;}
-.badges_icons{position: absolute;bottom: 0;right: 0}
-.badges_icons .badge{float: right;margin-left: -9%}
 .prof_details .badge{display: inline-block;margin-right: 2.5%;vertical-align: middle}
 .prof_details .badge_descr{display: inline-block;vertical-align: middle;width: 90%;white-space: normal;}
 .prof_side_info .badge{display: inline-block}

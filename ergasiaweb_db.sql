@@ -15,15 +15,16 @@ USE `ergasiaweb_db`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` tinyint unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(60) NOT NULL,
+  `search_distance` DECIMAL(5,2) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 INSERT INTO `categories` (id, title) VALUES
-(1, 'Δημόσια Wi-Fi'),
-(2, 'Δημόσια κτίρια'),
-(3, 'Αρχαία Μνημεία'),
-(4, 'Παραλίες');
+(1, 'Δημόσια Wi-Fi', 2),
+(2, 'Δημόσια κτίρια', 3),
+(3, 'Αρχαία Μνημεία', 12),
+(4, 'Παραλίες', 30);
 
 
 --
@@ -89,3 +90,7 @@ CREATE TABLE IF NOT EXISTS `reviews` (
   CONSTRAINT `fk_user_reviews` 
 		FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `ergasiaweb_db`.`places` 
+ADD INDEX `idx_cat_lat_lng` (`category_id` ASC, `lat` ASC, `lng` ASC);

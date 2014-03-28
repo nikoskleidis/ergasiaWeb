@@ -1,17 +1,12 @@
-<ul data-role="listview">
+<ul class="places_cat_list" data-role="listview" data-catid="">
     {{#each places}}
     <li class="place_selection">
         <div class="prof_avatar">
             <img src="{{avatar}}" class="round_img"/>
-            <div class="badges_icons">
-                <div class="badge badge_small certified"></div>
-                <div class="badge badge_small suggested"></div>
-                <div class="badge badge_small offers"></div>
-            </div>
         </div>
         <div class="prof_basic_info">
             <h3 class="prof_name">{{title}}</h3>
-            <p class="prof_descr">{{{description}}}</p>
+            <p class="prof_descr">{{{short_descr}}}</p>
         </div>
         <div class="prof_side_info">
             <div class="prof_rating">{{rate_icons rating}}</div>
@@ -21,7 +16,7 @@
         <div class="prof_details">
             <div class="prof_info">
                 <h4 class="prof_info_header"><span data-langmsg="info"></span>:</h4>
-                <p class="prof_full_descr">{{description}}</p>
+                <p class="prof_full_descr">{{{description}}}</p>
             </div>
             <div class="aligncenter">
                 <button class="pickButton" data-inline="true" data-id="{{id}}" data-name="{{title}}" data-rating="{{rating}}" data-img="{{avatar}}"><span data-langmsg="details"></span></button>

@@ -4,8 +4,8 @@ var headerHtml = '';
 var ajax_url = 'http://ergasiaweb.gr.185-4-133-73.linuxzone33.grserver.gr/services/';
 var profileDataObj = {type: 'load_profile', user: null, fullname: null, rating: 0, avatar: 'images/no-image-available.jpg'};
 var loginObj = null;
-var user_lat = 37.983258;
-var user_lng = 23.644827;
+var user_lat = 37.993442;
+var user_lng = 23.730506;
 var srv_categories = {
     "categories": [
         {id: 1, parent: 'public_services', title: 'public_wifi'},
@@ -152,11 +152,10 @@ $("#places").on('pageinit', function() {
         }
     })
             .on("scrollstart", function() {
-                loadCategoryPlace($(this).data("catid"), displayCategoryResults, 1);
+                loadCategoryPlaces($("#places_list .places_cat_list").data("catid"), appendCategoryResults, false);
             })
             .on("scrollstop", function() {
-                loadCategoryPlace($(this).data("catid"), displayCategoryResults, 1);
-                appendArticles();
+                loadCategoryPlaces($("#places_list .places_cat_list").data("catid"), appendCategoryResults, false);
             });
 });
 $("#rate_place").on('pagebeforecreate', function() {
