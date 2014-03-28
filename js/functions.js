@@ -1,5 +1,3 @@
-
-
 Storage.prototype.setObj = function(key, obj) {
     return this.setItem(key, JSON.stringify(obj));
 }
@@ -157,17 +155,18 @@ function loadCategoryPlaces(catid, callback, page) {
     }
 }
 
+function appendCategoryPlaces() {
+    if ($("#places_list").data("catid").length > 0) {
+        loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
+    } else if (allowAppend) {
+        allowAppend = false;
+        getFoursquareResults($("#places_list").data("category"), appendCategoryResults, $("#places_list .place_selection").length);
+    }
+}
+
 function appendLangScript() {
     addScriptTag("js/libs/cultures/globalize.culture." + langChosen + ".js");
     Globalize.culture(langChosen);
-}
-
-function ratePlace(placeId, name, rating, avatar) {
-    profileDataObj.user = placeId;
-    profileDataObj.fullname = name;
-    profileDataObj.rating = rating;
-    profileDataObj.avatar = avatar;
-    $(":mobile-pagecontainer").pagecontainer("change", '#rate_place');
 }
 
 function submitLoginForm() {
@@ -239,14 +238,23 @@ function renderRatingIcons(rating) {
     var html = '';
     for (var i = 1; i <= 5; i++)
     {
-        var appendClass = '';
+        if(isNaN(rating)) {
+            break;
+        }
+        var appendClass = 'empty';
         if (rating >= 1) {
-            appendClass = ' full';
+            appendClass = 'full';
         } else if (rating > 0) {
-            appendClass = ' half';
+            if (rating < 0.5) {
+                appendClass = 'one_third';
+            } else if (rating == 0.5) {
+                appendClass = 'half';
+            } else {
+                appendClass = 'two_third';
+            }
         }
         rating--;
-        html += '<span class="star-icon' + appendClass + '">☆</span>';
+        html += '<span class="star-icon ' + appendClass + '">☆</span>';
     }
     return html;
 }
@@ -391,7 +399,7 @@ function myjsonpfunction(data) {
 }
 
 function testGooglePlaces() {
-    console.log("testing google places");
+//    console.log("testing google places");
     var googleMapsKey = 'AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY';
     var url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?&callback=?';
     //var url = 'https://maps.googleapis.com/maps/api/place/radarsearch/json?location=51.503186,-0.126446&radius=5000&types=museum&sensor=false&key=AIzaSyA6XElr0BQ6cmlay66GDG7smz14DlgJPeY';

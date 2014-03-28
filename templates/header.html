@@ -1,35 +1,23 @@
 <div class="header-inner">
     <a href="#left-panel" class="fllt top_menu_link bars_link">&nbsp;</a>
-    <span class="home_link">Εργασία Web</span>
+    <a href="#home" class="home_link">Εργασία Web</a>
     <a href="#descriptionPopup" class="flrt top_menu_link info_link" data-rel="popup" data-position-to="window">&nbsp;</a>
     <div data-role="popup" id="descriptionPopup" class="ui-corner-all">
         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-        <h1 class="aligncenter">Εργασία μαθήματος Εφαρμογές στον Παγκόσμιο Ιστό</h1>
-        <h2 class="aligncenter">Διδάσκων: Βασίλης Βασσάλος</h2>
-        <h3 class="aligncenter">Φοιτητές: Κλειδής Νικόλαος - Σερενίδης Δημήτριος</h3>
-        <p>Ανάπτυξη web εφαρμογής που εκμεταλλεύεται τις σημαντικότερες τελευταίες web τεχνολογίες, με ιδιαίτερη έμφαση σε τεχνικές AJAX και σε τεχνολογίες για mobile συσκευές.
-            Βασικό αντικείμενο αποτελεί η ανεύρεση κοντινών σημείων ενδιαφέροντος με τη βοήθεια χάρτη. Πρόσβαση στην πληροφορία έχουν μόνο διαπιστευμένοι χρήστες, βάσει μηχανισμών user authentication και session management σε PHP. Το server-side σκέλος εκτελείται σε περιβάλλον Apache, με RDBMS MySQL.
-            Χρησιμοποιούνται δημοσίως διαθέσιμα γεωγραφικά δεδομένα (με πηγές <a target="_blank" href="http://geodata.gov.gr">geodata.gov.gr</a>, <a target="_blank" href="http://www.foursquare.com/">foursquare.com</a> και 
-            <a target="_blank" href="https://developers.google.com/places/documentation/">Google Places</a>), διαχωριζόμενα σε κατηγορίες. 
-            Η εφαρμογή λαμβάνει αυτόματα την τοποθεσία του χρήστη και παρουσιάζει το στίγμα του στο χάρτη (HTML 5 geolocation + Google Maps) προβάλλοντας γύρω του τα κοντινότερα σημεία από τις επιλεγμένες κατηγορίες. 
-            Παρέχεται επιπλέον η δυνατότητα αποθήκευσης τοποθεσιών και προτιμήσεων. Ο χρήστης μπορεί επίσης να προβεί σε αξιολόγηση και υποβολή σχολίου για μία τοποθεσία. 
-            Η φόρτωση των δεδομένων και το navigation της εφαρμογής βασίζεται αποκλειστικά σε ασύγχρονες κλήσεις AJAX και DOM manipulation. 
-            Για λόγους ελάφρυνσης του φόρτου του server επιτελείται και client side validation των φορμών, εκτός από server-side. 
-            Προς αποφυγή περιττών roundtrips στο server, πληθώρα δεδομένων αντλούνται από το local storage του browser, το οποίο θα συγχρονίζεται καταλλήλως. 
-            Έχει γίνει κατάλληλη παραμετροποίηση του apache server, μέσω εντολών για τα αντίστοιχα modules στο .htaccess αρχείο, για speed optimization (gzip compression και caching) και SEO friendly URLs (mod_rewrite). 
-            Το design της εφαρμογής είναι responsive με έμφαση σε φορητές συσκευές (smartphones & tablets).
-            Για λόγους ευχερέστερης συντήρησης του client-side κώδικα, χρησιμοποιήθηκε το templating javascript framework handlebars. 
-            Η ανταλλαγή δεδομένων με το server γίνεται σε format JSON, για λόγους καθαρότητας και καλύτερου διαχωρισμού αρμοδιοτήτων server και client. 
-            Έχουν οριστεί τέλος τέλος και vendor specific css properties για ευρύτερη υποστήριξη.</p>
-        <p>Συνοπτικά οι τεχνολογίες που χρησιμοποιήθηκαν:<br/>
-            <strong>Βασικές τεχνολογίες</strong><br/>
-            PHP,  html5, css, Javascript, MySQL<br/>
-            <strong>Frameworks & apis</strong><br/>
-            JQuery,  Google maps api,  Js templating system (handlebars)<br/>
-            <strong>Τεχνικές Προδιαγραφές</strong><br/>
-            Client & server side validation,  Ajax,  JSON,  REST token authentication, responsive design, speed optimization (local storage, 
-            gzip compression, caching), CSS3 (pseudo elements, opacity, transitions, gradients, border radius, shadows),  
-            HTML5 geolocation
-        </p>
+        <div class="app_info_wrap">
+            <h1 class="aligncenter">Εφαρμογές στον Παγκόσμιο Ιστό</h1>
+            <h2 class="aligncenter">Διδάσκων: Βασίλης Βασσάλος</h2>
+            <h3 class="aligncenter">Φοιτητές: Κλειδής Νικόλαος - Σερενίδης Δημήτριος</h3>
+            <p>Ανάπτυξη web εφαρμογής που εκμεταλλεύεται τις σημαντικότερες τελευταίες web τεχνολογίες, με ιδιαίτερη έμφαση σε τεχνικές AJAX, responsive design και σε τεχνολογίες για mobile συσκευές.
+                Βασικό αντικείμενο αποτελεί η ανεύρεση κοντινών σημείων ενδιαφέροντος. Χρησιμοποιούνται δημοσίως διαθέσιμα γεωγραφικά δεδομένα (με πηγές <a target="_blank" href="http://geodata.gov.gr">geodata.gov.gr</a> και <a target="_blank" href="http://www.foursquare.com/">foursquare.com</a>), διαχωριζόμενα σε κατηγορίες. 
+            <p><strong>Βασικές τεχνολογίες</strong><br/>
+                PHP, html5, css, Javascript, MySQL<br/>
+                <strong>Frameworks & apis</strong><br/>
+                JQuery,  Google maps api, Handlebars<br/>
+                <strong>Τεχνικές Προδιαγραφές</strong><br/>
+                Client & server side validation,  Ajax,  JSON, token authentication, responsive design, 
+                local storage, gzip compression, caching, CSS3, geolocation
+            </p>
+        </div>
     </div>
 </div>

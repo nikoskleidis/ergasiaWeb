@@ -108,10 +108,10 @@ $("#home").on('pagebeforecreate', function() {
                     var category = $(this).data("category");
                     var third_party_load = ($(this).data("third_party") == 1) ? true : false;
                     var places_wrapper = $("#places_list");
-                    places_wrapper.empty();
+                    places_wrapper.empty().data("catid", "").data("category", "");
                     if (third_party_load) { //apo trito server, p.x. foursquare
-                        places_wrapper.data("catid", catid);
-                        getFoursquareResults(user_lat + "," + user_lng, category, displayCategoryResults);
+                        places_wrapper.data("category", category);
+                        getFoursquareResults(category, displayCategoryResults, 0);
                     } else { //apo to diko mas server
                         places_wrapper.data("catid", catid);
                         loadCategoryPlaces(catid, displayCategoryResults, 1);
@@ -148,17 +148,11 @@ $("#places").on('pageinit', function() {
         }
     })
             .on("scrollstart", function() {
-                loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
+                appendCategoryPlaces();
             })
             .on("scrollstop", function() {
-                loadCategoryPlaces($("#places_list").data("catid"), appendCategoryResults, false);
+                appendCategoryPlaces();
             });
-});
-$("#rate_place").on('pagebeforecreate', function() {
-    $("#rating_wrap").html(render('rate_place', {data: false}));
-});
-$("#rate_place").on('pagebeforeshow', function() {
-    addProfileInfo("#rating_prof_name", "#rating_img", "#current_rating");
 });
 $("#settings").on('pagebeforecreate', function() {
     $("#settings_wrap").html(render('settings', {data: false}))
@@ -180,23 +174,18 @@ $("#settings").on('pagebeforecreate', function() {
                 getPicture(0, "avatars");
             });
 });
-$("#rate_place").on('pageshow', function() {
-    var container = $("#rating_bars");
-    container.find(".price_bar").animate({width: "80%"}, 1500).next(".rating_score").html("80%");
-    container.find(".quality_bar").animate({width: "60%"}, 1500).next(".rating_score").html("60%");
-    container.find(".availability_bar").animate({width: "30%"}, 1500).next(".rating_score").html("30%");
-});
 $("#search_location").on('pagebeforecreate', function() {
     $("#search_location_wrap").html(render('search_location', {data: false}));
-});
-$("#search_location").on('pageshow', function() {
-    $("#search_location_loader").fadeOut(2000, 'linear', function() {
-//        $("#search_location_loader").fadeIn(2000, 'linear');
+})
+        .on('pageshow', function() {
+    $("#search_location_loader").show().removeClass("finished_loader").fadeOut(2000, 'linear', function() {
+        $("#search_location_loader").not(".finished_loader").fadeIn(2000, 'linear');
     });
     if (navigator.geolocation) {
         var options = {timeout: 31000, enableHighAccuracy: true, maximumAge: 90000};
         navigator.geolocation.getCurrentPosition(
                 function(position) {
+                    $("#search_location_loader").hide().addClass("finished_loader");
                     var lat = position.coords.latitude;
                     var lng = position.coords.longitude;
                     reverseGeocode(lat, lng, "GR");

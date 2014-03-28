@@ -35,7 +35,7 @@ function testFoursquareApi() {
  * @param {type} categoryList
  * @returns {data}
  */
-function getFoursquareResults(logLat, categoryList, callback) {
+function getFoursquareResults(categoryList, callback, offset) {
     places = [];
     var url = "https://api.foursquare.com/v2/venues/explore";
     $.ajax({
@@ -45,13 +45,13 @@ function getFoursquareResults(logLat, categoryList, callback) {
         data: {
             client_id: fsq_clientId,
             client_secret: fsq_clientSecret,
-            ll: logLat, //Required. Latitude and longitude to search near.
+            ll: user_lat + "," + user_lng, //Required. Latitude and longitude to search near.
             radius: 800, //Limit results to venues within this many meters of the specified location. Defaults to a city-wide area.
             llAcc: 10000.0, //Accuracy of latitude and longitude, in meters
             alt: 0, //Altitude of the user's location, in meters.
             altAcc: 10000.0, //Accuracy of the user's altitude, in meters.
             limit: 10, //Number of results to return, up to 50.
-            offset: 0, 
+            offset: offset, 
             v: getDateInFormat(new Date(), fsq_dateFormat), //Version parameter
             categoryId: categoryList
         },
@@ -147,20 +147,16 @@ function getMoreInfoFor(id) {
             if (data && data.response && data.response.venue) {
                 moreInfo = data.response.venue;
             }
-            var newInfo = [];
+            var newInfo = {avatar: "images/no-image-available.jpg", rating: 0};
 
             if (moreInfo) {
                 var photo;
                 if (moreInfo.photos && moreInfo.photos.groups[0] && moreInfo.photos.groups[0].items[0]) {
                     photo = moreInfo.photos.groups[0].items[0];
                     newInfo.avatar = photo.prefix + "300x300" + photo.suffix;
-                } else {
-                    newInfo.avatar = "images/no-image-available.jpg";
                 }
                 if (moreInfo.rating) {
                     newInfo.rating = (moreInfo.rating / 2).toFixed(1);
-                } else {
-                    newInfo.rating = 0;
                 }
             }
             for (i = 0; i < places.length; i++) {
