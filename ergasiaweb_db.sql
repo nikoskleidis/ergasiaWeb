@@ -25334,3 +25334,6 @@ CREATE TABLE IF NOT EXISTS `user_favourites` (
 --
 ALTER TABLE `places`
   ADD CONSTRAINT `fk_category_places` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
+
+ALTER TABLE `ergasiaweb_db`.`user_favourites` 
+ADD UNIQUE INDEX `uq_usr_favourites` (`place_id` ASC, `user_id` ASC);

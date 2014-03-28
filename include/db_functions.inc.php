@@ -167,6 +167,37 @@ function replaceUser($data, $editMode = false) {
     return $user;
 }
 
+function insertFavourite($userId, $placeId) {
+    global $con;
+        $query = "INSERT INTO user_favourites (place_id,user_id) " .
+                "VALUES (?, ?)";
+    $stmt = $con->stmt_init();
+    if ($stmt->prepare($query)) {
+            $stmt->bind_param("ii", $placeId, $userId);
+        if (!$stmt->execute()) {
+            logErrors('insertFavourite(): ' . $stmt->error);
+        } else {
+            echo successJSON(array('msg' => 'add_success'), false);
+        }
+        $stmt->close();
+    }
+}
+
+function deleteFavourite($userId, $placeId) {
+    global $con;
+        $query = "DELETE FROM user_favourites WHERE place_id = ? AND user_id = ?";
+    $stmt = $con->stmt_init();
+    if ($stmt->prepare($query)) {
+            $stmt->bind_param("ii", $placeId, $userId);
+        if (!$stmt->execute()) {
+            logErrors('deleteFavourite(): ' . $stmt->error);
+        } else {
+            echo successJSON(array('msg' => 'delete_success'), false);
+        }
+        $stmt->close();
+    }
+}
+
 function fetchQueryObject($query) {
     global $con;
     $obj = null;

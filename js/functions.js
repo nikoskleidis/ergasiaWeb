@@ -203,6 +203,12 @@ function submitEditProfileForm() {
     }
 }
 
+function checkFavouriteResponse(result){
+    if(result.code != "SUCCESS") {
+        alert('Παρουσιάστηκε κάποιο απρόσμενο σφάλμα!');
+    }
+}
+
 function loginUser(result, alertMsg) {
     if (result && result.public_token && result.private_token && result.first_name) {
         setLoginObj(result);

@@ -1,5 +1,5 @@
 {{#each places}}
-<li class="place_selection">
+<li class="place_selection" data-placeid="{{id}}">
     <div class="prof_avatar">
         <img src="{{avatar}}" class="round_img"/>
     </div>
@@ -12,7 +12,7 @@
         <div class="prof_rating">{{rate_icons rating}}</div>
         {{else}}
         <div class="add_to_favourite">
-            <span class="star-icon {{is_favourite}}">☆</span>
+            <span class="star-icon favourite-icon {{is_favourite}}">☆</span>
         </div>
         {{/if}}
         <div class="clear"></div>

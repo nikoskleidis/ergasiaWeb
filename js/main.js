@@ -132,9 +132,20 @@ $("#home").on('pagebeforeshow', function() {
 $("#places").on('pageinit', function() {
     $("#places_list").on("tap", ".place_selection", function(event) {
         var target = $(event.target);
-        if (target.is(".pickButton")) {
-            target.closest(".place_selection").addClass("ui-focus");
-            viewProfile(target.attr("data-id"), target.attr("data-name"), target.attr("data-rating"), target.attr("data-img"));
+        if (target.is(".favourite-icon")) {
+            var placeId = target.closest(".place_selection").data("placeid");
+            var action = '';
+            if (target.is(".not_added")) {
+                target.removeClass("not_added").addClass("added");
+                action = 'add_to_favourites';
+            } else {
+                target.removeClass("added").addClass("not_added");
+                action = 'remove_favourite';
+            }
+            privateAjaxCall({
+                action: action,
+                placeid: placeId
+            }, checkFavouriteResponse);
         } else {
             var isOpened = $(this).hasClass("tapped");
             var currentSelection = $("#places_list").find(".place_selection.tapped");
@@ -178,23 +189,23 @@ $("#search_location").on('pagebeforecreate', function() {
     $("#search_location_wrap").html(render('search_location', {data: false}));
 })
         .on('pageshow', function() {
-    $("#search_location_loader").show().removeClass("finished_loader").fadeOut(2000, 'linear', function() {
-        $("#search_location_loader").not(".finished_loader").fadeIn(2000, 'linear');
-    });
-    if (navigator.geolocation) {
-        var options = {timeout: 31000, enableHighAccuracy: true, maximumAge: 90000};
-        navigator.geolocation.getCurrentPosition(
-                function(position) {
-                    $("#search_location_loader").hide().addClass("finished_loader");
-                    var lat = position.coords.latitude;
-                    var lng = position.coords.longitude;
-                    reverseGeocode(lat, lng, "GR");
-                    initializeMap(14, true, lat, lng, 'images/map_icon.png');
-                },
-                function() {
-                    showAlert('Error getting location');
-                }, options);
-    } else {
-        showAlert("no geolocation!!!", "no");
-    }
-});
+            $("#search_location_loader").show().removeClass("finished_loader").fadeOut(2000, 'linear', function() {
+                $("#search_location_loader").not(".finished_loader").fadeIn(2000, 'linear');
+            });
+            if (navigator.geolocation) {
+                var options = {timeout: 31000, enableHighAccuracy: true, maximumAge: 90000};
+                navigator.geolocation.getCurrentPosition(
+                        function(position) {
+                            $("#search_location_loader").hide().addClass("finished_loader");
+                            var lat = position.coords.latitude;
+                            var lng = position.coords.longitude;
+                            reverseGeocode(lat, lng, "GR");
+                            initializeMap(14, true, lat, lng, 'images/map_icon.png');
+                        },
+                        function() {
+                            showAlert('Error getting location');
+                        }, options);
+            } else {
+                showAlert("no geolocation!!!", "no");
+            }
+        });

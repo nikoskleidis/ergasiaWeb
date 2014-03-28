@@ -143,15 +143,17 @@ h2 {font-size:1.6em}
 #places_list .place_selection.tapped{background: #464648;color: #fff}
 .star-icon {position:relative}
 .star-icon:before{content: "\2605";position: absolute;left:0;overflow: hidden;font-size: 1.2em;color: #68be61;margin: -1px}
-.star-icon.empty:before, .add_to_favourite .star-icon.not_added:before{width: 0%}
+.star-icon.empty:before{width: 0%}
 .star-icon.one_third:before {width: 48%}
 .star-icon.half:before {width: 58%}
 .star-icon.two_third:before {width: 71%}
 .place_selection.tapped .star-icon,.place_selection.tapped .star-icon:before{color: #fff}
 .add_to_favourite {text-align: right;margin: 0 .5em .5em;}
 .add_to_favourite .star-icon{font-size: 2.4em;color: #FFD700;}
+.add_to_favourite .star-icon:before{color: #FFF;transition:color 400ms,opacity 400ms;overflow: visible;}
 .add_to_favourite .star-icon.added:before{text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.9);}
-.add_to_favourite .star-icon.added:before{color: #FFD700}
+.add_to_favourite .star-icon.not_added:before{color: #FFF;opacity: 0}
+.add_to_favourite .star-icon.added:before{color: #FFD700;opacity: 1}
 .prof_img{width: 82%}
 .place_selection .prof_name, .prof_info_details_wrap h3{line-height: 1.2em;margin: 2% 0 !important;font-weight: normal !important;}
 .place_selection .prof_name{font-size: 1.4em;}

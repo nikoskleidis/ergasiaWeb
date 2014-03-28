@@ -47,6 +47,12 @@ else if (!empty($_REQUEST['public_token']) && !empty($_REQUEST['private_token'])
         case 'load_places':
             echo json_encode(array("catid" => $data['catid'], "places" => getPlaces($userId, $data['lat'], $data['lng'], $data['catid'], $data['page'])));
             break;
+        case 'add_to_favourites':
+            insertFavourite($userId, $data['placeid']);
+            break;
+        case 'remove_favourite':
+            deleteFavourite($userId, $data['placeid']);
+            break;
     }
 }
 
